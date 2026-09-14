@@ -516,6 +516,186 @@ body.h .slide{padding-left:calc(var(--u)*6);padding-right:calc(var(--u)*6)}
 .testimonial-picker{margin-top:calc(var(--u)*1)}.testimonial-empty{padding:calc(var(--u)*.7);border:1px dashed var(--line);border-radius:calc(var(--u)*.7);font-size:calc(var(--u)*.75);line-height:1.4;color:var(--txt3);background:var(--cream)}.testimonial-option{width:100%;display:grid;text-align:left;gap:2px;margin-top:6px;padding:8px 9px;border:1px solid var(--line);border-radius:8px;background:#fff;cursor:pointer}.testimonial-option b{font:800 12px 'Archivo';color:var(--navy2)}.testimonial-option span{font:600 10px 'Inter';color:var(--txt3)}
 body.v .mosaic-body{grid-template-columns:1fr}body.v .mosaic-side{border-left:0;border-top:1px solid var(--line)}body.v .mosaic-grid{grid-template-columns:1fr 1fr}body.v .mosaic-library{grid-template-columns:1fr 1fr}body.v .product-builder{grid-template-columns:1fr 1fr;grid-template-rows:none;overflow:auto}body.v .slide-combo{padding-top:calc(var(--u)*4)}body.v .combo-head{grid-template-columns:1fr}body.v .combo-total-mini{min-width:0}body.v .combo-footer{grid-template-columns:1fr 1fr}body.v .offer-wrap{grid-template-columns:1fr;gap:calc(var(--u)*1.6)}body.v .slide-final-offer .big{font-size:calc(var(--u)*4.8);max-width:none}body.v .offer-items{max-height:calc(var(--u)*16)}body.v .diagnostic-promise{max-width:none}
 
+
+
+/* ===== V3.4: composição horizontal uniforme em tela cheia ===== */
+body.h .slide{
+  padding:calc(var(--u)*4.2) calc(var(--u)*5.2) calc(var(--u)*6.5);
+  justify-content:center;
+}
+body.h .slide>.split,
+body.h .slide>.authority,
+body.h .slide>.cover-grid,
+body.h .slide>.offer-wrap,
+body.h .slide>.combo-head,
+body.h .slide>.product-builder,
+body.h .slide>.combo-footer,
+body.h .slide>.custom-content{
+  width:min(100%,calc(var(--u)*122));
+  margin-left:auto;
+  margin-right:auto;
+}
+body.h .eyebrow{font-size:calc(var(--u)*1.05);margin-bottom:calc(var(--u)*1.05)}
+body.h .big{font-size:calc(var(--u)*5.05);line-height:.98}
+body.h .lead{font-size:calc(var(--u)*1.42);line-height:1.38;margin-top:calc(var(--u)*1.15);max-width:43ch}
+body.h .split{grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr);gap:calc(var(--u)*3.2);align-items:center}
+body.h .media{aspect-ratio:16/9;max-height:calc(var(--u)*31.5);width:100%;border-radius:calc(var(--u)*1.35)}
+body.h .media img{object-fit:contain;object-position:center;background:transparent}
+body.h .caption{left:calc(var(--u)*.85);bottom:calc(var(--u)*.8);font-size:calc(var(--u)*.86);padding:calc(var(--u)*.45) calc(var(--u)*.8)}
+body.h .chips{margin-top:calc(var(--u)*1.15);gap:calc(var(--u)*.5)}
+body.h .chip{font-size:calc(var(--u)*.92);padding:calc(var(--u)*.44) calc(var(--u)*.78)}
+
+/* Capa */
+body.h .cover-grid{grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:calc(var(--u)*2.4);align-items:center}
+body.h .cover-grid>div:first-child{padding-top:0}
+body.h .cover .brand-logo{height:calc(var(--u)*3.6);margin-bottom:calc(var(--u)*1.35)}
+body.h .cover .kicker{position:static!important;display:inline-flex;margin:0 0 calc(var(--u)*1.35)!important;font-size:calc(var(--u)*.88);padding:calc(var(--u)*.45) calc(var(--u)*.8)}
+body.h .cover .big{font-size:calc(var(--u)*5.8);max-width:11ch}
+body.h .cover .lead{font-size:calc(var(--u)*1.42);margin-top:calc(var(--u)*1.1);max-width:35ch}
+body.h .cover .proofs{margin-top:calc(var(--u)*1);gap:calc(var(--u)*.42)}
+body.h .cover .proofs span{font-size:calc(var(--u)*.88);padding:calc(var(--u)*.4) calc(var(--u)*.7)}
+body.h .diagnostic-promise{margin-top:calc(var(--u)*1);padding:calc(var(--u)*.75) calc(var(--u)*.95);max-width:44ch}
+body.h .diagnostic-promise b{font-size:calc(var(--u)*1.05)}
+body.h .diagnostic-promise span{font-size:calc(var(--u)*.9)}
+body.h .cover .foot{margin-top:calc(var(--u)*1.35);font-size:calc(var(--u)*.86)}
+body.h .cover-visual{min-height:calc(var(--u)*38);align-items:flex-end}
+body.h .cover-visual:before{width:calc(var(--u)*31);height:calc(var(--u)*31);bottom:calc(var(--u)*1)}
+body.h .cover-visual .mari{height:calc(var(--u)*39);max-height:calc(var(--u)*39)}
+body.h .cover .badge{right:calc(var(--u)*1);bottom:calc(var(--u)*2.1);padding:calc(var(--u)*.75) calc(var(--u)*1)}
+body.h .cover .badge b{font-size:calc(var(--u)*1.7)}
+body.h .cover .badge span{font-size:calc(var(--u)*.78)}
+
+/* Autoridade */
+body.h .slide-authority .authority{grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:calc(var(--u)*3.4);align-items:center}
+body.h .slide-authority .authority-photo{aspect-ratio:16/9;max-height:calc(var(--u)*31);border-radius:calc(var(--u)*1.35);background:#0D0927}
+body.h .slide-authority .authority-photo img{object-fit:cover;object-position:center}
+body.h .slide-authority .big{font-size:calc(var(--u)*4.65);max-width:12ch}
+body.h .slide-authority .lead{font-size:calc(var(--u)*1.32);max-width:40ch;margin-top:calc(var(--u)*.85)}
+body.h .slide-authority .partner-label{margin-top:calc(var(--u)*.9);margin-bottom:calc(var(--u)*.5);font-size:calc(var(--u)*.76)}
+body.h .slide-authority .logos{grid-template-columns:repeat(4,minmax(0,1fr));gap:calc(var(--u)*.45)}
+body.h .slide-authority .logo-card{height:calc(var(--u)*4.2);padding:calc(var(--u)*.45)}
+body.h .slide-authority .logo-card img{max-height:calc(var(--u)*2.7);max-width:88%}
+
+/* Nivelamento */
+body.h .slide-level .split{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr)}
+body.h .slide-level .big{font-size:calc(var(--u)*5.15);max-width:12ch}
+body.h .slide-level .steps{margin-top:calc(var(--u)*1.3);gap:calc(var(--u)*.55)}
+body.h .slide-level .step{padding:calc(var(--u)*.72) calc(var(--u)*.9);grid-template-columns:calc(var(--u)*3.2) 1fr;gap:calc(var(--u)*.75)}
+body.h .slide-level .step i{width:calc(var(--u)*2.5);height:calc(var(--u)*2.5);font-size:calc(var(--u)*.9)}
+body.h .slide-level .step b{font-size:calc(var(--u)*1.15)}
+body.h .slide-level .step span{font-size:calc(var(--u)*.92)}
+body.h .slide-level .phone-stage{min-height:0;height:calc(var(--u)*34);border-radius:calc(var(--u)*1.35);background:rgba(255,255,255,.64);border:calc(var(--u)*.08) solid rgba(15,10,46,.08);overflow:hidden;padding:calc(var(--u)*1.2)}
+body.h .slide-level .phone-stage:before{width:calc(var(--u)*27);height:calc(var(--u)*27)}
+body.h .slide-level .phone-stage img{height:100%;max-width:100%;object-fit:contain;object-position:center}
+
+/* Conversação */
+body.h .slide-live .split{grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr)}
+body.h .slide-live .big{font-size:calc(var(--u)*4.85);max-width:12ch}
+body.h .slide-live .grid{margin-top:calc(var(--u)*1.25);gap:calc(var(--u)*.55)}
+body.h .slide-live .cell{padding:calc(var(--u)*.9)}
+body.h .slide-live .stat .k{font-size:calc(var(--u)*2.25)}
+body.h .slide-live .stat .v{font-size:calc(var(--u)*.92);line-height:1.24;margin-top:calc(var(--u)*.35)}
+body.h .slide-live .chips{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:calc(var(--u)*.8);gap:calc(var(--u)*.4)}
+body.h .slide-live .chip{min-height:calc(var(--u)*2.2);font-size:calc(var(--u)*.78);padding:calc(var(--u)*.35) calc(var(--u)*.45)}
+body.h .slide-live .media{max-height:calc(var(--u)*32);background:#fff;padding:calc(var(--u)*.5)}
+body.h .slide-live .media img{object-fit:contain;background:#fff;border-radius:calc(var(--u)*.85)}
+
+/* Gravadas */
+body.h .slide-recorded .split{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+body.h .slide-recorded .big{font-size:calc(var(--u)*4.75);max-width:13ch}
+body.h .slide-recorded .lead{font-size:calc(var(--u)*1.32);max-width:39ch}
+body.h .slide-recorded .media-platform{max-height:calc(var(--u)*32);padding:calc(var(--u)*.5);background:#17191D}
+body.h .slide-recorded .media-platform img{object-fit:contain;object-position:center;background:#17191D;border-radius:calc(var(--u)*.8)}
+
+/* DECK */
+body.h .slide-deck .split{grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:calc(var(--u)*2.6)}
+body.h .slide-deck .big{font-size:calc(var(--u)*4.45);max-width:12ch}
+body.h .slide-deck .grid{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:calc(var(--u)*1.05);gap:calc(var(--u)*.5)}
+body.h .slide-deck .cell{padding:calc(var(--u)*.8)}
+body.h .slide-deck .cell .n{font-size:calc(var(--u)*.82)}
+body.h .slide-deck .cell .t{font-size:calc(var(--u)*1.08);margin-top:calc(var(--u)*.15)}
+body.h .slide-deck .cell .d{font-size:calc(var(--u)*.84);line-height:1.2;margin-top:calc(var(--u)*.15)}
+body.h .slide-deck .deck-stack{height:calc(var(--u)*33);gap:calc(var(--u)*.5);padding:calc(var(--u)*.85);align-items:stretch;border-radius:calc(var(--u)*1.35)}
+body.h .slide-deck .deck-shot{justify-content:center;gap:calc(var(--u)*.35)}
+body.h .slide-deck .deck-shot span{font-size:calc(var(--u)*.7);min-height:calc(var(--u)*1.5);padding:calc(var(--u)*.22) calc(var(--u)*.45)}
+body.h .slide-deck .deck-shot img{height:calc(var(--u)*28.5);max-height:calc(var(--u)*28.5);object-fit:contain;object-position:center;border-radius:calc(var(--u)*.55)}
+
+/* Pitch + LinkedIn, Entrevista e Apostila: mesma gramática visual */
+body.h .slide-career .split,
+body.h .slide-interview-complete .split,
+body.h .slide-booklet .split{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:calc(var(--u)*3.2)}
+body.h .slide-career .big,
+body.h .slide-interview-complete .big,
+body.h .slide-booklet .big{font-size:calc(var(--u)*4.65);max-width:13ch}
+body.h .slide-career .lead,
+body.h .slide-interview-complete .lead,
+body.h .slide-booklet .lead{font-size:calc(var(--u)*1.28);max-width:42ch}
+body.h .slide-career .media,
+body.h .slide-interview-complete .media,
+body.h .slide-booklet .media{aspect-ratio:16/9;max-height:calc(var(--u)*32);padding:calc(var(--u)*.55);background:#17191D}
+body.h .slide-career .media img,
+body.h .slide-interview-complete .media img,
+body.h .slide-booklet .media img{object-fit:contain;object-position:center;border-radius:calc(var(--u)*.75);background:#17191D}
+body.h .slide-booklet .media{background:#fff}
+body.h .slide-booklet .media img{background:#fff}
+
+/* Planejamento */
+body.h .slide-combo{padding-top:calc(var(--u)*2.5);padding-bottom:calc(var(--u)*5.7);justify-content:flex-start}
+body.h .slide-combo .combo-head{align-items:center}
+body.h .slide-combo .big{font-size:calc(var(--u)*4.2);max-width:16ch}
+body.h .slide-combo .eyebrow{margin-bottom:calc(var(--u)*.55)}
+body.h .combo-total-mini{min-width:calc(var(--u)*15);padding:calc(var(--u)*.7) calc(var(--u)*.9)}
+body.h .combo-total-mini b{font-size:calc(var(--u)*1.65)}
+body.h .product-builder{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(3,minmax(0,1fr));gap:calc(var(--u)*.45);margin-top:calc(var(--u)*.65);min-height:0}
+body.h .product-card{padding:calc(var(--u)*.5) calc(var(--u)*.7);gap:calc(var(--u)*.5);border-radius:calc(var(--u)*.65)}
+body.h .product-card .pn{font-size:calc(var(--u)*1.04);line-height:1.04}
+body.h .product-card .pp{font-size:calc(var(--u)*.92)}
+body.h .combo-footer{margin-top:calc(var(--u)*.55);gap:calc(var(--u)*.45)}
+body.h .combo-footer>div{padding:calc(var(--u)*.5) calc(var(--u)*.75)}
+body.h .combo-footer b{font-size:calc(var(--u)*1.12)}
+
+/* Oferta final */
+body.h .slide-final-offer .offer-wrap{grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:calc(var(--u)*3.2);align-items:center}
+body.h .slide-final-offer .big{font-size:calc(var(--u)*5.05);max-width:13ch}
+body.h .offer-saving{margin-top:calc(var(--u)*1.1);font-size:calc(var(--u)*1.08);padding:calc(var(--u)*.6) calc(var(--u)*.9)}
+body.h .offer-rule{margin-top:calc(var(--u)*.55);font-size:calc(var(--u)*.84)}
+body.h .offer-card{padding:calc(var(--u)*1.2);border-radius:calc(var(--u)*1.1)}
+body.h .offer-items{max-height:calc(var(--u)*20);gap:calc(var(--u)*.35)}
+body.h .offer-item{padding:calc(var(--u)*.45) calc(var(--u)*.55);font-size:calc(var(--u)*.82)}
+body.h .offer-summary{margin-top:calc(var(--u)*.65);padding-top:calc(var(--u)*.55)}
+body.h .offer-summary>div{font-size:calc(var(--u)*.84)}
+body.h .offer-summary-total{font-size:calc(var(--u)*1.05)!important}
+body.h .offer-summary-total b{font-size:calc(var(--u)*1.4)}
+
+/* Slides personalizados */
+body.h .custom-slide .custom-content{max-width:calc(var(--u)*92);padding-left:calc(var(--u)*3)}
+body.h .custom-slide .big{font-size:calc(var(--u)*5.6);max-width:15ch}
+body.h .custom-slide .lead{font-size:calc(var(--u)*1.9);line-height:1.35;max-width:45ch}
+
+/* Corrige seletores antigos do DECK vertical sem alterar o layout móvel atual */
+body.v .slide-deck .deck-shot:nth-child(2){grid-column:auto;grid-row:auto}
+body.v .slide-deck .deck-shot:nth-child(3){grid-column:auto;grid-row:auto}
+body.v .slide-deck .deck-shot:nth-child(2) img,
+body.v .slide-deck .deck-shot:nth-child(3) img{width:100%;height:auto;max-height:none;object-fit:contain;object-position:center top}
+
+
+/* ===== Depoimentos VTurb ===== */
+.testimonial-slide{align-items:stretch!important}
+.testimonial-layout{width:100%;display:grid;grid-template-columns:minmax(0,.9fr) minmax(320px,.72fr);gap:calc(var(--u)*4.8);align-items:center}
+.testimonial-copy{display:flex;flex-direction:column;justify-content:center;min-width:0}
+.testimonial-slide .big{max-width:10ch;font-size:calc(var(--u)*5.7);line-height:.98}
+.testimonial-slide .lead{max-width:34ch;font-size:calc(var(--u)*1.75);line-height:1.32;color:rgba(255,255,255,.76)}
+.testimonial-player-shell{width:min(100%,calc(var(--u)*30));justify-self:center;border-radius:calc(var(--u)*1.15);overflow:hidden;background:#000;box-shadow:0 calc(var(--u)*1.1) calc(var(--u)*3.5) rgba(0,0,0,.32);border:1px solid rgba(255,255,255,.12)}
+.testimonial-player-shell vturb-smartplayer{display:block!important;width:100%!important;max-width:none!important;margin:0!important}
+.testimonial-player-placeholder{position:relative;width:100%;padding:125% 0 0;background:linear-gradient(150deg,#0B0625,#000);display:block}
+.testimonial-player-placeholder:after{content:'▶';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:calc(var(--u)*4);height:calc(var(--u)*4);border-radius:999px;background:rgba(255,107,0,.94);display:grid;place-items:center;color:#fff;font:900 calc(var(--u)*1.35) 'Archivo';padding-left:calc(var(--u)*.18);box-shadow:0 10px 28px rgba(0,0,0,.28)}
+.mosaic-preview-stage .testimonial-player-shell{box-shadow:none}.mosaic-preview-stage vturb-smartplayer{display:none!important}.mosaic-preview-stage .testimonial-player-shell:before{content:'▶';position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(145deg,#100735,#050022);color:#FF6B00;font:900 72px 'Archivo';z-index:3}.mosaic-preview-stage .testimonial-player-shell{position:relative;min-height:470px}
+body.v .testimonial-layout{grid-template-columns:1fr;gap:calc(var(--u)*2.2)}
+body.v .testimonial-copy{text-align:left}
+body.v .testimonial-slide .big{font-size:calc(var(--u)*4.6);max-width:12ch}
+body.v .testimonial-slide .lead{font-size:calc(var(--u)*1.35)}
+body.v .testimonial-player-shell{width:min(100%,calc(var(--u)*31))}
+
 </style>
 </head>
 <body class="h">
@@ -698,6 +878,12 @@ const BASE_SLIDES=[{id:'cover',title:'Abertura'},{id:'authority',title:'High Lev
 const BASE_IDS=BASE_SLIDES.map(x=>x.id);
 const DEFAULT_SLIDE_ORDER=['cover','authority','level','live','recorded','deck','career','combo','offer'];
 const PRODUCT_DISPLAY_ORDER=['glossary','recorded','interview','live60','live80','live120','deck','booklet'];
+const VTURB_ACCOUNT_ID='2aac0681-fa5e-4d00-8829-8daf90155e21';
+const BUILTIN_TESTIMONIALS=[
+{id:'rodrigo-diferencial-carreira',title:'Rodrigo',theme:'Diferencial na carreira',quote:'O inglês como diferencial real para avançar na carreira.',vturbAccountId:VTURB_ACCOUNT_ID,vturbPlayerId:'685edbbd372ee5f4dfcac261'},
+{id:'edeilson-vaga-offshore',title:'Edeilson',theme:'Conseguiu vaga no offshore',quote:'Do objetivo de entrar no mercado à conquista da vaga.',vturbAccountId:VTURB_ACCOUNT_ID,vturbPlayerId:'69659ef42e6d8eb8b7727eed'},
+{id:'luiz-comunicacao-rapida',title:'Luiz',theme:'Conseguiu se comunicar rápido',quote:'Evolução prática para conseguir se comunicar com mais rapidez.',vturbAccountId:VTURB_ACCOUNT_ID,vturbPlayerId:'6937410a0c589e5b5d7a4cc8'}
+];
 const DEFAULT_MASTER_CONFIG={products:[
 {id:'glossary',name:'Glossário + guia de termos técnicos',description:'Glossário de inglês técnico e guia prático de termos para consulta e apoio ao estudo.',price:0,active:true,group:'material'},
 {id:'recorded',name:'Aulas gravadas + apresentação + LinkedIn + certificado',description:'Base do básico ao intermediário com módulos de carreira e certificado técnico.',price:0,active:true,group:'course'},
@@ -707,7 +893,7 @@ const DEFAULT_MASTER_CONFIG={products:[
 {id:'live120',name:'Conversação ao vivo • 120h',description:'Plano de conversação com 120 horas ao vivo.',price:0,active:true,group:'conversation'},
 {id:'deck',name:'DECK • IA + Memory Card + nivelamento',description:'IA, S.O.S Memory Card e nivelamento para análise de evolução.',price:0,active:true,group:'app'},
 {id:'booklet',name:'Apostila física de apoio',description:'Material físico de apoio ao programa.',price:297,active:true,group:'material'}
-],discountRules:[{minItems:0,minTotal:0,percent:0}],testimonials:[]};
+],discountRules:[{minItems:0,minTotal:0,percent:0}],testimonials:BUILTIN_TESTIMONIALS.map(t=>({...t}))};
 const DEFAULT_SELLER_CONFIG={presentation:{clientName:'',slideOrder:[...DEFAULT_SLIDE_ORDER],customSlides:[]}};
 let AUTH={token:null,user:null},MASTER_CONFIG=normalizeMasterConfig(DEFAULT_MASTER_CONFIG),SELLER_CONFIG=normalizeSellerConfig(DEFAULT_SELLER_CONFIG);
 let currentIndex=0,settingsOpen=false,mosaicOpen=false,dragSlideId=null,sellerReady=false,masterReady=false,sellerSaveTimer=null,masterSaveTimer=null;
@@ -720,8 +906,30 @@ function num(v){if(typeof v==='number')return v||0;return parseFloat(String(v||'
 function uid(){return 'custom-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,7)}
 function remoteHeaders(){return {'apikey':SUPABASE_PUBLISHABLE_KEY,'Content-Type':'application/json'}}
 async function rpc(name,payload){const res=await fetch(SUPABASE_URL+'/rest/v1/rpc/'+name,{method:'POST',headers:remoteHeaders(),body:JSON.stringify(payload||{})});const text=await res.text();let data=null;if(text){try{data=JSON.parse(text)}catch(e){data=text}}if(!res.ok){const msg=data&&typeof data==='object'&&(data.message||data.hint||data.details);throw new Error(msg||String(data||('HTTP '+res.status)))}return data}
-function normalizeMasterConfig(raw){const s=raw&&typeof raw==='object'?raw:{};let incoming=Array.isArray(s.products)?s.products.map((p,idx)=>({id:String(p&&p.id||('product-'+idx)).replace(/[^a-zA-Z0-9_-]/g,''),name:String(p&&p.name||'Produto'),description:String(p&&p.description||''),price:Math.max(Number(p&&p.price)||0,0),active:p&&p.active!==false,group:String(p&&p.group||'other')})).filter(p=>p.id):[];const oldGuide=incoming.find(p=>p.id==='guide'),oldGlossary=incoming.find(p=>p.id==='glossary');if(oldGuide){if(oldGlossary){oldGlossary.price=Math.max((Number(oldGlossary.price)||0)+(Number(oldGuide.price)||0),0);oldGlossary.active=oldGlossary.active||oldGuide.active}else{oldGuide.id='glossary';incoming.push(oldGuide)}incoming=incoming.filter(p=>p.id!=='guide')}const byId=new Map(incoming.map(p=>[p.id,p]));const products=DEFAULT_MASTER_CONFIG.products.map(d=>{const p=byId.get(d.id);return p?{...d,...p,id:d.id,name:d.id==='glossary'?'Glossário + guia de termos técnicos':p.name,description:d.id==='glossary'?'Glossário de inglês técnico e guia prático de termos para consulta e apoio ao estudo.':p.description}:{...d}});incoming.filter(p=>!products.some(x=>x.id===p.id)&&p.id!=='guide').forEach(p=>products.push(p));const discountRules=Array.isArray(s.discountRules)&&s.discountRules.length?s.discountRules.map(r=>({minItems:Math.max(parseInt(r&&r.minItems)||0,0),minTotal:Math.max(Number(r&&r.minTotal)||0,0),percent:Math.min(Math.max(Number(r&&r.percent)||0,0),100)})):DEFAULT_MASTER_CONFIG.discountRules.map(r=>({...r}));const testimonials=Array.isArray(s.testimonials)?s.testimonials.map((t,idx)=>({id:String(t&&t.id||('testimonial-'+idx)),title:String(t&&t.title||'Depoimento'),theme:String(t&&t.theme||'Depoimento'),quote:String(t&&t.quote||''),mediaUrl:String(t&&t.mediaUrl||'')})):[];return{products,discountRules,testimonials}}
-function normalizeSellerConfig(raw){const s=raw&&typeof raw==='object'?raw:{},p=s.presentation&&typeof s.presentation==='object'?s.presentation:{};const customSlides=Array.isArray(p.customSlides)?p.customSlides.map(c=>({id:String(c&&c.id||uid()),label:String(c&&c.label||'Desafio'),title:String(c&&c.title||'Novo desafio'),body:String(c&&c.body||''),theme:c&&c.theme==='light'?'light':'dark'})):[];const valid=new Set([...BASE_IDS,...customSlides.map(c=>c.id)]),hasOrder=Array.isArray(p.slideOrder);const slideOrder=hasOrder?p.slideOrder.map(String).filter((id,idx,a)=>valid.has(id)&&a.indexOf(id)===idx):[...DEFAULT_SLIDE_ORDER];return{presentation:{clientName:String(p.clientName||''),slideOrder,customSlides}}}
+function normalizeMasterConfig(raw){
+  const s=raw&&typeof raw==='object'?raw:{};
+  let incoming=Array.isArray(s.products)?s.products.map((p,idx)=>({id:String(p&&p.id||('product-'+idx)).replace(/[^a-zA-Z0-9_-]/g,''),name:String(p&&p.name||'Produto'),description:String(p&&p.description||''),price:Math.max(Number(p&&p.price)||0,0),active:p&&p.active!==false,group:String(p&&p.group||'other')})).filter(p=>p.id):[];
+  const oldGuide=incoming.find(p=>p.id==='guide'),oldGlossary=incoming.find(p=>p.id==='glossary');
+  if(oldGuide){if(oldGlossary){oldGlossary.price=Math.max((Number(oldGlossary.price)||0)+(Number(oldGuide.price)||0),0);oldGlossary.active=oldGlossary.active||oldGuide.active}else{oldGuide.id='glossary';incoming.push(oldGuide)}incoming=incoming.filter(p=>p.id!=='guide')}
+  const byId=new Map(incoming.map(p=>[p.id,p]));
+  const products=DEFAULT_MASTER_CONFIG.products.map(d=>{const p=byId.get(d.id);return p?{...d,...p,id:d.id,name:d.id==='glossary'?'Glossário + guia de termos técnicos':p.name,description:d.id==='glossary'?'Glossário de inglês técnico e guia prático de termos para consulta e apoio ao estudo.':p.description}:{...d}});
+  incoming.filter(p=>!products.some(x=>x.id===p.id)&&p.id!=='guide').forEach(p=>products.push(p));
+  const discountRules=Array.isArray(s.discountRules)&&s.discountRules.length?s.discountRules.map(r=>({minItems:Math.max(parseInt(r&&r.minItems)||0,0),minTotal:Math.max(Number(r&&r.minTotal)||0,0),percent:Math.min(Math.max(Number(r&&r.percent)||0,0),100)})):DEFAULT_MASTER_CONFIG.discountRules.map(r=>({...r}));
+  const incomingTestimonials=Array.isArray(s.testimonials)?s.testimonials.map((t,idx)=>({id:String(t&&t.id||('testimonial-'+idx)),title:String(t&&t.title||'Depoimento'),theme:String(t&&t.theme||'Depoimento'),quote:String(t&&t.quote||''),mediaUrl:String(t&&t.mediaUrl||''),vturbAccountId:String(t&&t.vturbAccountId||''),vturbPlayerId:String(t&&t.vturbPlayerId||'')})):[];
+  const testimonialMap=new Map(BUILTIN_TESTIMONIALS.map(t=>[t.id,{...t}]));
+  incomingTestimonials.forEach(t=>testimonialMap.set(t.id,{...(testimonialMap.get(t.id)||{}),...t}));
+  return{products,discountRules,testimonials:[...testimonialMap.values()]}
+}
+function normalizeSellerConfig(raw){
+  const s=raw&&typeof raw==='object'?raw:{},p=s.presentation&&typeof s.presentation==='object'?s.presentation:{};
+  const customSlides=Array.isArray(p.customSlides)?p.customSlides.map(c=>({
+    id:String(c&&c.id||uid()),label:String(c&&c.label||'Desafio'),title:String(c&&c.title||'Novo desafio'),body:String(c&&c.body||''),theme:c&&c.theme==='light'?'light':'dark',
+    kind:c&&c.kind==='testimonial'?'testimonial':'custom',testimonialId:String(c&&c.testimonialId||''),vturbAccountId:String(c&&c.vturbAccountId||''),vturbPlayerId:String(c&&c.vturbPlayerId||''),mediaUrl:String(c&&c.mediaUrl||'')
+  })):[];
+  const valid=new Set([...BASE_IDS,...customSlides.map(c=>c.id)]),hasOrder=Array.isArray(p.slideOrder);
+  const slideOrder=hasOrder?p.slideOrder.map(String).filter((id,idx,a)=>valid.has(id)&&a.indexOf(id)===idx):[...DEFAULT_SLIDE_ORDER];
+  return{presentation:{clientName:String(p.clientName||''),slideOrder,customSlides}}
+}
 function sellerStorageKey(){return SELLER_STORAGE_PREFIX+(AUTH.user&&AUTH.user.id?AUTH.user.id:'guest')}
 function setCloudStatus(text,state){const e=el('cloudStatus');if(!e)return;e.textContent=text;e.className='cloud-status'+(state?' '+state:'')}
 function saveSellerLocal(){if(!AUTH.user)return;try{localStorage.setItem(sellerStorageKey(),JSON.stringify(SELLER_CONFIG))}catch(e){}}
@@ -738,13 +946,20 @@ async function setAuthenticatedUser(row,token){AUTH.token=token||row.token;AUTH.
 async function loginUser(){const username=el('loginUsername').value.trim(),password=el('loginPassword').value;el('loginError').textContent='';if(!username||!password){el('loginError').textContent='Informe usuário e senha.';return}el('loginSubmit').disabled=true;el('loginSubmit').textContent='Entrando...';try{const rows=await rpc('ppt_login',{p_username:username,p_password:password}),row=Array.isArray(rows)?rows[0]:null;if(!row)throw new Error('Usuário ou senha inválidos.');await setAuthenticatedUser(row,row.token);el('loginPassword').value=''}catch(e){const msg=String(e&&e.message||'');if(/Could not find the function|PGRST202|ppt_login/i.test(msg))el('loginError').textContent='O sistema de contas ainda não está instalado no Supabase.';else if(/Failed to fetch|NetworkError|Load failed/i.test(msg))el('loginError').textContent='Não foi possível conectar ao Supabase.';else el('loginError').textContent=msg||'Não foi possível entrar.'}finally{el('loginSubmit').disabled=false;el('loginSubmit').textContent='Entrar'}}
 async function restoreSession(){try{const raw=localStorage.getItem(SESSION_STORAGE_KEY);if(!raw)return;const saved=JSON.parse(raw);if(!saved||!saved.token)return;const rows=await rpc('ppt_session_info',{p_token:saved.token}),row=Array.isArray(rows)?rows[0]:null;if(!row){localStorage.removeItem(SESSION_STORAGE_KEY);return}await setAuthenticatedUser(row,saved.token)}catch(e){localStorage.removeItem(SESSION_STORAGE_KEY)}}
 async function logoutUser(){const token=AUTH.token;AUTH={token:null,user:null};localStorage.removeItem(SESSION_STORAGE_KEY);try{if(token)await rpc('ppt_logout',{p_token:token})}catch(e){}location.reload()}
-function customSlideHTML(c){const theme=c.theme==='light'?'light':'deep';return '<section class="slide custom-slide '+theme+'" data-slide-id="'+escapeHTML(c.id)+'" data-slide-title="'+escapeHTML(c.title)+'"><div class="custom-content"><div class="eyebrow">'+escapeHTML(c.label||'Desafio')+'</div><div class="big">'+escapeHTML(c.title)+'</div><div class="lead">'+escapeHTML(c.body)+'</div></div></section>'}
+function testimonialSlideHTML(c){
+  const account=escapeHTML(c.vturbAccountId||VTURB_ACCOUNT_ID),player=escapeHTML(c.vturbPlayerId||'');
+  const playerHTML=player?'<div class="testimonial-player-shell"><vturb-smartplayer id="vid-'+player+'" data-vturb-account="'+account+'" data-vturb-player="'+player+'" style="display:block;margin:0 auto;width:100%;max-width:none"><div class="testimonial-player-placeholder"></div></vturb-smartplayer></div>':'<div class="testimonial-player-shell"><div class="testimonial-player-placeholder"></div></div>';
+  return '<section class="slide custom-slide deep testimonial-slide" data-slide-id="'+escapeHTML(c.id)+'" data-slide-title="'+escapeHTML(c.title)+'"><div class="testimonial-layout"><div class="testimonial-copy"><div class="eyebrow">Depoimento • '+escapeHTML(c.title||'Aluno')+'</div><div class="big">'+escapeHTML(c.label||'Resultado real')+'</div><div class="lead">'+escapeHTML(c.body||'')+'</div></div>'+playerHTML+'</div></section>'
+}
+function customSlideHTML(c){if(c&&c.kind==='testimonial')return testimonialSlideHTML(c);const theme=c.theme==='light'?'light':'deep';return '<section class="slide custom-slide '+theme+'" data-slide-id="'+escapeHTML(c.id)+'" data-slide-title="'+escapeHTML(c.title)+'"><div class="custom-content"><div class="eyebrow">'+escapeHTML(c.label||'Desafio')+'</div><div class="big">'+escapeHTML(c.title)+'</div><div class="lead">'+escapeHTML(c.body)+'</div></div></section>'}
+function ensureVturbPlayers(root=document){root.querySelectorAll('vturb-smartplayer[data-vturb-player]').forEach(player=>{const pid=player.dataset.vturbPlayer,account=player.dataset.vturbAccount||VTURB_ACCOUNT_ID;if(!pid||player.dataset.scriptRequested==='1')return;player.dataset.scriptRequested='1';const key='vturb-script-'+pid;if(document.getElementById(key))return;const sc=document.createElement('script');sc.id=key;sc.src='https://scripts.converteai.net/'+account+'/players/'+pid+'/v4/player.js';sc.async=true;document.head.appendChild(sc)})}
+
 function realSlides(){return [...el('stage').querySelectorAll(':scope > section.slide')]}
 function rebuildCustomSlides(){el('stage').querySelectorAll(':scope > .custom-slide').forEach(e=>e.remove());const anchor=el('stage').querySelector(':scope > .slide-combo');if(!anchor)return;SELLER_CONFIG.presentation.customSlides.forEach(c=>anchor.insertAdjacentHTML('beforebegin',customSlideHTML(c)))}
 function orderedSlides(){const map=new Map(realSlides().map(s=>[s.dataset.slideId,s]));return SELLER_CONFIG.presentation.slideOrder.map(id=>map.get(id)).filter(Boolean)}
 function renderPresentation(resetIndex){rebuildCustomSlides();applyClientName();const ordered=orderedSlides(),all=realSlides();all.forEach(s=>{s.classList.remove('on');s.style.display='none'});if(resetIndex)currentIndex=Math.min(currentIndex,Math.max(ordered.length-1,0));renderDots();show(currentIndex);if(mosaicOpen)renderMosaic()}
 function renderDots(){el('dots').innerHTML='';orderedSlides().forEach((s,idx)=>{const d=document.createElement('div');d.className='dot';d.title=s.dataset.slideTitle||('Slide '+(idx+1));d.onclick=()=>show(idx);el('dots').appendChild(d)})}
-function show(k){const list=orderedSlides();if(!list.length)return;currentIndex=Math.max(0,Math.min(Number(k)||0,list.length-1));realSlides().forEach(s=>{s.classList.remove('on');s.style.display='none'});const cur=list[currentIndex];cur.style.display='flex';cur.classList.add('on');[...el('dots').children].forEach((d,n)=>d.classList.toggle('on',n===currentIndex));const nav=el('dots').parentElement;nav.className='nav';nav.classList.toggle('dark',cur.classList.contains('dark')||cur.classList.contains('deep')||cur.classList.contains('cover'));nav.classList.toggle('at-start',currentIndex===0);nav.classList.toggle('at-end',currentIndex===list.length-1);if(cur.dataset.slideId==='combo')renderProducts();if(cur.dataset.slideId==='offer')renderOffer()}
+function show(k){const list=orderedSlides();if(!list.length)return;currentIndex=Math.max(0,Math.min(Number(k)||0,list.length-1));realSlides().forEach(s=>{s.classList.remove('on');s.style.display='none'});const cur=list[currentIndex];cur.style.display='flex';cur.classList.add('on');[...el('dots').children].forEach((d,n)=>d.classList.toggle('on',n===currentIndex));const nav=el('dots').parentElement;nav.className='nav';nav.classList.toggle('dark',cur.classList.contains('dark')||cur.classList.contains('deep')||cur.classList.contains('cover'));nav.classList.toggle('at-start',currentIndex===0);nav.classList.toggle('at-end',currentIndex===list.length-1);if(cur.dataset.slideId==='combo')renderProducts();if(cur.dataset.slideId==='offer')renderOffer();if(cur.classList.contains('testimonial-slide'))ensureVturbPlayers(cur)}
 function go(d){if(settingsOpen||mosaicOpen)return;const next=currentIndex+d;if(next<0||next>=orderedSlides().length)return;show(next)}
 function fit(){const wrap=document.querySelector('.wrap'),st=el('stage'),vertical=document.body.classList.contains('v');let w,h;if(!vertical){w=wrap.clientWidth;h=wrap.clientHeight}else{const ratio=9/16,aw=wrap.clientWidth-24,ah=wrap.clientHeight-24;w=aw;h=w/ratio;if(h>ah){h=ah;w=h*ratio}}st.style.width=w+'px';st.style.height=h+'px';const u=vertical?w/54:Math.min(w/100,h/56.25);document.documentElement.style.setProperty('--u',Math.max(u,5)+'px')}
 function setMode(m){document.body.classList.toggle('h',m==='h');document.body.classList.toggle('v',m==='v');el('bH').classList.toggle('on',m==='h');el('bV').classList.toggle('on',m==='v');fit()}
@@ -762,17 +977,17 @@ function jumpToDeliverable(id){selectedProducts.add(id);renderProducts();renderO
 function toggleMosaic(force){mosaicOpen=typeof force==='boolean'?force:!mosaicOpen;el('mosaicOverlay').classList.toggle('on',mosaicOpen);el('mosaicOverlay').setAttribute('aria-hidden',String(!mosaicOpen));el('bMosaic').classList.toggle('on',mosaicOpen);if(mosaicOpen){renderMosaic();newCustomSlide(null,false)}}
 let pendingInsertAfter=null;
 function slideTitle(id){const b=BASE_SLIDES.find(x=>x.id===id);if(b)return b.title;const c=SELLER_CONFIG.presentation.customSlides.find(x=>x.id===id);return c?c.title:id}
-function slidePreviewInfo(id){const custom=SELLER_CONFIG.presentation.customSlides.find(c=>c.id===id);if(custom)return{label:custom.label||'Desafio',title:custom.title,theme:custom.theme==='light'?'light':'deep',custom:true};const node=realSlides().find(s=>s.dataset.slideId===id),theme=node?(node.classList.contains('cover')?'cover':node.classList.contains('deep')?'deep':node.classList.contains('dark')?'dark':'light'):'light';const labels={cover:'Abertura',authority:'Autoridade',level:'Ponto de partida',live:'Conversação',recorded:'Base estrutural',deck:'App do aluno',career:'Pitch + LinkedIn',interview:'Entrevista',booklet:'Material físico',combo:'Planejamento',offer:'Diagnóstico'};return{label:labels[id]||'Slide',title:slideTitle(id),theme,custom:false}}
+function slidePreviewInfo(id){const custom=SELLER_CONFIG.presentation.customSlides.find(c=>c.id===id);if(custom)return{label:custom.label||'Desafio',title:custom.title,theme:custom.theme==='light'?'light':'deep',custom:true,testimonial:custom.kind==='testimonial'};const node=realSlides().find(s=>s.dataset.slideId===id),theme=node?(node.classList.contains('cover')?'cover':node.classList.contains('deep')?'deep':node.classList.contains('dark')?'dark':'light'):'light';const labels={cover:'Abertura',authority:'Autoridade',level:'Ponto de partida',live:'Conversação',recorded:'Base estrutural',deck:'App do aluno',career:'Pitch + LinkedIn',interview:'Entrevista',booklet:'Material físico',combo:'Planejamento',offer:'Diagnóstico'};return{label:labels[id]||'Slide',title:slideTitle(id),theme,custom:false}}
 function applyClientName(){const name=String(SELLER_CONFIG.presentation.clientName||'').trim();[['coverClientPlan','coverClientName'],['comboClientPlan','comboClientName']].forEach(([wrapId,nameId])=>{const w=el(wrapId),n=el(nameId);if(!w||!n)return;n.textContent=name;w.hidden=!name});const input=el('clientNameInput');if(input&&document.activeElement!==input)input.value=name}
 function updateClientName(value){SELLER_CONFIG.presentation.clientName=String(value||'').trim();applyClientName();scheduleSellerSave();renderMosaic()}
 function nextCustomTitle(label){const base=String(label||'Desafio');const n=SELLER_CONFIG.presentation.customSlides.filter(c=>String(c.label||'').toLowerCase()===base.toLowerCase()).length+1;return base+' '+n}
 function syncCustomTitleToCategory(){const id=el('customSlideId').value,label=el('customSlideLabel').value;if(!id)el('customSlideTitle').value=nextCustomTitle(label)}
 function slideNodeById(id){return realSlides().find(s=>s.dataset.slideId===id)}
-function cleanPreviewClone(clone){clone.classList.add('on');clone.style.display='flex';clone.querySelectorAll('[id]').forEach(x=>x.removeAttribute('id'));clone.querySelectorAll('*').forEach(x=>{[...x.attributes].forEach(a=>{if(/^on/i.test(a.name))x.removeAttribute(a.name)});if(x.matches('input,button,select,textarea'))x.setAttribute('tabindex','-1')});return clone}
+function cleanPreviewClone(clone){clone.classList.add('on');clone.style.display='flex';clone.querySelectorAll('vturb-smartplayer').forEach(v=>{const ph=document.createElement('div');ph.className='testimonial-player-placeholder';v.replaceWith(ph)});clone.querySelectorAll('[id]').forEach(x=>x.removeAttribute('id'));clone.querySelectorAll('*').forEach(x=>{[...x.attributes].forEach(a=>{if(/^on/i.test(a.name))x.removeAttribute(a.name)});if(x.matches('input,button,select,textarea'))x.setAttribute('tabindex','-1')});return clone}
 function hydrateMosaicPreviews(root=document){root.querySelectorAll('.mosaic-thumb[data-preview-id]').forEach(thumb=>{const id=thumb.dataset.previewId,node=slideNodeById(id);if(!node)return;const host=thumb.querySelector('.mosaic-preview-stage');if(!host)return;host.innerHTML='';host.appendChild(cleanPreviewClone(node.cloneNode(true)));const scale=thumb.clientWidth/1600;host.style.transform='scale('+scale+')'});}
 function libraryCard(id){const info=slidePreviewInfo(id);return '<div class="library-card" draggable="true" data-library-id="'+escapeHTML(id)+'" ondragstart="startLibraryDrag(event,\''+escapeHTML(id)+'\')"><div class="mosaic-thumb" data-preview-id="'+escapeHTML(id)+'"><div class="mosaic-preview-stage"></div></div><div class="library-meta"><b>'+escapeHTML(info.title)+'</b><button onclick="restoreSlide(\''+escapeHTML(id)+'\')">Adicionar</button></div></div>'}
 function renderLibrary(){const order=SELLER_CONFIG.presentation.slideOrder,hiddenBase=BASE_IDS.filter(id=>!order.includes(id)),hiddenCustom=SELLER_CONFIG.presentation.customSlides.filter(c=>!order.includes(c.id));let html='';hiddenBase.forEach(id=>html+=libraryCard(id));hiddenCustom.forEach(c=>html+=libraryCard(c.id));html+='<button class="library-action" onclick="newCustomSlide()"><i>+</i><b>Novo slide</b><span>Crie um desafio, dificuldade, problema, objetivo ou contexto.</span></button>';html+='<button class="library-action testimonial" onclick="openTestimonialPicker()"><i>▶</i><b>Depoimento por tema</b><span>Escolha primeiro qual depoimento deve entrar na apresentação.</span></button>';el('mosaicLibrary').innerHTML=html;setTimeout(()=>hydrateMosaicPreviews(el('mosaicLibrary')),0)}
-function renderMosaic(){const order=SELLER_CONFIG.presentation.slideOrder;el('mosaicGrid').innerHTML=order.map((id,idx)=>{const info=slidePreviewInfo(id);return '<div class="mosaic-card" draggable="true" data-id="'+escapeHTML(id)+'" ondragstart="startSlideDrag(event,\''+escapeHTML(id)+'\')" ondragover="overSlideDrag(event)" ondrop="dropSlide(event,\''+escapeHTML(id)+'\')" ondragend="endSlideDrag(event)"><div class="mosaic-thumb" data-preview-id="'+escapeHTML(id)+'" onclick="openSlideFromMosaic(\''+escapeHTML(id)+'\')"><div class="mosaic-preview-stage"></div><span class="mosaic-index">'+(idx+1)+'</span></div><div class="mosaic-meta"><span class="mosaic-num">Slide '+(idx+1)+'</span><span class="mosaic-drag">⋮⋮ arraste</span></div><div class="mosaic-actions">'+(info.custom?'<button class="primary" onclick="editCustomSlide(\''+escapeHTML(id)+'\')">Editar</button>':'<button onclick="openSlideFromMosaic(\''+escapeHTML(id)+'\')">Abrir</button>')+'<button onclick="newCustomSlide(\''+escapeHTML(id)+'\')">+ depois</button><button onclick="hideSlide(\''+escapeHTML(id)+'\')">Retirar</button>'+(info.custom?'<button onclick="deleteCustomSlide(\''+escapeHTML(id)+'\')">Excluir</button>':'')+'</div></div>'}).join('')+'<button class="mosaic-add-card" onclick="newCustomSlide()"><i>+</i><b>Novo slide</b><span>Adicione ao final</span></button>';applyClientName();renderLibrary();setTimeout(()=>hydrateMosaicPreviews(el('mosaicGrid')),0);if(el('testimonialPicker'))el('testimonialPicker').hidden=true}
+function renderMosaic(){const order=SELLER_CONFIG.presentation.slideOrder;el('mosaicGrid').innerHTML=order.map((id,idx)=>{const info=slidePreviewInfo(id);return '<div class="mosaic-card" draggable="true" data-id="'+escapeHTML(id)+'" ondragstart="startSlideDrag(event,\''+escapeHTML(id)+'\')" ondragover="overSlideDrag(event)" ondrop="dropSlide(event,\''+escapeHTML(id)+'\')" ondragend="endSlideDrag(event)"><div class="mosaic-thumb" data-preview-id="'+escapeHTML(id)+'" onclick="openSlideFromMosaic(\''+escapeHTML(id)+'\')"><div class="mosaic-preview-stage"></div><span class="mosaic-index">'+(idx+1)+'</span></div><div class="mosaic-meta"><span class="mosaic-num">Slide '+(idx+1)+'</span><span class="mosaic-drag">⋮⋮ arraste</span></div><div class="mosaic-actions">'+(info.custom&&!info.testimonial?'<button class="primary" onclick="editCustomSlide(\''+escapeHTML(id)+'\')">Editar</button>':'<button onclick="openSlideFromMosaic(\''+escapeHTML(id)+'\')">Abrir</button>')+'<button onclick="newCustomSlide(\''+escapeHTML(id)+'\')">+ depois</button><button onclick="hideSlide(\''+escapeHTML(id)+'\')">Retirar</button>'+(info.custom?'<button onclick="deleteCustomSlide(\''+escapeHTML(id)+'\')">Excluir</button>':'')+'</div></div>'}).join('')+'<button class="mosaic-add-card" onclick="newCustomSlide()"><i>+</i><b>Novo slide</b><span>Adicione ao final</span></button>';applyClientName();renderLibrary();setTimeout(()=>hydrateMosaicPreviews(el('mosaicGrid')),0);if(el('testimonialPicker'))el('testimonialPicker').hidden=true}
 function toggleMosaic(force){mosaicOpen=typeof force==='boolean'?force:!mosaicOpen;el('mosaicOverlay').classList.toggle('on',mosaicOpen);el('mosaicOverlay').setAttribute('aria-hidden',String(!mosaicOpen));el('bMosaic').classList.toggle('on',mosaicOpen);if(mosaicOpen){renderMosaic();newCustomSlide(null,false)}}
 function openSlideFromMosaic(id){const idx=SELLER_CONFIG.presentation.slideOrder.indexOf(id);if(idx<0)return;toggleMosaic(false);show(idx)}
 function startSlideDrag(e,id){dragSlideId=id;e.currentTarget.classList.add('dragging');e.dataTransfer.effectAllowed='move';try{e.dataTransfer.setData('text/plain','slide:'+id)}catch(_){}}
@@ -786,10 +1001,10 @@ function restoreSlide(id){if(!SELLER_CONFIG.presentation.slideOrder.includes(id)
 function deleteCustomSlide(id){SELLER_CONFIG.presentation.customSlides=SELLER_CONFIG.presentation.customSlides.filter(x=>x.id!==id);SELLER_CONFIG.presentation.slideOrder=SELLER_CONFIG.presentation.slideOrder.filter(x=>x!==id);scheduleSellerSave();newCustomSlide(null,false);renderPresentation(false);renderMosaic()}
 function clearCustomSlideEditor(){pendingInsertAfter=null;el('customSlideId').value='';el('customSlideLabel').value='Desafio';el('customSlideTitle').value=nextCustomTitle('Desafio');el('customSlideBody').value='';el('customSlideTheme').value='dark'}
 function newCustomSlide(afterId=null,focus=true){clearCustomSlideEditor();pendingInsertAfter=afterId||null;el('mosaicStatus').textContent=afterId?'Novo slide será inserido depois de “'+slideTitle(afterId)+'”.':'Novo slide será adicionado ao final da apresentação.';el('mosaicStatus').className='cloud-status';if(el('testimonialPicker'))el('testimonialPicker').hidden=true;if(focus)setTimeout(()=>el('customSlideBody').focus(),40)}
-function editCustomSlide(id){const c=SELLER_CONFIG.presentation.customSlides.find(x=>x.id===id);if(!c)return;pendingInsertAfter=null;el('customSlideId').value=c.id;el('customSlideLabel').value=c.label||'Desafio';el('customSlideTitle').value=c.title;el('customSlideBody').value=c.body;el('customSlideTheme').value=c.theme;if(el('testimonialPicker'))el('testimonialPicker').hidden=true;el('mosaicStatus').textContent='Editando “'+c.title+'”.';el('mosaicStatus').className='cloud-status'}
-function saveCustomSlide(){const id=el('customSlideId').value||uid(),label=el('customSlideLabel').value||'Desafio',title=el('customSlideTitle').value.trim()||nextCustomTitle(label),body=el('customSlideBody').value.trim(),theme=el('customSlideTheme').value;if(!body){el('mosaicStatus').textContent='Escreva o subtítulo/situação do slide.';el('mosaicStatus').className='cloud-status error';return}const idx=SELLER_CONFIG.presentation.customSlides.findIndex(x=>x.id===id),obj={id,label,title,body,theme};if(idx>=0)SELLER_CONFIG.presentation.customSlides[idx]=obj;else{SELLER_CONFIG.presentation.customSlides.push(obj);if(pendingInsertAfter&&SELLER_CONFIG.presentation.slideOrder.includes(pendingInsertAfter)){const pos=SELLER_CONFIG.presentation.slideOrder.indexOf(pendingInsertAfter);SELLER_CONFIG.presentation.slideOrder.splice(pos+1,0,id)}else SELLER_CONFIG.presentation.slideOrder.push(id)}scheduleSellerSave();el('mosaicStatus').textContent='Slide salvo para '+AUTH.user.username+'. Arraste a miniatura para reposicionar.';el('mosaicStatus').className='cloud-status ok';newCustomSlide(null,false);renderPresentation(false);renderMosaic()}
+function editCustomSlide(id){const c=SELLER_CONFIG.presentation.customSlides.find(x=>x.id===id);if(!c||c.kind==='testimonial')return;pendingInsertAfter=null;el('customSlideId').value=c.id;el('customSlideLabel').value=c.label||'Desafio';el('customSlideTitle').value=c.title;el('customSlideBody').value=c.body;el('customSlideTheme').value=c.theme;if(el('testimonialPicker'))el('testimonialPicker').hidden=true;el('mosaicStatus').textContent='Editando “'+c.title+'”.';el('mosaicStatus').className='cloud-status'}
+function saveCustomSlide(){const id=el('customSlideId').value||uid(),label=el('customSlideLabel').value||'Desafio',title=el('customSlideTitle').value.trim()||nextCustomTitle(label),body=el('customSlideBody').value.trim(),theme=el('customSlideTheme').value;if(!body){el('mosaicStatus').textContent='Escreva o subtítulo/situação do slide.';el('mosaicStatus').className='cloud-status error';return}const idx=SELLER_CONFIG.presentation.customSlides.findIndex(x=>x.id===id),obj={id,label,title,body,theme,kind:'custom'};if(idx>=0)SELLER_CONFIG.presentation.customSlides[idx]=obj;else{SELLER_CONFIG.presentation.customSlides.push(obj);if(pendingInsertAfter&&SELLER_CONFIG.presentation.slideOrder.includes(pendingInsertAfter)){const pos=SELLER_CONFIG.presentation.slideOrder.indexOf(pendingInsertAfter);SELLER_CONFIG.presentation.slideOrder.splice(pos+1,0,id)}else SELLER_CONFIG.presentation.slideOrder.push(id)}scheduleSellerSave();el('mosaicStatus').textContent='Slide salvo para '+AUTH.user.username+'. Arraste a miniatura para reposicionar.';el('mosaicStatus').className='cloud-status ok';newCustomSlide(null,false);renderPresentation(false);renderMosaic()}
 function openTestimonialPicker(){const box=el('testimonialOptions'),list=Array.isArray(MASTER_CONFIG.testimonials)?MASTER_CONFIG.testimonials:[];el('testimonialPicker').hidden=false;if(!list.length){box.innerHTML='<div class="testimonial-empty">Nenhum depoimento cadastrado ainda. Quando você definir os temas e enviar os vídeos, eles aparecerão aqui para o vendedor escolher antes de adicionar.</div>';return}box.innerHTML=list.map(t=>'<button class="testimonial-option" onclick="addTestimonialSlide(\''+escapeHTML(t.id)+'\')"><b>'+escapeHTML(t.theme||t.title)+'</b><span>'+escapeHTML(t.title)+'</span></button>').join('')}
-function addTestimonialSlide(testimonialId){const t=(MASTER_CONFIG.testimonials||[]).find(x=>x.id===testimonialId);if(!t)return;const id=uid(),obj={id,label:'Depoimento',title:t.title||'Depoimento',body:t.quote||'',theme:'dark',testimonialId:t.id,mediaUrl:t.mediaUrl||''};SELLER_CONFIG.presentation.customSlides.push(obj);SELLER_CONFIG.presentation.slideOrder.push(id);scheduleSellerSave();renderPresentation(false);renderMosaic();editCustomSlide(id)}
+function addTestimonialSlide(testimonialId){const t=(MASTER_CONFIG.testimonials||[]).find(x=>x.id===testimonialId);if(!t)return;const id=uid(),obj={id,label:t.theme||'Depoimento',title:t.title||'Depoimento',body:t.quote||'',theme:'dark',kind:'testimonial',testimonialId:t.id,mediaUrl:t.mediaUrl||'',vturbAccountId:t.vturbAccountId||VTURB_ACCOUNT_ID,vturbPlayerId:t.vturbPlayerId||''};SELLER_CONFIG.presentation.customSlides.push(obj);SELLER_CONFIG.presentation.slideOrder.push(id);scheduleSellerSave();renderPresentation(false);renderMosaic();el('mosaicStatus').textContent='Depoimento de '+(t.title||'aluno')+' adicionado. Arraste a miniatura para posicionar.';el('mosaicStatus').className='cloud-status ok'}
 
 function toggleSettings(force){settingsOpen=typeof force==='boolean'?force:!settingsOpen;el('settingsOverlay').classList.toggle('on',settingsOpen);el('settingsOverlay').setAttribute('aria-hidden',String(!settingsOpen));el('bSettings').classList.toggle('on',settingsOpen);if(settingsOpen){setDefaultSettingsTab();if(AUTH.user&&AUTH.user.role==='master'){renderCatalog();renderDiscountRules();renderUsers()}}}
 function setDefaultSettingsTab(){if(!AUTH.user)return;setSettingsTab(AUTH.user.role==='master'?'catalogo':'conta')}
