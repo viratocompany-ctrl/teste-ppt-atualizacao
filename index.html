@@ -439,6 +439,76 @@ body.v .career-tags span{font-size:calc(var(--u)*.66);padding:calc(var(--u)*.28)
 .master-only{display:none}.master-only.on{display:inline-flex}.account-create{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;align-items:end;margin-top:14px}.account-create label{font-size:11px;color:var(--txt3);font-weight:700}.account-create input{width:100%;margin-top:6px;border:1px solid #E4DCEB;border-radius:9px;padding:9px 10px;font:600 12px 'Inter';color:var(--navy2)}.account-create button,.user-action{border:0;border-radius:9px;background:var(--orange);color:#fff;padding:10px 13px;font:800 11px 'Archivo';cursor:pointer}.account-status{min-height:18px;margin-top:9px;font-size:11px;font-weight:700;color:var(--txt3)}.account-status.ok{color:#20985B}.account-status.bad{color:#C53C32}.user-list{display:grid;gap:8px;margin-top:16px}.user-row{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px;align-items:center;padding:11px 12px;border:1px solid #E8E0EC;background:#fff;border-radius:11px}.user-main b{display:block;font:800 13px 'Archivo';color:var(--navy2)}.user-main span{font-size:10px;color:var(--txt3)}.user-state{font:800 9px 'Archivo Narrow';letter-spacing:.06em;text-transform:uppercase;padding:5px 8px;border-radius:999px;background:#EAF9F1;color:#1D8A53}.user-state.off{background:#FCECEC;color:#B33C37}.user-actions{display:flex;gap:6px}.user-action{padding:7px 9px;background:#F1ECF5;color:var(--navy2)}.user-action.danger{background:#FFF0E7;color:#C65300}.password-box{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;align-items:end;margin-top:12px}.password-box input{width:100%;margin-top:6px;border:1px solid #E4DCEB;border-radius:9px;padding:9px 10px;font:600 12px 'Inter';color:var(--navy2)}
 @media(max-width:760px){.account-create,.password-box{grid-template-columns:1fr}.user-row{grid-template-columns:1fr}.user-actions{flex-wrap:wrap}.hint{display:none}}
 
+
+/* ===== V3: tela cheia, mosaico e construtor de projeto ===== */
+body.h .wrap{padding:0}
+body.h .stage{border-radius:0;box-shadow:none}
+body.h .slide{padding-left:calc(var(--u)*6);padding-right:calc(var(--u)*6)}
+.diagnostic-promise{margin-top:calc(var(--u)*1.35);max-width:48ch;padding:calc(var(--u)*1.05) calc(var(--u)*1.2);border-left:calc(var(--u)*.28) solid var(--orange);background:rgba(255,255,255,.055);border-radius:0 calc(var(--u)*.9) calc(var(--u)*.9) 0}
+.diagnostic-promise b{display:block;font-family:'Archivo';font-size:calc(var(--u)*1.35);color:#fff}
+.diagnostic-promise span{display:block;margin-top:calc(var(--u)*.3);font-size:calc(var(--u)*1.12);line-height:1.35;color:#C9C6DC}
+.slide-combo{justify-content:flex-start;padding-top:calc(var(--u)*4.5)}
+.combo-head{display:grid;grid-template-columns:1fr auto;gap:calc(var(--u)*2.5);align-items:end}
+.slide-combo .big{font-size:calc(var(--u)*5.3)}
+.slide-combo .lead{font-size:calc(var(--u)*1.45);margin-top:calc(var(--u)*1.2);max-width:54ch}
+.combo-total-mini{min-width:calc(var(--u)*18);padding:calc(var(--u)*1.25);border:calc(var(--u)*.08) solid var(--line);background:#fff;border-radius:calc(var(--u)*1.1);box-shadow:0 calc(var(--u)*.5) calc(var(--u)*1.5) rgba(15,10,46,.06)}
+.combo-total-mini span,.combo-total-mini small{display:block;color:var(--txt3);font-size:calc(var(--u)*.9)}
+.combo-total-mini b{display:block;color:var(--navy2);font-family:'Archivo';font-size:calc(var(--u)*2.25);margin:calc(var(--u)*.3) 0}
+.product-builder{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*.75);margin-top:calc(var(--u)*1.35);overflow:auto;padding-right:calc(var(--u)*.15)}
+.product-card{position:relative;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:calc(var(--u)*.8);min-height:calc(var(--u)*5.3);padding:calc(var(--u)*.85) calc(var(--u)*1);border:calc(var(--u)*.1) solid var(--line);background:#fff;border-radius:calc(var(--u)*1);cursor:pointer;transition:.16s}
+.product-card:hover{transform:translateY(calc(var(--u)*-.08));border-color:rgba(255,107,0,.5)}
+.product-card.on{border-color:var(--orange);background:#FFF7EF;box-shadow:0 0 0 calc(var(--u)*.12) rgba(255,107,0,.13)}
+.product-card input{width:calc(var(--u)*1.35);height:calc(var(--u)*1.35);accent-color:var(--orange)}
+.product-card .pn{font-family:'Archivo';font-size:calc(var(--u)*1.08);font-weight:800;color:var(--navy2);line-height:1.15}
+.product-card .pd{font-size:calc(var(--u)*.82);color:var(--txt3);margin-top:calc(var(--u)*.18);line-height:1.25}
+.product-card .pp{font-family:'Archivo';font-size:calc(var(--u)*1.15);font-weight:900;color:var(--orange);white-space:nowrap}
+.combo-footer{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:calc(var(--u)*.7);margin-top:calc(var(--u)*1.15)}
+.combo-footer>div{padding:calc(var(--u)*.75) calc(var(--u)*1);background:#fff;border:calc(var(--u)*.08) solid var(--line);border-radius:calc(var(--u)*.9)}
+.combo-footer span{display:block;font-size:calc(var(--u)*.78);color:var(--txt3);text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+.combo-footer b{display:block;margin-top:calc(var(--u)*.18);font-family:'Archivo';font-size:calc(var(--u)*1.45);color:var(--navy2)}
+.combo-footer-total{background:var(--navy)!important;border-color:var(--navy)!important}.combo-footer-total span{color:#AAA6C3}.combo-footer-total b{color:#fff}
+.offer-wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:calc(var(--u)*3);align-items:center;width:100%}
+.slide-final-offer .big{font-size:calc(var(--u)*5.7);max-width:13ch}
+.offer-old{display:inline-block;color:#fff;text-decoration:line-through;text-decoration-color:var(--orange);text-decoration-thickness:calc(var(--u)*.22)}
+.offer-saving{margin-top:calc(var(--u)*1.7);display:inline-flex;padding:calc(var(--u)*.8) calc(var(--u)*1.15);border-radius:999px;background:rgba(255,107,0,.13);border:calc(var(--u)*.1) solid rgba(255,107,0,.48);color:var(--orange-l);font-family:'Archivo';font-size:calc(var(--u)*1.35);font-weight:900}
+.offer-rule{margin-top:calc(var(--u)*.8);color:#AAA6C3;font-size:calc(var(--u)*1);line-height:1.4;max-width:45ch}
+.offer-card{background:#fff;color:var(--txt);border-radius:calc(var(--u)*1.35);padding:calc(var(--u)*1.6);box-shadow:0 calc(var(--u)*1.6) calc(var(--u)*4) rgba(0,0,0,.22)}
+.offer-items{display:grid;gap:calc(var(--u)*.45);max-height:calc(var(--u)*25);overflow:auto}
+.offer-item{display:flex;align-items:center;justify-content:space-between;gap:calc(var(--u)*.8);padding:calc(var(--u)*.58) calc(var(--u)*.7);border-radius:calc(var(--u)*.7);background:var(--cream2);font-size:calc(var(--u)*.92);color:var(--txt2)}
+.offer-item b{font-family:'Archivo';color:var(--navy2)}
+.offer-empty{padding:calc(var(--u)*1);border:calc(var(--u)*.08) dashed var(--line);border-radius:calc(var(--u)*.8);color:var(--txt3);font-size:calc(var(--u)*.95)}
+.offer-summary{margin-top:calc(var(--u)*.9);padding-top:calc(var(--u)*.75);border-top:calc(var(--u)*.08) solid var(--line);display:grid;gap:calc(var(--u)*.42)}
+.offer-summary>div{display:flex;justify-content:space-between;gap:calc(var(--u)*1);font-size:calc(var(--u)*.95);color:var(--txt2)}
+.offer-summary b{font-family:'Archivo';color:var(--navy2)}
+.offer-summary-total{padding-top:calc(var(--u)*.5);margin-top:calc(var(--u)*.2);border-top:calc(var(--u)*.08) solid var(--line);font-size:calc(var(--u)*1.2)!important}
+.offer-summary-total b{font-size:calc(var(--u)*1.65);color:var(--orange)}
+.custom-slide .custom-content{max-width:72ch}.custom-slide .big{font-size:calc(var(--u)*5.7);max-width:14ch}.custom-slide .lead{white-space:pre-line;max-width:58ch}
+.custom-links{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.6);margin-top:calc(var(--u)*1.7)}
+.custom-links button{border:calc(var(--u)*.1) solid var(--orange);background:transparent;color:var(--orange);border-radius:999px;padding:calc(var(--u)*.62) calc(var(--u)*1);font:800 calc(var(--u)*.98) 'Archivo';cursor:pointer}
+.custom-slide.dark .custom-links button,.custom-slide.deep .custom-links button{color:var(--orange-l)}
+.mosaic-overlay{display:none;position:absolute;inset:0;z-index:26;background:rgba(3,0,21,.88);backdrop-filter:blur(8px);padding:calc(var(--u)*1.3)}
+.mosaic-overlay.on{display:flex}.mosaic-box{width:100%;height:100%;display:flex;flex-direction:column;background:var(--cream);color:var(--txt);border-radius:calc(var(--u)*1.1);overflow:hidden}
+.mosaic-head{display:flex;justify-content:space-between;align-items:flex-start;padding:calc(var(--u)*1.25) calc(var(--u)*1.6);border-bottom:calc(var(--u)*.08) solid var(--line)}.mosaic-head .eyebrow{margin-bottom:calc(var(--u)*.2)}
+.mosaic-body{display:grid;grid-template-columns:1.55fr .75fr;min-height:0;flex:1}.mosaic-column,.mosaic-side{overflow:auto;padding:calc(var(--u)*1.25) calc(var(--u)*1.5)}.mosaic-side{border-left:calc(var(--u)*.08) solid var(--line);background:#fff}
+.mosaic-section-title{font-family:'Archivo';font-weight:900;font-size:calc(var(--u)*1.15);color:var(--navy2);margin-bottom:calc(var(--u)*.65)}.mosaic-spacer{margin-top:calc(var(--u)*1.25)}
+.mosaic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*.65)}
+.mosaic-card{position:relative;min-height:calc(var(--u)*7);display:flex;flex-direction:column;justify-content:space-between;padding:calc(var(--u)*.8);background:#fff;border:calc(var(--u)*.08) solid var(--line);border-radius:calc(var(--u)*.85);cursor:grab}
+.mosaic-card.dragging{opacity:.45}.mosaic-card.drag-over{border-color:var(--orange);box-shadow:0 0 0 calc(var(--u)*.1) rgba(255,107,0,.15)}
+.mosaic-num{font-family:'Archivo Narrow';font-size:calc(var(--u)*.8);font-weight:700;color:var(--orange);letter-spacing:.08em;text-transform:uppercase}.mosaic-card b{font-family:'Archivo';font-size:calc(var(--u)*1);color:var(--navy2);line-height:1.15}
+.mosaic-actions{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.35);margin-top:calc(var(--u)*.65)}.mosaic-actions button,.hidden-slide button{border:0;border-radius:999px;background:var(--cream2);color:var(--txt2);padding:calc(var(--u)*.35) calc(var(--u)*.6);font:700 calc(var(--u)*.72) 'Inter';cursor:pointer}
+.mosaic-actions button:hover,.hidden-slide button:hover{background:#FFE2C5;color:var(--orange)}
+.mosaic-hidden{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.5)}.hidden-slide{display:flex;align-items:center;gap:calc(var(--u)*.45);padding:calc(var(--u)*.45) calc(var(--u)*.6);border:calc(var(--u)*.08) solid var(--line);border-radius:999px;background:#fff;font-size:calc(var(--u)*.82);color:var(--txt2)}
+.mosaic-field{display:grid;gap:calc(var(--u)*.32);margin-top:calc(var(--u)*.7);font-family:'Archivo Narrow';font-size:calc(var(--u)*.78);font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--txt3)}
+.mosaic-field input,.mosaic-field textarea,.mosaic-field select{width:100%;border:1px solid #E4DCEB;border-radius:9px;padding:9px 10px;font:600 12px 'Inter';color:var(--navy2);background:#fff;resize:vertical}
+.deliverable-checks{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--u)*.35);max-height:calc(var(--u)*10);overflow:auto;padding:calc(var(--u)*.4);border:1px solid #E4DCEB;border-radius:9px}.deliverable-checks label{display:flex;align-items:flex-start;gap:6px;font:600 10px/1.25 'Inter';text-transform:none;letter-spacing:0;color:var(--txt2)}.deliverable-checks input{width:auto;margin-top:1px}
+.mosaic-editor-actions{display:flex;gap:calc(var(--u)*.5);margin-top:calc(var(--u)*.8)}.ghost-action{border:1px solid var(--line);background:#fff;color:var(--txt2);border-radius:999px;padding:calc(var(--u)*.55) calc(var(--u)*.9);font:800 calc(var(--u)*.82) 'Archivo';cursor:pointer}
+.wildcards{display:grid;gap:calc(var(--u)*.45)}.wildcards button{display:grid;text-align:left;gap:calc(var(--u)*.15);padding:calc(var(--u)*.65) calc(var(--u)*.8);border:1px solid var(--line);border-radius:calc(var(--u)*.7);background:var(--cream);cursor:pointer}.wildcards b{font-family:'Archivo';font-size:calc(var(--u)*.88);color:var(--navy2)}.wildcards span{font-size:calc(var(--u)*.72);line-height:1.3;color:var(--txt3)}
+.catalog-list{display:grid;gap:calc(var(--u)*.55);margin-top:calc(var(--u)*.9)}.catalog-row{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(0,.7fr) minmax(0,.75fr);gap:calc(var(--u)*.7);align-items:end;padding:calc(var(--u)*.7);border:1px solid var(--line);border-radius:calc(var(--u)*.75);background:#fff}
+.catalog-row label,.discount-row label{display:grid;gap:calc(var(--u)*.25);font-family:'Archivo Narrow';font-size:calc(var(--u)*.72);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--txt3)}.catalog-row input,.discount-row input{border:1px solid #E4DCEB;border-radius:8px;padding:8px 9px;font:700 12px 'Inter';color:var(--navy2);background:#fff}.catalog-row .catalog-active{display:flex;align-items:center;gap:6px;padding-bottom:8px;font:700 11px 'Inter';color:var(--txt2)}
+.discount-rules{display:grid;gap:calc(var(--u)*.55);margin-top:calc(var(--u)*.9)}.discount-row{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:calc(var(--u)*.65);align-items:end;padding:calc(var(--u)*.7);border:1px solid var(--line);border-radius:calc(var(--u)*.75);background:#fff}
+.nav.at-start #navPrev,.nav.at-end #navNext{opacity:.28;cursor:default}
+body.v .mosaic-body{grid-template-columns:1fr}body.v .mosaic-side{border-left:0;border-top:1px solid var(--line)}body.v .mosaic-grid{grid-template-columns:1fr 1fr}body.v .product-builder{grid-template-columns:1fr}body.v .slide-combo{padding-top:calc(var(--u)*4)}body.v .combo-head{grid-template-columns:1fr}body.v .combo-total-mini{min-width:0}body.v .combo-footer{grid-template-columns:1fr}body.v .offer-wrap{grid-template-columns:1fr;gap:calc(var(--u)*1.6)}body.v .slide-final-offer .big{font-size:calc(var(--u)*4.8);max-width:none}body.v .offer-items{max-height:calc(var(--u)*16)}body.v .diagnostic-promise{max-width:none}
+
 </style>
 </head>
 <body class="h">
@@ -457,485 +527,249 @@ body.v .career-tags span{font-size:calc(var(--u)*.66);padding:calc(var(--u)*.28)
     <div class="auth-foot">Acesso individual por vendedor</div>
   </div>
 </div>
-<div class="bar"><span class="lbl">Formato</span><div class="seg"><button id="bH" class="on" onclick="setMode('h')">Horizontal</button><button id="bV" onclick="setMode('v')">Vertical</button></div><button id="bSettings" class="btn gear-btn" onclick="toggleSettings()" aria-label="Configurações" title="Configurações">⚙</button><span class="hint">Setas navegam. A engrenagem abre as configurações comerciais.</span><div class="user-session" id="userSession" hidden><div class="user-badge"><span id="userSessionName">Usuário</span><span class="user-role" id="userSessionRole">Vendedor</span></div><button class="user-logout" onclick="logoutUser()">Sair</button></div></div>
+<div class="bar">
+  <span class="lbl">Formato</span>
+  <div class="seg"><button id="bH" class="on" onclick="setMode('h')">Horizontal</button><button id="bV" onclick="setMode('v')">Vertical</button></div>
+  <button id="bMosaic" class="btn" onclick="toggleMosaic()" title="Organizar e personalizar slides">▦ Mosaico</button>
+  <button id="bSettings" class="btn gear-btn" onclick="toggleSettings()" aria-label="Configurações" title="Configurações">⚙</button>
+  <span class="hint">Setas navegam. <b>Mosaico</b> reorganiza e personaliza a apresentação.</span>
+  <div class="user-session" id="userSession" hidden><div class="user-badge"><span id="userSessionName">Usuário</span><span class="user-role" id="userSessionRole">Vendedor</span></div><button class="user-logout" onclick="logoutUser()">Sair</button></div>
+</div>
 <div class="wrap"><div class="stage" id="stage">
-<section class="slide on cover"><div class="cover-grid"><div><img class="brand-logo" src="./assets/marca/high-level-logo.webp" alt="High Level"><div class="kicker">S.O.S Inglês Técnico Offshore</div><div class="big">Inglês que você usa <em>falando.</em></div><div class="lead">Programa completo de 12 meses, com conversação ao vivo no centro.</div><div class="proofs"><span>+25 anos de High Level</span><span>Inglês em contexto offshore</span></div><div class="foot">High Level Consultoria de Idiomas</div></div><div class="cover-visual"><img class="mari" src="./assets/marca/mari.webp" alt="Mari"><div class="badge"><b>12 meses</b><span>de programa completo</span></div></div></div></section><section class="slide dark slide-authority"><div class="authority"><div class="authority-photo"><img src="./assets/marca/hl-sede.webp" alt="Treinamento na sede da High Level"></div><div class="authority-copy"><div class="eyebrow">Quem já confiou o inglês da equipe</div><div class="big"><em>25 anos</em> formando times inteiros.</div><div class="lead">Consultoria, não curso de prateleira. O programa é moldado ao objetivo de quem estuda.</div><div class="partner-label">Experiência com equipes e processos seletivos de empresas como</div><div class="logos"><div class="logo-card"><img src="./assets/parceiros/shell.webp" alt="Shell"></div><div class="logo-card"><img src="./assets/parceiros/bw-offshore.webp" alt="BW Offshore"></div><div class="logo-card"><img src="./assets/parceiros/abs.webp" alt="ABS"></div><div class="logo-card"><img src="./assets/parceiros/ellis.webp" alt="Ellis"></div></div></div></div></section><section class="slide light slide-level"><div class="split"><div><div class="eyebrow">Ponto de partida</div><div class="big">Começa pelo <em>nivelamento.</em></div><div class="lead">O teste define por onde você entra e em quais turmas você fala.</div><div class="steps"><div class="step"><i>01</i><div><b>Teste</b><span>No app, resultado na hora.</span></div></div><div class="step"><i>02</i><div><b>Trilha</b><span>O módulo certo para o seu nível.</span></div></div><div class="step"><i>03</i><div><b>Agenda</b><span>Horários abertos para esse nível.</span></div></div></div></div><div class="phone-stage"><img src="./assets/produto/deck-agenda.webp" alt="Agenda no DECK"></div></div></section><section class="slide dark slide-live"><div class="split"><div><div class="eyebrow">O núcleo do programa</div><div class="big"><em>120 horas</em> falando ao vivo.</div><div class="grid g3"><div class="cell stat"><div class="k">120h</div><div class="v">de conversação ao vivo</div></div><div class="cell stat"><div class="k">6</div><div class="v">alunos por turma, no máximo</div></div><div class="cell stat"><div class="k">Seg a sex</div><div class="v">aulas disponíveis</div></div></div><div class="chips"><span class="chip">Horários flexíveis</span><span class="chip">Temas diferentes em cada aula</span><span class="chip">100% em contexto offshore</span></div></div><div class="media"><img src="./assets/produto/aovivo.webp" alt="Aula ao vivo"><div class="caption">Aula real ao vivo</div></div></div></section><section class="slide light slide-recorded"><div class="split"><div><div class="eyebrow">A base estrutural</div><div class="big"><em>100 aulas</em> gravadas, do básico ao intermediário.</div><div class="lead">Liberadas desde o primeiro dia. Três formatos em cada módulo.</div><div class="chips"><span class="chip">Teórica</span><span class="chip">Texto com áudio</span><span class="chip">Prática guiada</span></div></div><div class="media media-platform"><img src="./assets/produto/gravadas.webp" alt="Plataforma do aluno com aulas gravadas"><div class="caption">Plataforma do aluno</div></div></div></section><section class="slide deep slide-deck"><div class="split"><div><div class="eyebrow">DECK, o app do aluno</div><div class="big">Treino todo dia, <em>mesmo sem aula.</em></div><div class="grid g4"><div class="cell"><div class="n">01</div><div class="t">Nivelamento</div><div class="d">Perfil por área, nível e objetivo.</div></div><div class="cell"><div class="n">02</div><div class="t">IA de conversa</div><div class="d">8 sotaques diferentes.</div></div><div class="cell"><div class="n">03</div><div class="t">Flashcards</div><div class="d">Repetição espaçada.</div></div><div class="cell"><div class="n">04</div><div class="t">Agendamento</div><div class="d">Sua aula em poucos cliques.</div></div></div></div><div class="deck-stack"><div class="deck-shot"><span>Agenda</span><img src="./assets/produto/deck-agenda.webp" alt="Agenda de aulas no DECK"></div><div class="deck-shot"><span>IA Tutor</span><img src="./assets/produto/deck-ia.webp" alt="IA Tutor do DECK"></div><div class="deck-shot"><span>Memory Card</span><img src="./assets/produto/deck-memory.webp" alt="Memory Card do DECK"></div></div></div></section>
-<section class="slide light slide-career">
-  <div class="career-head">
-    <div class="eyebrow">Bônus de carreira</div>
-    <div class="big">Preparação para <em>ser encontrado</em> e se apresentar melhor.</div>
+<section class="slide cover" data-slide-id="cover" data-slide-title="Abertura"><div class="cover-grid"><div><img alt="High Level" class="brand-logo" src="./assets/marca/high-level-logo.webp"/><div class="kicker">S.O.S Inglês Técnico Offshore</div><div class="big">Inglês que você usa <em>falando.</em></div><div class="lead">Programa completo de 12 meses, com conversação ao vivo no centro.</div><div class="proofs"><span>+25 anos de High Level</span><span>Inglês em contexto offshore</span></div><div class="diagnostic-promise"><b>Diagnóstico + planejamento de estudo</b><span>para transformar o inglês de um problema em um divisor de águas na sua carreira.</span></div><div class="foot">High Level Consultoria de Idiomas</div></div><div class="cover-visual"><img alt="Mari" class="mari" src="./assets/marca/mari.webp"/><div class="badge"><b>12 meses</b><span>de programa completo</span></div></div></div></section>
+<section class="slide dark slide-authority" data-slide-id="authority" data-slide-title="High Level"><div class="authority"><div class="authority-photo"><img alt="Treinamento na sede da High Level" src="./assets/marca/hl-sede.webp"/></div><div class="authority-copy"><div class="eyebrow">Quem já confiou o inglês da equipe</div><div class="big"><em>25 anos</em> formando times inteiros.</div><div class="lead">Consultoria, não curso de prateleira. O programa é moldado ao objetivo de quem estuda.</div><div class="partner-label">Experiência com equipes e processos seletivos de empresas como</div><div class="logos"><div class="logo-card"><img alt="Shell" src="./assets/parceiros/shell.webp"/></div><div class="logo-card"><img alt="BW Offshore" src="./assets/parceiros/bw-offshore.webp"/></div><div class="logo-card"><img alt="ABS" src="./assets/parceiros/abs.webp"/></div><div class="logo-card"><img alt="Ellis" src="./assets/parceiros/ellis.webp"/></div></div></div></div></section>
+<section class="slide light slide-level" data-slide-id="level" data-slide-title="Nivelamento"><div class="split"><div><div class="eyebrow">Ponto de partida</div><div class="big">Começa pelo <em>nivelamento.</em></div><div class="lead">O teste define por onde você entra e em quais turmas você fala.</div><div class="steps"><div class="step"><i>01</i><div><b>Teste</b><span>No app, resultado na hora.</span></div></div><div class="step"><i>02</i><div><b>Trilha</b><span>O módulo certo para o seu nível.</span></div></div><div class="step"><i>03</i><div><b>Agenda</b><span>Horários abertos para esse nível.</span></div></div></div></div><div class="phone-stage"><img alt="Agenda no DECK" src="./assets/produto/deck-agenda.webp"/></div></div></section>
+<section class="slide dark slide-live" data-slide-id="live" data-slide-title="120h ao vivo"><div class="split"><div><div class="eyebrow">O núcleo do programa</div><div class="big"><em>120 horas</em> falando ao vivo.</div><div class="grid g3"><div class="cell stat"><div class="k">120h</div><div class="v">de conversação ao vivo</div></div><div class="cell stat"><div class="k">6</div><div class="v">alunos por turma, no máximo</div></div><div class="cell stat"><div class="k">Seg a sex</div><div class="v">aulas disponíveis</div></div></div><div class="chips"><span class="chip">Horários flexíveis</span><span class="chip">Temas diferentes em cada aula</span><span class="chip">100% em contexto offshore</span></div></div><div class="media"><img alt="Aula ao vivo" src="./assets/produto/aovivo.webp"/><div class="caption">Aula real ao vivo</div></div></div></section>
+<section class="slide light slide-recorded" data-slide-id="recorded" data-slide-title="Aulas gravadas"><div class="split"><div><div class="eyebrow">A base estrutural</div><div class="big"><em>100 aulas</em> gravadas, do básico ao intermediário.</div><div class="lead">Liberadas desde o primeiro dia. Três formatos em cada módulo.</div><div class="chips"><span class="chip">Teórica</span><span class="chip">Texto com áudio</span><span class="chip">Prática guiada</span></div></div><div class="media media-platform"><img alt="Plataforma do aluno com aulas gravadas" src="./assets/produto/gravadas.webp"/><div class="caption">Plataforma do aluno</div></div></div></section>
+<section class="slide deep slide-deck" data-slide-id="deck" data-slide-title="DECK"><div class="split"><div><div class="eyebrow">DECK, o app do aluno</div><div class="big">Treino todo dia, <em>mesmo sem aula.</em></div><div class="grid g4"><div class="cell"><div class="n">01</div><div class="t">Nivelamento</div><div class="d">Perfil por área, nível e objetivo.</div></div><div class="cell"><div class="n">02</div><div class="t">IA de conversa</div><div class="d">8 sotaques diferentes.</div></div><div class="cell"><div class="n">03</div><div class="t">Flashcards</div><div class="d">Repetição espaçada.</div></div><div class="cell"><div class="n">04</div><div class="t">Agendamento</div><div class="d">Sua aula em poucos cliques.</div></div></div></div><div class="deck-stack"><div class="deck-shot"><span>Agenda</span><img alt="Agenda de aulas no DECK" src="./assets/produto/deck-agenda.webp"/></div><div class="deck-shot"><span>IA Tutor</span><img alt="IA Tutor do DECK" src="./assets/produto/deck-ia.webp"/></div><div class="deck-shot"><span>Memory Card</span><img alt="Memory Card do DECK" src="./assets/produto/deck-memory.webp"/></div></div></div></section>
+<section class="slide light slide-career" data-slide-id="career" data-slide-title="Carreira">
+<div class="career-head">
+<div class="eyebrow">Bônus de carreira</div>
+<div class="big">Preparação para <em>ser encontrado</em> e se apresentar melhor.</div>
+</div>
+<div class="career-grid">
+<article class="career-card">
+<div class="career-shot"><img alt="Curso LinkedIn para offshore" src="./assets/produto/linkedin.webp"/></div>
+<div class="career-content">
+<div class="career-kicker">Curso bônus</div>
+<div class="career-title">LinkedIn para offshore</div>
+<div class="career-desc">Aulas práticas para organizar o perfil e fortalecer sua apresentação profissional no mercado offshore.</div>
+<div class="career-tags"><span>Perfil profissional</span><span>LinkedIn</span><span>Mercado offshore</span></div>
+</div>
+</article>
+<article class="career-card">
+<div class="career-shot"><img alt="Mini curso S.O.S Entrevista de Emprego em Inglês" src="./assets/produto/entrevista.webp"/></div>
+<div class="career-content">
+<div class="career-kicker">Mini curso</div>
+<div class="career-title">Entrevista de emprego em inglês</div>
+<div class="career-desc">Treino direcionado para se apresentar e responder com mais clareza em uma entrevista de emprego em inglês.</div>
+<div class="career-tags"><span>Apresentação</span><span>Respostas</span><span>Job Interview</span></div>
+</div>
+</article>
+</div>
+</section>
+
+<section class="slide light slide-combo" data-slide-id="combo" data-slide-title="Monte o projeto">
+  <div class="combo-head">
+    <div>
+      <div class="eyebrow">Projeto personalizado</div>
+      <div class="big">Monte o que faz <em>sentido agora.</em></div>
+      <div class="lead">Selecione os entregáveis que entram no projeto deste aluno. O valor é calculado na hora com os preços definidos pela conta mestre.</div>
+    </div>
+    <div class="combo-total-mini"><span>Projeto selecionado</span><b id="comboTotalTop">R$ 0,00</b><small id="comboCountTop">0 itens</small></div>
   </div>
-  <div class="career-grid">
-    <article class="career-card">
-      <div class="career-shot"><img src="./assets/produto/linkedin.webp" alt="Curso LinkedIn para offshore"></div>
-      <div class="career-content">
-        <div class="career-kicker">Curso bônus</div>
-        <div class="career-title">LinkedIn para offshore</div>
-        <div class="career-desc">Aulas práticas para organizar o perfil e fortalecer sua apresentação profissional no mercado offshore.</div>
-        <div class="career-tags"><span>Perfil profissional</span><span>LinkedIn</span><span>Mercado offshore</span></div>
-      </div>
-    </article>
-    <article class="career-card">
-      <div class="career-shot"><img src="./assets/produto/entrevista.webp" alt="Mini curso S.O.S Entrevista de Emprego em Inglês"></div>
-      <div class="career-content">
-        <div class="career-kicker">Mini curso</div>
-        <div class="career-title">Entrevista de emprego em inglês</div>
-        <div class="career-desc">Treino direcionado para se apresentar e responder com mais clareza em uma entrevista de emprego em inglês.</div>
-        <div class="career-tags"><span>Apresentação</span><span>Respostas</span><span>Job Interview</span></div>
-      </div>
-    </article>
+  <div class="product-builder" id="productBuilder"></div>
+  <div class="combo-footer">
+    <div><span>Subtotal</span><b id="comboSubtotal">R$ 0,00</b></div>
+    <div><span>Desconto aplicável</span><b id="comboDiscountPreview">0%</b></div>
+    <div class="combo-footer-total"><span>Projeto</span><b id="comboFinalPreview">R$ 0,00</b></div>
   </div>
 </section>
-<section class="slide deep slide-invest"><div class="invest"><div><div class="eyebrow">Investimento</div><div class="lead" style="margin-top:0">Aula particular custa em média <b style="color:#fff">R$ <span data-edit id="hora">50</span> por hora</b>. As <b style="color:#fff"><span data-edit id="horas">120</span> horas</b> de conversação sairiam por</div><div class="strike" style="margin-top:calc(var(--u)*1.2)">R$ <span id="ancora">6.000</span></div><div class="pricebig">R$ <span id="precoInvest">2.560</span><small> à vista</small></div><div class="parc">ou <b>12x de R$ <span id="parcelaInvest">264,76</span></b> no cartão</div><div class="save">Economia de R$ <span id="economia">3.440</span> só na conversação</div><div class="booklet-offer" id="apostilaInvest">Apostila física incluída, bônus de R$ <span id="apostilaValorInvest">297</span></div><div class="deadline">Condição válida até&nbsp;<span id="prazo" contenteditable="true" spellcheck="false" title="Clique para ajustar a validade"></span></div><div class="note">E as 100 aulas gravadas, o nivelamento e o DECK entram junto.</div></div><div class="mockup"><img src="./assets/produto/mockup-entregaveis.webp" alt="Entregáveis"><small>Tudo dentro do mesmo programa</small></div></div></section><section class="slide light payment-slide">
-  <div class="eyebrow">Modo de pagamento</div>
-  <div class="big">Condição exclusiva de <em>diagnóstico.</em></div>
-  <div class="pay-tabs"><button id="tabSinal" class="on" onclick="setPayTab('sinal')">Por sinal</button><button id="tabVoucher" onclick="setPayTab('voucher')">Voucher</button></div>
-  <div class="pay-grid">
-    <div class="pay-card pay-input-card">
-      <div id="paySinalPane">
-        <div class="ctitle">Informe o sinal</div>
-        <div class="signal-input"><span>R$</span><input id="paySinal" inputmode="decimal" value="0,00" aria-label="Valor do sinal"></div>
-        <div class="pay-help">A condição é liberada automaticamente conforme a faixa configurada.</div>
-      </div>
-      <div id="payVoucherPane" style="display:none">
-        <div class="ctitle">Aplicar voucher</div>
-        <div class="voucher-input"><input id="voucherCode" autocomplete="off" placeholder="Digite o código"><button onclick="aplicarVoucher()">Aplicar</button></div>
-        <div class="pay-help">O código carrega a condição definida nas configurações.</div>
-        <div class="voucher-status" id="voucherStatus"></div>
-      </div>
-      <div class="unlock-wrap pay-unlock-wrap"><div class="unlock-title">Benefícios disponíveis</div><div class="unlock-list" id="unlockList"></div></div>
-      <div class="booklet-mini" id="apostilaPayment">Apostila física incluída, bônus de R$ <b id="apostilaValorPay">297</b></div>
+<section class="slide deep slide-final-offer" data-slide-id="offer" data-slide-title="Condição do projeto">
+  <div class="offer-wrap">
+    <div class="offer-copy">
+      <div class="eyebrow">Condição do projeto</div>
+      <div class="big">Você realiza o projeto de <span class="offer-old" id="offerFrom">R$ 0,00</span> por <em id="offerTo">R$ 0,00</em>.</div>
+      <div class="offer-saving" id="offerSaving">Selecione os itens no slide anterior.</div>
+      <div class="offer-rule" id="offerRule">Condição calculada automaticamente pela composição do projeto.</div>
     </div>
-    <div class="pay-card pay-result-card">
-      <div class="ctitle">Condição liberada</div>
-      <div class="pay-condition" id="payConditionTitle">Condição padrão</div>
-      <div class="pay-main" id="payMain">12x de <em>R$ 264,76</em></div>
-      <div class="pay-effective-discount" id="payEffectiveDiscount"><div><div class="label">Desconto do pacote</div><div class="value" id="payEffectiveDiscountValue">R$ 0,00</div></div><small id="payEffectiveDiscountBase">Comparado ao parcelamento padrão com juros</small></div>
-      <div class="pay-badges" id="payBadges"></div>
-      <div class="pay-summary">
-        <div class="row"><span>Sinal</span><b id="paySignalDisplay">R$ 0,00</b></div>
-        <div class="row"><span>Valor do curso</span><b id="payCourseDisplay">R$ 2.560,00</b></div>
-        <div class="row"><span>Total para o cliente</span><b id="payTotalDisplay">R$ 3.177,12</b></div>
+    <div class="offer-card">
+      <div class="ctitle">O que entra neste projeto</div>
+      <div class="offer-items" id="offerItems"></div>
+      <div class="offer-summary">
+        <div><span>Valor dos entregáveis</span><b id="offerSubtotal">R$ 0,00</b></div>
+        <div><span>Desconto</span><b id="offerDiscountAmount">R$ 0,00</b></div>
+        <div class="offer-summary-total"><span>Valor final</span><b id="offerFinal">R$ 0,00</b></div>
       </div>
-      <button class="copy" id="copyPayment" onclick="copiarPagamento()">Copiar condição</button>
     </div>
   </div>
 </section>
+
 <div class="settings-overlay" id="settingsOverlay" aria-hidden="true">
   <div class="settings-box">
-    <div class="settings-head"><div><div class="eyebrow">Configurações comerciais</div><div class="settings-title">Regras de condição</div></div><button class="settings-close" onclick="toggleSettings(false)" aria-label="Fechar">×</button></div>
+    <div class="settings-head"><div><div class="eyebrow">Configurações</div><div class="settings-title">Gestão da apresentação</div></div><button class="settings-close" onclick="toggleSettings(false)" aria-label="Fechar">×</button></div>
     <div class="settings-tabs">
-      <button id="settingsTabPreco" class="on" onclick="setSettingsTab('preco')">Preço</button>
-      <button id="settingsTabApostila" onclick="setSettingsTab('apostila')">Apostila</button>
-      <button id="settingsTabSinal" onclick="setSettingsTab('sinal')">Sinal</button>
-      <button id="settingsTabVouchers" onclick="setSettingsTab('vouchers')">Vouchers</button>
+      <button id="settingsTabCatalogo" class="master-only on" onclick="setSettingsTab('catalogo')">Catálogo e preços</button>
+      <button id="settingsTabDescontos" class="master-only" onclick="setSettingsTab('descontos')">Descontos</button>
       <button id="settingsTabUsuarios" class="master-only" onclick="setSettingsTab('usuarios')">Usuários</button>
+      <button id="settingsTabConta" onclick="setSettingsTab('conta')">Minha conta</button>
     </div>
     <div class="settings-scroll">
-      <div class="settings-panel on" data-settings-panel="preco">
-        <div class="settings-section">
-          <div class="settings-section-title">Preço do curso</div>
-          <div class="settings-desc">Altere o preço à vista usado no investimento, no parcelamento padrão e em todas as condições comerciais.</div>
-          <div class="settings-price-grid">
-            <div class="settings-price-card">
-              <label>Preço à vista <span class="money-field">R$ <input id="cfgPrecoBase" inputmode="decimal" value="2560"></span></label>
-              <div class="settings-price-preview">Novo parcelamento padrão: <b id="cfgPrecoParcelaPreview">12x de R$ 264,76</b></div>
-            </div>
-            <div class="settings-price-card">
-              <div class="settings-section-title">Aplicação automática</div>
-              <div class="settings-price-preview">O novo preço atualiza o slide de investimento, economia, sinal máximo, descontos, vouchers e o modo de pagamento.</div>
-            </div>
-          </div>
-        </div>
+      <div class="settings-panel on" data-settings-panel="catalogo">
+        <div class="settings-section"><div class="settings-section-head"><div><div class="settings-section-title">Produtos e valores</div><div class="settings-desc">Somente a conta mestre altera os preços. Todos os vendedores recebem os mesmos valores automaticamente.</div></div></div><div class="catalog-list" id="catalogList"></div></div>
       </div>
-      <div class="settings-panel" data-settings-panel="apostila">
+      <div class="settings-panel" data-settings-panel="descontos">
         <div class="settings-section">
-          <div class="settings-section-title">Apostila física</div>
-          <div class="settings-inline"><label class="settings-check"><input id="cfgApostilaAtiva" type="checkbox" checked> Mostrar como bônus</label><label>Valor do bônus <span class="money-field">R$ <input id="cfgApostilaValor" value="297"></span></label></div>
-        </div>
-      </div>
-      <div class="settings-panel" data-settings-panel="sinal">
-        <div class="settings-section">
-          <div class="settings-section-head"><div><div class="settings-section-title">Faixas por sinal</div><div class="settings-desc">Cada faixa pode liberar desconto e parcelamento sem juros. As faixas são avaliadas pelo valor do sinal.</div></div><button class="settings-add" onclick="addRule()">+ Adicionar faixa</button></div>
-          <div class="rule-list" id="ruleList"></div>
-        </div>
-      </div>
-      <div class="settings-panel" data-settings-panel="vouchers">
-        <div class="settings-section">
-          <div class="settings-section-head"><div><div class="settings-section-title">Vouchers</div><div class="settings-desc">Crie códigos com entrada própria, bônus combináveis e opção de incluir a apostila física.</div></div><button class="settings-add" onclick="addVoucher()">+ Criar voucher</button></div>
-          <div class="voucher-list" id="voucherList"></div>
+          <div class="settings-section-head"><div><div class="settings-section-title">Regras de desconto</div><div class="settings-desc">Uma regra pode exigir quantidade mínima de itens, valor mínimo ou os dois. Quando mais de uma regra se aplicar, vale o maior percentual.</div></div><button class="settings-add" onclick="addDiscountRule()">+ Adicionar regra</button></div>
+          <div class="discount-rules" id="discountRules"></div>
         </div>
       </div>
       <div class="settings-panel" data-settings-panel="usuarios">
         <div class="settings-section">
           <div class="settings-section-title">Contas de vendedores</div>
-          <div class="settings-desc">Somente a conta mestre pode criar, bloquear e redefinir a senha das contas. Cada vendedor tem uma configuração comercial independente.</div>
-          <div class="account-create">
-            <label>Nome do usuário<input id="newUserName" autocomplete="off" placeholder="Ex.: Matheus"></label>
-            <label>Senha inicial<input id="newUserPassword" type="password" autocomplete="new-password" placeholder="Mínimo 3 caracteres"></label>
-            <button type="button" onclick="createSeller()">Adicionar conta</button>
-          </div>
-          <div class="account-status" id="accountStatus"></div>
-          <div class="user-list" id="userList"></div>
+          <div class="settings-desc">A conta mestre cria e administra acessos. Cada vendedor mantém sua própria ordem e personalização de slides.</div>
+          <div class="account-create"><label>Nome do usuário<input id="newUserName" autocomplete="off" placeholder="Ex.: Matheus"></label><label>Senha inicial<input id="newUserPassword" type="password" autocomplete="new-password" placeholder="Mínimo 3 caracteres"></label><button type="button" onclick="createSeller()">Adicionar conta</button></div>
+          <div class="account-status" id="accountStatus"></div><div class="user-list" id="userList"></div>
         </div>
+      </div>
+      <div class="settings-panel" data-settings-panel="conta">
         <div class="settings-section">
-          <div class="settings-section-title">Minha senha</div>
-          <div class="settings-desc">Altere a senha da conta atualmente conectada.</div>
-          <div class="password-box">
-            <label>Senha atual<input id="currentPassword" type="password" autocomplete="current-password"></label>
-            <label>Nova senha<input id="newPassword" type="password" autocomplete="new-password"></label>
-            <button class="settings-add" type="button" onclick="changeMyPassword()">Alterar senha</button>
-          </div>
+          <div class="settings-section-title">Minha senha</div><div class="settings-desc">Altere a senha da conta atualmente conectada.</div>
+          <div class="password-box"><label>Senha atual<input id="currentPassword" type="password" autocomplete="current-password"></label><label>Nova senha<input id="newPassword" type="password" autocomplete="new-password"></label><button class="settings-add" type="button" onclick="changeMyPassword()">Alterar senha</button></div>
           <div class="account-status" id="passwordStatus"></div>
         </div>
       </div>
     </div>
-    <div class="settings-foot"><span id="cloudStatus" class="cloud-status">Configuração da conta: aguardando login...</span><button onclick="toggleSettings(false)">Concluir</button></div>
+    <div class="settings-foot"><span id="cloudStatus" class="cloud-status">Aguardando login...</span><button onclick="toggleSettings(false)">Concluir</button></div>
   </div>
 </div>
-<div class="nav"><div class="dots" id="dots"></div><button class="arrow" onclick="go(-1)">&#8249;</button><button class="arrow" onclick="go(1)">&#8250;</button></div>
+
+<div class="mosaic-overlay" id="mosaicOverlay" aria-hidden="true">
+  <div class="mosaic-box">
+    <div class="mosaic-head"><div><div class="eyebrow">Mosaico</div><div class="settings-title">Monte a apresentação para este vendedor</div><div class="settings-desc">Arraste para mudar a ordem, oculte o que não fizer sentido e crie slides ligados às dores e aos entregáveis.</div></div><button class="settings-close" onclick="toggleMosaic(false)">×</button></div>
+    <div class="mosaic-body">
+      <div class="mosaic-column"><div class="mosaic-section-title">Ordem atual</div><div class="mosaic-grid" id="mosaicGrid"></div><div class="mosaic-section-title mosaic-spacer">Slides fora da apresentação</div><div class="mosaic-hidden" id="mosaicHidden"></div></div>
+      <div class="mosaic-side">
+        <div class="mosaic-section-title">Criar / editar slide</div>
+        <input type="hidden" id="customSlideId">
+        <label class="mosaic-field">Título<input id="customSlideTitle" placeholder="Ex.: O inglês está travando sua promoção?"></label>
+        <label class="mosaic-field">Texto<textarea id="customSlideBody" rows="5" placeholder="Escreva as dores do lead, contexto ou argumento que você quer usar."></textarea></label>
+        <label class="mosaic-field">Visual<select id="customSlideTheme"><option value="dark">Escuro</option><option value="light">Claro</option></select></label>
+        <div class="mosaic-field"><span>Linkar aos entregáveis</span><div class="deliverable-checks" id="customSlideProducts"></div></div>
+        <div class="mosaic-editor-actions"><button class="settings-add" onclick="saveCustomSlide()">Salvar slide</button><button class="ghost-action" onclick="clearCustomSlideEditor()">Novo</button></div>
+        <div class="mosaic-section-title mosaic-spacer">Slides coringa</div>
+        <div class="wildcards">
+          <button onclick="addWildcard('linkedin')"><b>Pitch + LinkedIn</b><span>Conecta posicionamento profissional ao entregável.</span></button>
+          <button onclick="addWildcard('interview')"><b>Entrevista em inglês técnico</b><span>Curso completo de preparação para entrevistas.</span></button>
+          <button onclick="addWildcard('booklet')"><b>Apostila física</b><span>Material de apoio como reforço de valor.</span></button>
+          <button onclick="addWildcard('testimonial')"><b>Depoimento por tema</b><span>Cria um slide editável para inserir um depoimento real alinhado à fala.</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="settings-foot"><span id="mosaicStatus" class="cloud-status">Alterações salvas na conta do vendedor.</span><button onclick="toggleMosaic(false)">Concluir</button></div>
+  </div>
+</div>
+<div class="nav"><div class="dots" id="dots"></div><button class="arrow" id="navPrev" onclick="go(-1)">&#8249;</button><button class="arrow" id="navNext" onclick="go(1)">&#8250;</button></div>
 </div></div>
 <script>
-const PRECO_PADRAO=2560,TAXA_MENSAL=.0349;
-let i=0,payTab='sinal',activeVoucher=null,settingsOpen=false,selectedBenefits=new Set();
-const CONFIG_STORAGE_PREFIX='highlevel-commercial-settings-v2';
-const SESSION_STORAGE_KEY='highlevel-ppt-session-v2';
 const SUPABASE_URL='https://lzxusdnqnvdpacjbgyae.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY='sb_publishable_VRUSkcmOWTgzcllG8THm5Q_4_LcRxpY';
-const CONFIG_REMOTE_KEY='sos-offshore-presentation';
-let AUTH={token:null,user:null};
-let remoteReady=false,remoteSaveTimer=null,remoteSaving=false,lastRemoteJSON='';
-const DEFAULT_CONFIG={
-  preco:{base:PRECO_PADRAO},
-  apostila:{ativa:true,valor:297},
-  regras:[
-    {min:500,max:749.99,desconto:0,parcelas:3},
-    {min:750,max:null,desconto:0,parcelas:6}
-  ],
-  vouchers:[]
-};
-function normalizeConfig(raw){
-  const src=raw&&typeof raw==='object'?raw:{};
-  const preco=src.preco&&typeof src.preco==='object'?src.preco:{};
-  const precoBase=Number(preco.base);
-  const ap=src.apostila&&typeof src.apostila==='object'?src.apostila:{};
-  const regras=Array.isArray(src.regras)?src.regras.map(r=>({min:Math.max(Number(r&&r.min)||0,0),max:r&&r.max!=null&&r.max!==''?Math.max(Number(r.max)||0,0):null,desconto:Math.max(Number(r&&r.desconto)||0,0),parcelas:Math.min(Math.max(parseInt(r&&r.parcelas)||1,1),12)})):DEFAULT_CONFIG.regras.map(r=>({...r}));
-  const vouchers=Array.isArray(src.vouchers)?src.vouchers.map(v=>{const matriculas=Math.max(parseInt(v&&v.matriculas)||1,1),utilizados=Math.min(Math.max(parseInt(v&&v.utilizados)||0,0),matriculas);return{code:String(v&&v.code||'').toUpperCase().replace(/[^A-Z0-9-]/g,''),matriculas,utilizados,entrada:Math.max(Number(v&&v.entrada)||0,0),apostila:!!(v&&v.apostila),bonus:Array.isArray(v&&v.bonus)?v.bonus.map(b=>({tipo:b&&b.tipo==='desconto'?'desconto':'parcelas',valor:Math.max(Number(b&&b.valor)||0,0)})):[]}}):[];
-  const valorAp=Number(ap.valor);
-  return{preco:{base:Number.isFinite(precoBase)&&precoBase>0?precoBase:PRECO_PADRAO},apostila:{ativa:ap.ativa!==false,valor:Number.isFinite(valorAp)?Math.max(valorAp,0):297},regras,vouchers};
-}
-function configStorageKey(){return CONFIG_STORAGE_PREFIX+':'+(AUTH.user&&AUTH.user.id?AUTH.user.id:'guest')}
-function loadConfig(){if(!AUTH.user)return normalizeConfig(DEFAULT_CONFIG);try{const raw=localStorage.getItem(configStorageKey());return raw?normalizeConfig(JSON.parse(raw)):normalizeConfig(DEFAULT_CONFIG)}catch(e){return normalizeConfig(DEFAULT_CONFIG)}}
-function saveLocalConfig(){if(!AUTH.user)return;try{localStorage.setItem(configStorageKey(),JSON.stringify(CONFIG))}catch(e){}}
-function setCloudStatus(text,state){const el=document.getElementById('cloudStatus');if(!el)return;el.textContent='Configuração da conta: '+text;el.className='cloud-status'+(state?' '+state:'')}
-function remoteHeaders(extra){return Object.assign({'apikey':SUPABASE_PUBLISHABLE_KEY,'Content-Type':'application/json'},extra||{})}
-async function rpc(name,payload){const res=await fetch(SUPABASE_URL+'/rest/v1/rpc/'+name,{method:'POST',headers:remoteHeaders(),body:JSON.stringify(payload||{})});const text=await res.text();let data=null;if(text){try{data=JSON.parse(text)}catch(e){data=text}}if(!res.ok){const msg=data&&typeof data==='object'&&(data.message||data.hint||data.details);throw new Error(msg||String(data||('HTTP '+res.status)))}return data}
+const PRESENTATION_KEY='sos-offshore-presentation-v3';
+const SESSION_STORAGE_KEY='highlevel-ppt-session-v3';
+const SELLER_STORAGE_PREFIX='highlevel-ppt-seller-v3:';
+const MASTER_STORAGE_KEY='highlevel-ppt-master-v3';
+const BASE_SLIDES=[{id:'cover',title:'Abertura'},{id:'authority',title:'High Level'},{id:'level',title:'Nivelamento'},{id:'live',title:'120h ao vivo'},{id:'recorded',title:'Aulas gravadas'},{id:'deck',title:'DECK'},{id:'career',title:'Carreira'},{id:'combo',title:'Monte o projeto'},{id:'offer',title:'Condição do projeto'}];
+const BASE_IDS=BASE_SLIDES.map(x=>x.id);
+const DEFAULT_MASTER_CONFIG={products:[
+{id:'glossary',name:'Glossário de inglês técnico',description:'Consulta rápida de termos técnicos.',price:0,active:true,group:'material'},
+{id:'guide',name:'Guia de inglês técnico',description:'Guia prático de apoio ao estudo.',price:0,active:true,group:'material'},
+{id:'live60',name:'Conversação ao vivo • 60h',description:'Plano de conversação com 60 horas ao vivo.',price:0,active:true,group:'conversation'},
+{id:'live80',name:'Conversação ao vivo • 80h',description:'Plano de conversação com 80 horas ao vivo.',price:0,active:true,group:'conversation'},
+{id:'live120',name:'Conversação ao vivo • 120h',description:'Plano de conversação com 120 horas ao vivo.',price:0,active:true,group:'conversation'},
+{id:'recorded',name:'Aulas gravadas + apresentação + LinkedIn + certificado',description:'Base do básico ao intermediário com módulos de carreira e certificado técnico.',price:0,active:true,group:'course'},
+{id:'interview',name:'Curso completo de entrevista de emprego em inglês',description:'Preparação completa para entrevistas em inglês.',price:0,active:true,group:'course'},
+{id:'deck',name:'DECK • IA + Memory Card + nivelamento',description:'IA, S.O.S Memory Card e nivelamento para análise de evolução.',price:0,active:true,group:'app'},
+{id:'booklet',name:'Apostila física de apoio',description:'Material físico de apoio ao programa.',price:297,active:true,group:'material'}
+],discountRules:[{minItems:0,minTotal:0,percent:0}]};
+const DEFAULT_SELLER_CONFIG={presentation:{slideOrder:[...BASE_IDS],customSlides:[]}};
+let AUTH={token:null,user:null},MASTER_CONFIG=normalizeMasterConfig(DEFAULT_MASTER_CONFIG),SELLER_CONFIG=normalizeSellerConfig(DEFAULT_SELLER_CONFIG);
+let currentIndex=0,settingsOpen=false,mosaicOpen=false,dragSlideId=null,sellerReady=false,masterReady=false,sellerSaveTimer=null,masterSaveTimer=null;
+let selectedProducts=new Set();
+
+const el=id=>document.getElementById(id);
 function escapeHTML(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
-async function saveRemoteConfig(force){
-  if(!AUTH.token||(!remoteReady&&!force))return;
-  if(remoteSaving){scheduleRemoteSave();return}
-  remoteSaving=true;
-  const snapshot=JSON.stringify(normalizeConfig(CONFIG));
-  setCloudStatus('salvando...','saving');
-  try{
-    await rpc('ppt_save_config',{p_token:AUTH.token,p_presentation_key:CONFIG_REMOTE_KEY,p_config:JSON.parse(snapshot)});
-    lastRemoteJSON=snapshot;
-    setCloudStatus('salvo para '+AUTH.user.username,'ok');
-  }catch(e){
-    console.error('Falha ao salvar configuração da conta',e);
-    setCloudStatus('falha na nuvem, salvo neste navegador','error');
-  }finally{
-    remoteSaving=false;
-    if(JSON.stringify(normalizeConfig(CONFIG))!==snapshot)scheduleRemoteSave();
-  }
-}
-function scheduleRemoteSave(){clearTimeout(remoteSaveTimer);remoteSaveTimer=setTimeout(()=>saveRemoteConfig(false),550)}
-function saveConfig(){saveLocalConfig();if(remoteReady&&AUTH.token)scheduleRemoteSave()}
-function applyConfigToUI(){
-  cfgPrecoBase.value=money(getBasePrice());
-  cfgApostilaAtiva.checked=!!CONFIG.apostila.ativa;
-  cfgApostilaValor.value=CONFIG.apostila.valor;
-  apostilaValorInvest.textContent=fmt(CONFIG.apostila.valor);
-  apostilaInvest.style.display=CONFIG.apostila.ativa?'inline-flex':'none';
-  activeVoucher=null;selectedBenefits.clear();
-  if(settingsOpen){renderRules();renderVouchers()}
-  syncPriceUI(false);
-  recalcPayment();
-}
-async function loadRemoteConfig(){
-  if(!AUTH.token)return;
-  setCloudStatus('sincronizando '+AUTH.user.username+'...','saving');
-  try{
-    const remote=await rpc('ppt_load_config',{p_token:AUTH.token,p_presentation_key:CONFIG_REMOTE_KEY});
-    const hasRemote=remote&&typeof remote==='object'&&!Array.isArray(remote)&&Object.keys(remote).length>0;
-    if(hasRemote){
-      CONFIG=normalizeConfig(remote);
-      saveLocalConfig();
-      lastRemoteJSON=JSON.stringify(CONFIG);
-      applyConfigToUI();
-      remoteReady=true;
-      setCloudStatus('sincronizado com '+AUTH.user.username,'ok');
-    }else{
-      remoteReady=true;
-      await saveRemoteConfig(true);
-    }
-  }catch(e){
-    console.error('Falha ao carregar configuração da conta',e);
-    remoteReady=true;
-    setCloudStatus('offline, usando cache de '+AUTH.user.username,'error');
-  }
-}
-async function setAuthenticatedUser(row,token){
-  AUTH.token=token||row.token;
-  AUTH.user={id:row.user_id,username:row.username,role:row.role};
-  localStorage.setItem(SESSION_STORAGE_KEY,JSON.stringify({token:AUTH.token}));
-  userSession.hidden=false;userSessionName.textContent=AUTH.user.username;userSessionRole.textContent=AUTH.user.role==='master'?'Mestre':'Vendedor';
-  settingsTabUsuarios.classList.toggle('on',false);settingsTabUsuarios.classList.toggle('master-only',true);
-  settingsTabUsuarios.classList.toggle('on-master',AUTH.user.role==='master');
-  settingsTabUsuarios.classList.toggle('on',false);
-  if(AUTH.user.role==='master')settingsTabUsuarios.classList.add('on-visible');
-  settingsTabUsuarios.style.display=AUTH.user.role==='master'?'inline-flex':'none';
-  authOverlay.classList.add('off');loginError.textContent='';
-  remoteReady=false;lastRemoteJSON='';
-  CONFIG=loadConfig();applyConfigToUI();
-  await loadRemoteConfig();
-}
-async function loginUser(){
-  const username=loginUsername.value.trim(),password=loginPassword.value;loginError.textContent='';
-  if(!username||!password){loginError.textContent='Informe usuário e senha.';return}
-  loginSubmit.disabled=true;loginSubmit.textContent='Entrando...';
-  try{
-    const rows=await rpc('ppt_login',{p_username:username,p_password:password});
-    const row=Array.isArray(rows)?rows[0]:null;
-    if(!row)throw new Error('Usuário ou senha inválidos.');
-    await setAuthenticatedUser(row,row.token);
-    loginPassword.value='';
-  }catch(e){
-    const msg=String(e&&e.message||'');
-    if(/Could not find the function|PGRST202|ppt_login/i.test(msg)){
-      loginError.textContent='O sistema de contas ainda não está instalado no Supabase. Execute o SQL de configuração e tente novamente.';
-    }else if(/Failed to fetch|NetworkError|Load failed/i.test(msg)){
-      loginError.textContent='Não foi possível conectar ao Supabase. Verifique a internet e tente novamente.';
-    }else{
-      loginError.textContent=msg||'Não foi possível entrar.';
-    }
-  }finally{loginSubmit.disabled=false;loginSubmit.textContent='Entrar'}
-}
-async function restoreSession(){
-  try{const raw=localStorage.getItem(SESSION_STORAGE_KEY);if(!raw)return;const saved=JSON.parse(raw);if(!saved||!saved.token)return;const rows=await rpc('ppt_session_info',{p_token:saved.token});const row=Array.isArray(rows)?rows[0]:null;if(!row){localStorage.removeItem(SESSION_STORAGE_KEY);return}await setAuthenticatedUser(row,saved.token)}catch(e){localStorage.removeItem(SESSION_STORAGE_KEY)}
-}
-async function logoutUser(){
-  const token=AUTH.token;AUTH={token:null,user:null};remoteReady=false;clearTimeout(remoteSaveTimer);
-  localStorage.removeItem(SESSION_STORAGE_KEY);
-  try{if(token)await rpc('ppt_logout',{p_token:token})}catch(e){}
-  location.reload();
-}
-async function renderUsers(){
-  if(!AUTH.user||AUTH.user.role!=='master'||!AUTH.token)return;
-  userList.innerHTML='<div class="settings-desc">Carregando contas...</div>';
-  try{const rows=await rpc('ppt_list_users',{p_token:AUTH.token});userList.innerHTML=(rows||[]).map(u=>'<div class="user-row"><div class="user-main"><b>'+escapeHTML(u.username)+'</b><span>'+(u.role==='master'?'Conta mestre':'Vendedor')+'</span></div><span class="user-state '+(u.active?'':'off')+'">'+(u.active?'Ativa':'Bloqueada')+'</span><div class="user-actions">'+(u.role==='master'?'':'<button class="user-action" onclick="resetSellerPassword(\''+u.user_id+'\',\''+escapeHTML(u.username).replace(/'/g,'&#039;')+'\')">Senha</button><button class="user-action '+(u.active?'danger':'')+'" onclick="setSellerActive(\''+u.user_id+'\','+(!u.active)+')">'+(u.active?'Bloquear':'Ativar')+'</button>')+'</div></div>').join('')||'<div class="settings-desc">Nenhuma conta criada.</div>'}
-  catch(e){userList.innerHTML='<div class="account-status bad">'+escapeHTML(e.message)+'</div>'}
-}
-async function createSeller(){
-  const name=newUserName.value.trim(),password=newUserPassword.value;accountStatus.className='account-status';accountStatus.textContent='';
-  if(!name||password.length<3){accountStatus.classList.add('bad');accountStatus.textContent='Informe um nome e uma senha com pelo menos 3 caracteres.';return}
-  try{await rpc('ppt_create_user',{p_token:AUTH.token,p_username:name,p_password:password});newUserName.value='';newUserPassword.value='';accountStatus.classList.add('ok');accountStatus.textContent='Conta criada. Ela recebeu uma cópia das suas condições atuais.';await renderUsers()}catch(e){accountStatus.classList.add('bad');accountStatus.textContent=e.message}
-}
-async function setSellerActive(id,active){try{await rpc('ppt_set_user_active',{p_token:AUTH.token,p_user_id:id,p_active:!!active});await renderUsers()}catch(e){accountStatus.className='account-status bad';accountStatus.textContent=e.message}}
-async function resetSellerPassword(id,name){const pw=prompt('Nova senha para '+name+':');if(pw===null)return;if(pw.length<3){alert('A senha precisa ter pelo menos 3 caracteres.');return}try{await rpc('ppt_master_reset_password',{p_token:AUTH.token,p_user_id:id,p_new_password:pw});accountStatus.className='account-status ok';accountStatus.textContent='Senha de '+name+' redefinida. As sessões antigas foram encerradas.'}catch(e){accountStatus.className='account-status bad';accountStatus.textContent=e.message}}
-async function changeMyPassword(){const current=currentPassword.value,next=newPassword.value;passwordStatus.className='account-status';passwordStatus.textContent='';if(!current||next.length<3){passwordStatus.classList.add('bad');passwordStatus.textContent='Confira a senha atual e use pelo menos 3 caracteres na nova.';return}try{await rpc('ppt_change_password',{p_token:AUTH.token,p_current_password:current,p_new_password:next});currentPassword.value='';newPassword.value='';passwordStatus.classList.add('ok');passwordStatus.textContent='Senha alterada.'}catch(e){passwordStatus.classList.add('bad');passwordStatus.textContent=e.message}}
-let CONFIG=normalizeConfig(DEFAULT_CONFIG);
-const slides=[...document.querySelectorAll('.slide')],dots=document.getElementById('dots');
-const paymentSlide=slides.find(s=>s.classList.contains('payment-slide'));
-const normalSlides=slides.filter(s=>s!==paymentSlide);
-let paymentOpen=false,lastNormalIndex=0;
-normalSlides.forEach((s,k)=>{const d=document.createElement('div');d.className='dot';d.onclick=()=>show(k);dots.appendChild(d)});
-const num=t=>parseFloat(String(t).replace(/\./g,'').replace(',','.').replace(/[^\d.]/g,''))||0;
-const money=n=>n.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
-const fmt=n=>n.toLocaleString('pt-BR',{maximumFractionDigits:0});
-const cents=n=>Math.round((n+Number.EPSILON)*100)/100;
-const getBasePrice=()=>Math.max(Number(CONFIG&&CONFIG.preco&&CONFIG.preco.base)||PRECO_PADRAO,0);
-function parcelaTaxa(pv,n){if(pv<=0)return 0;if(n<=1)return pv;return pv*(TAXA_MENSAL/(1-Math.pow(1+TAXA_MENSAL,-n)))}
-function fit(){const wrap=document.querySelector('.wrap'),st=document.getElementById('stage'),ratio=document.body.classList.contains('v')?9/16:16/9,aw=wrap.clientWidth-32,ah=wrap.clientHeight-32;let w=aw,h=w/ratio;if(h>ah){h=ah;w=h*ratio}st.style.width=w+'px';st.style.height=h+'px';document.documentElement.style.setProperty('--u',(w/(document.body.classList.contains('v')?54:100))+'px')}
-function setMode(m){document.body.classList.toggle('h',m==='h');document.body.classList.toggle('v',m==='v');bH.classList.toggle('on',m==='h');bV.classList.toggle('on',m==='v');fit()}
-function resetPaymentState(){selectedBenefits.clear();activeVoucher=null;voucherCode.value='';voucherStatus.textContent=''}
-function show(k){
-  paymentOpen=false;
-  i=Math.max(0,Math.min(Number(k)||0,normalSlides.length-1));
-  lastNormalIndex=i;
-  slides.forEach(s=>s.classList.remove('on'));
-  const cur=normalSlides[i];
-  if(cur)cur.classList.add('on');
-  [...dots.children].forEach((d,n)=>d.classList.toggle('on',n===i));
-  const nav=dots.parentElement;
-  nav.className='nav';
-  nav.classList.toggle('dark',!!cur&&(cur.classList.contains('dark')||cur.classList.contains('deep')||cur.classList.contains('cover')));
-  nav.classList.toggle('at-start',i===0);
-  nav.classList.toggle('at-end',i===normalSlides.length-1);
-}
-function showPayment(){
-  if(!paymentSlide)return;
-  paymentOpen=true;
-  lastNormalIndex=i;
-  slides.forEach(s=>s.classList.remove('on'));
-  paymentSlide.classList.add('on');
-  [...dots.children].forEach(d=>d.classList.remove('on'));
-  const nav=dots.parentElement;
-  nav.className='nav payment-locked';
-  setPayTab('sinal');
-  paySinal.value='0,00';
-  resetPaymentState();
-  recalcPayment();
-}
-function closePayment(){if(paymentOpen)show(lastNormalIndex)}
-function go(d){
-  if(settingsOpen||paymentOpen)return;
-  const next=i+d;
-  if(next<0||next>=normalSlides.length)return;
-  show(next);
-}
-document.addEventListener('keydown',e=>{
-  if(settingsOpen){if(e.key==='Escape')toggleSettings(false);return}
-  if(e.target.closest('input,select,[contenteditable="true"]'))return;
-  if(e.key==='7'){
-    e.preventDefault();
-    if(paymentOpen)closePayment();else showPayment();
-    return;
-  }
-  if(paymentOpen){if(e.key==='Escape')closePayment();return}
-  if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();go(1)}
-  if(e.key==='ArrowLeft'){e.preventDefault();go(-1)}
-});
-function recalc(){const a=num(hora.textContent)*num(horas.textContent),base=getBasePrice();ancora.textContent=fmt(a);const eco=a-base;if(eco>0){document.querySelector('.save').style.display='inline-block';economia.textContent=fmt(eco)}else document.querySelector('.save').style.display='none';precoInvest.textContent=fmt(base);parcelaInvest.textContent=money(parcelaTaxa(base,12));if(document.getElementById('cfgPrecoParcelaPreview'))cfgPrecoParcelaPreview.textContent='12x de R$ '+money(parcelaTaxa(base,12))}
-function syncPriceUI(shouldSave=true){
-  const el=document.getElementById('cfgPrecoBase');
-  if(el){
-    const val=Math.max(num(el.value)||getBasePrice(),1);
-    CONFIG.preco={base:val};
-    el.value=money(val);
-  }
-  if(shouldSave)saveConfig();
-  selectedBenefits.clear();activeVoucher=null;
-  recalc();recalcPayment();
-}
-function setSettingsTab(tab){
-  if(tab==='usuarios'&&(!AUTH.user||AUTH.user.role!=='master'))tab='preco';
-  document.querySelectorAll('.settings-tabs button').forEach(b=>b.classList.remove('on'));
-  const btn=document.getElementById('settingsTab'+tab.charAt(0).toUpperCase()+tab.slice(1));if(btn)btn.classList.add('on');
-  document.querySelectorAll('[data-settings-panel]').forEach(p=>p.classList.toggle('on',p.dataset.settingsPanel===tab));
-  if(tab==='usuarios')renderUsers();
-}
-
-function syncApostila(){const val=Math.max(num(cfgApostilaValor.value)||297,0);CONFIG.apostila.valor=val;CONFIG.apostila.ativa=cfgApostilaAtiva.checked;saveConfig();apostilaValorInvest.textContent=fmt(val);apostilaInvest.style.display=CONFIG.apostila.ativa?'inline-flex':'none';recalcPayment()}
-function findRule(sinal){return CONFIG.regras.filter(r=>sinal>=r.min&&(r.max==null||sinal<=r.max)).sort((a,b)=>b.min-a.min)[0]||null}
-function getSignal(){return payTab==='voucher'&&activeVoucher?Math.min(Math.max(Number(activeVoucher.entrada)||0,0),getBasePrice()):Math.min(Math.max(num(paySinal.value),0),getBasePrice())}
-function availableBenefits(){
-  if(payTab==='voucher'&&activeVoucher){return (activeVoucher.bonus||[]).map((b,idx)=>({...b,key:'voucher-'+idx}))}
-  const r=findRule(getSignal()),out=[];
-  if(!r)return out;
-  if((Number(r.desconto)||0)>0)out.push({tipo:'desconto',valor:Number(r.desconto),key:'rule-discount'});
-  if((Number(r.parcelas)||0)>0)out.push({tipo:'parcelas',valor:Number(r.parcelas),key:'rule-installments'});
-  return out
-}
-function benefitLabel(b){if(b.tipo==='desconto')return 'Desconto de R$ '+fmt(Number(b.valor)||0);if(b.tipo==='parcelas')return 'Parcelamento em '+Math.max(parseInt(b.valor)||1,1)+'x sem juros';return 'Bônus'}
-function currentCondition(){
-  const signal=getSignal(),available=availableBenefits();
-  let discount=0,interestFree=false,installments=12;
-  available.forEach(b=>{if(!selectedBenefits.has(b.key))return;if(b.tipo==='desconto')discount+=Math.max(Number(b.valor)||0,0);if(b.tipo==='parcelas'){interestFree=true;installments=Math.max(parseInt(b.valor)||1,1)}});
-  discount=Math.min(discount,getBasePrice());
-  const basePrice=getBasePrice(),course=basePrice-discount,sg=Math.min(signal,course),balance=Math.max(course-sg,0);
-  const installment=cents(interestFree?balance/installments:parcelaTaxa(balance,12));
-  const qty=interestFree?installments:12,total=cents(sg+installment*qty);
-  const baselineSignal=Math.min(signal,basePrice),baselineBalance=Math.max(basePrice-baselineSignal,0);
-  const baselineInstallment=cents(parcelaTaxa(baselineBalance,12));
-  const baselineTotal=cents(baselineSignal+baselineInstallment*12);
-  const hasBooklet=payTab==='voucher'?voucherHasApostila():!!CONFIG.apostila.ativa;
-  const bookletDiscount=hasBooklet?Math.max(Number(CONFIG.apostila.valor)||0,0):0;
-  const financialDiscount=Math.max(baselineTotal-total,0);
-  const effectiveDiscount=cents(financialDiscount+bookletDiscount);
-  return{signal:sg,discount,installments:qty,interestFree,course,balance,installment,total,baselineTotal,baselineInstallment,financialDiscount:cents(financialDiscount),bookletDiscount,effectiveDiscount,available,voucher:payTab==='voucher'?activeVoucher:null}
-}
-function renderUnlocks(c){
-  if(!c.available.length){unlockList.innerHTML='<span class="unlock-empty">Nenhum benefício liberado para esta condição.</span>';return}
-  unlockList.innerHTML=c.available.map(b=>'<button class="unlock-option '+(selectedBenefits.has(b.key)?'on':'')+'" onclick="toggleBenefit(\''+b.key+'\')">'+benefitLabel(b)+'<small>'+(selectedBenefits.has(b.key)?'Aplicado na proposta':'Disponível, clique para aplicar')+'</small></button>').join('')
-}
-function toggleBenefit(key){if(selectedBenefits.has(key))selectedBenefits.delete(key);else selectedBenefits.add(key);recalcPayment()}
-function voucherHasApostila(){return !!(payTab==='voucher'&&activeVoucher&&activeVoucher.apostila)}
-function recalcPayment(){
-  const c=currentCondition(),badges=[];
-  payConditionTitle.textContent=c.voucher?'Voucher '+c.voucher.code:'Condição atual';
-  if(c.signal>0){payMain.innerHTML='Sinal de <em>R$ '+money(c.signal)+'</em> + '+c.installments+'x de <em>R$ '+money(c.installment)+'</em>'}else{payMain.innerHTML=c.installments+'x de <em>R$ '+money(c.installment)+'</em>'}
-  const discountBox=document.getElementById('payEffectiveDiscount'),discountValue=document.getElementById('payEffectiveDiscountValue'),discountBase=document.getElementById('payEffectiveDiscountBase');
-  if(discountBox&&discountValue&&discountBase){
-    discountBox.classList.toggle('on',c.effectiveDiscount>0);
-    discountValue.textContent='R$ '+money(c.effectiveDiscount);
-    discountBase.textContent=c.bookletDiscount>0
-      ? 'Inclui R$ '+money(c.bookletDiscount)+' da apostila + economia vs. 12x com juros de R$ '+money(c.baselineTotal)
-      : 'Base: 12x com juros = R$ '+money(c.baselineTotal);
-  }
-  if(c.interestFree)badges.push(c.installments+'x sem juros aplicado');
-  if(c.discount>0)badges.push('R$ '+fmt(c.discount)+' de desconto aplicado');
-  if(c.voucher){const total=Math.max(parseInt(c.voucher.matriculas)||0,0),used=Math.min(Math.max(parseInt(c.voucher.utilizados)||0,0),total),available=Math.max(total-used,0);badges.push(available+' matrícula'+(available===1?' disponível':'s disponíveis')+' neste voucher')}
-  const showBooklet=payTab==='voucher'?voucherHasApostila():CONFIG.apostila.ativa;
-  apostilaValorPay.textContent=fmt(CONFIG.apostila.valor);apostilaPayment.style.display=showBooklet?'flex':'none';
-  if(showBooklet)badges.push('Apostila física, bônus de R$ '+fmt(CONFIG.apostila.valor));
-  payBadges.innerHTML=badges.map(x=>'<span>'+x+'</span>').join('');
-  renderUnlocks(c);
-  paySignalDisplay.textContent='R$ '+money(c.signal);payCourseDisplay.textContent='R$ '+money(c.course);payTotalDisplay.textContent='R$ '+money(c.total)
-}
-function setPayTab(tab){payTab=tab;tabSinal.classList.toggle('on',tab==='sinal');tabVoucher.classList.toggle('on',tab==='voucher');paySinalPane.style.display=tab==='sinal'?'block':'none';payVoucherPane.style.display=tab==='voucher'?'block':'none';selectedBenefits.clear();activeVoucher=null;voucherStatus.innerHTML='';recalcPayment()}
-function voucherUsageTotals(){return CONFIG.vouchers.reduce((acc,v)=>{const total=Math.max(parseInt(v.matriculas)||0,0),used=Math.min(Math.max(parseInt(v.utilizados)||0,0),total);acc.total+=total;acc.used+=used;acc.available+=Math.max(total-used,0);return acc},{total:0,used:0,available:0})}
-function voucherUsageHTML(prefix){const t=voucherUsageTotals();return (prefix||'')+'<span class="voucher-usage">Disponíveis: '+t.available+' &nbsp;•&nbsp; Já utilizados: '+t.used+'</span>'}
-function aplicarVoucher(){const code=voucherCode.value.trim().toUpperCase(),v=CONFIG.vouchers.find(x=>x.code.toUpperCase()===code);voucherStatus.classList.remove('ok','bad');selectedBenefits.clear();if(!v){activeVoucher=null;voucherStatus.innerHTML=code?voucherUsageHTML('Voucher não encontrado.'):'';if(code)voucherStatus.classList.add('bad');recalcPayment();return}const total=Math.max(parseInt(v.matriculas)||0,0),used=Math.min(Math.max(parseInt(v.utilizados)||0,0),total),available=Math.max(total-used,0);if(available<=0){activeVoucher=null;voucherStatus.innerHTML='Voucher esgotado.<span class="voucher-usage">Disponíveis neste voucher: 0 &nbsp;•&nbsp; Já utilizados: '+used+'</span>';voucherStatus.classList.add('bad');recalcPayment();return}activeVoucher=v;voucherStatus.innerHTML='Voucher válido.<span class="voucher-usage">Disponíveis neste voucher: '+available+' de '+total+' &nbsp;•&nbsp; Já utilizados: '+used+'</span>';voucherStatus.classList.add('ok');recalcPayment()}
-async function copiarPagamento(){const c=currentCondition();let t=(c.signal>0?'Sinal de R$ '+money(c.signal)+' + ':'')+c.installments+'x de R$ '+money(c.installment)+(c.interestFree?' sem juros':'');t+='. Total: R$ '+money(c.total)+'.';if(c.effectiveDiscount>0)t+=' Desconto do pacote: R$ '+money(c.effectiveDiscount)+'.';if(c.bookletDiscount>0)t+=' Inclui apostila física, benefício de R$ '+money(c.bookletDiscount)+'.';if(c.voucher)t+=' Voucher '+c.voucher.code+'.';try{await navigator.clipboard.writeText(t)}catch(e){const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove()}copyPayment.textContent='Condição copiada';setTimeout(()=>copyPayment.textContent='Copiar condição',1200)}
-function toggleSettings(force){settingsOpen=typeof force==='boolean'?force:!settingsOpen;settingsOverlay.classList.toggle('on',settingsOpen);settingsOverlay.setAttribute('aria-hidden',String(!settingsOpen));bSettings.classList.toggle('on',settingsOpen);if(settingsOpen){renderRules();renderVouchers();if(AUTH.user&&AUTH.user.role==='master')renderUsers()}}
-function ruleRow(r,idx){return '<div class="rule-item">'+
- '<label>Sinal mínimo<input data-rule="'+idx+'" data-key="min" value="'+(r.min??0)+'"></label>'+
- '<label>Sinal máximo<input data-rule="'+idx+'" data-key="max" value="'+(r.max==null?'':r.max)+'" placeholder="Sem limite"></label>'+
- '<label>Desconto R$<input data-rule="'+idx+'" data-key="desconto" value="'+(r.desconto??0)+'"></label>'+
- '<label>Sem juros<input data-rule="'+idx+'" data-key="parcelas" value="'+(r.parcelas??1)+'"></label>'+
- '<label>Resumo<input value="'+(r.max==null?'Acima de '+r.min:r.min+' a '+r.max)+'" disabled></label>'+
- '<button class="settings-remove" onclick="removeRule('+idx+')">×</button></div>'}
-function renderRules(){ruleList.innerHTML=CONFIG.regras.map(ruleRow).join('')||'<div class="settings-desc">Nenhuma faixa configurada.</div>';ruleList.querySelectorAll('input[data-rule]').forEach(el=>el.addEventListener('input',e=>{const idx=Number(e.target.dataset.rule),key=e.target.dataset.key,val=e.target.value.trim();CONFIG.regras[idx][key]=key==='max'?(val===''?null:num(val)):num(val);saveConfig();selectedBenefits.clear();recalcPayment()}))}
-function addRule(){CONFIG.regras.push({min:0,max:null,desconto:0,parcelas:1});saveConfig();renderRules()}
-function removeRule(i){CONFIG.regras.splice(i,1);saveConfig();selectedBenefits.clear();renderRules();recalcPayment()}
-function bonusValueControl(b,vi,bi){if(b.tipo==='parcelas'){let opts='';for(let n=1;n<=12;n++)opts+='<option value="'+n+'" '+(Number(b.valor)===n?'selected':'')+'>'+n+'x</option>';return '<label>Valor<select data-voucher-bonus="'+vi+'" data-bonus="'+bi+'" data-key="valor">'+opts+'</select></label>'}return '<label>Valor R$<input data-voucher-bonus="'+vi+'" data-bonus="'+bi+'" data-key="valor" value="'+(b.valor??0)+'"></label>'}
-function voucherBonusRow(b,vi,bi){return '<div class="voucher-bonus-row"><label>Bônus<select data-voucher-bonus="'+vi+'" data-bonus="'+bi+'" data-key="tipo"><option value="parcelas" '+(b.tipo==='parcelas'?'selected':'')+'>Parcelamento sem juros</option><option value="desconto" '+(b.tipo==='desconto'?'selected':'')+'>Desconto em reais</option></select></label>'+bonusValueControl(b,vi,bi)+'<button class="settings-remove" onclick="removeVoucherBonus('+vi+','+bi+')">×</button></div>'}
-function voucherRow(v,idx){return '<div class="voucher-item"><div class="voucher-top">'+
- '<label>Código<input data-voucher="'+idx+'" data-key="code" value="'+v.code+'"></label>'+
- '<label>Matrículas<input data-voucher="'+idx+'" data-key="matriculas" value="'+v.matriculas+'"></label>'+
- '<label>Utilizados<input data-voucher="'+idx+'" data-key="utilizados" value="'+(v.utilizados??0)+'"></label>'+
- '<label>Disponíveis<input value="'+Math.max((Number(v.matriculas)||0)-(Number(v.utilizados)||0),0)+'" disabled></label>'+
- '<label>Entrada R$<input data-voucher="'+idx+'" data-key="entrada" value="'+(v.entrada??0)+'"></label>'+
- '<label class="voucher-check"><input type="checkbox" data-voucher="'+idx+'" data-key="apostila" '+(v.apostila?'checked':'')+'> Apostila física</label>'+
- '<button class="settings-remove" onclick="removeVoucher('+idx+')">×</button></div>'+
- '<div class="voucher-bonus-head"><div class="voucher-bonus-title">Bônus do voucher</div><button class="voucher-mini-add" onclick="addVoucherBonus('+idx+')">+ Bônus</button></div>'+
- '<div class="voucher-bonus-list">'+((v.bonus||[]).map((b,bi)=>voucherBonusRow(b,idx,bi)).join('')||'<div class="settings-desc">Nenhum bônus adicionado.</div>')+'</div></div>'}
-function renderVouchers(){
-  voucherList.innerHTML=CONFIG.vouchers.map(voucherRow).join('')||'<div class="settings-desc">Nenhum voucher criado ainda.</div>';
-  voucherList.querySelectorAll('[data-voucher]').forEach(el=>el.addEventListener('input',e=>{const idx=Number(e.target.dataset.voucher),key=e.target.dataset.key;if(key==='apostila')CONFIG.vouchers[idx][key]=e.target.checked;else if(key==='code')CONFIG.vouchers[idx][key]=e.target.value.toUpperCase().replace(/[^A-Z0-9-]/g,'');else CONFIG.vouchers[idx][key]=num(e.target.value);if(key==='matriculas'){CONFIG.vouchers[idx].matriculas=Math.max(parseInt(CONFIG.vouchers[idx].matriculas)||1,1);CONFIG.vouchers[idx].utilizados=Math.min(Math.max(parseInt(CONFIG.vouchers[idx].utilizados)||0,0),CONFIG.vouchers[idx].matriculas)}if(key==='utilizados')CONFIG.vouchers[idx].utilizados=Math.min(Math.max(parseInt(CONFIG.vouchers[idx].utilizados)||0,0),Math.max(parseInt(CONFIG.vouchers[idx].matriculas)||1,1));saveConfig();activeVoucher=null;selectedBenefits.clear();recalcPayment();if(key==='matriculas'||key==='utilizados')renderVouchers()}));
-  voucherList.querySelectorAll('[data-voucher-bonus]').forEach(el=>el.addEventListener('change',updateVoucherBonus));
-  voucherList.querySelectorAll('input[data-voucher-bonus]').forEach(el=>el.addEventListener('input',updateVoucherBonus))
-}
-function updateVoucherBonus(e){const vi=Number(e.target.dataset.voucherBonus),bi=Number(e.target.dataset.bonus),key=e.target.dataset.key,b=CONFIG.vouchers[vi].bonus[bi];if(key==='tipo'){b.tipo=e.target.value;b.valor=b.tipo==='parcelas'?6:250;saveConfig();renderVouchers()}else{b.valor=num(e.target.value);saveConfig()}activeVoucher=null;selectedBenefits.clear();recalcPayment()}
-function randomVoucher(){return 'SOS-'+Math.random().toString(36).slice(2,7).toUpperCase()}
-function addVoucher(){CONFIG.vouchers.push({code:randomVoucher(),matriculas:1,utilizados:0,entrada:0,apostila:false,bonus:[{tipo:'parcelas',valor:6}]});saveConfig();renderVouchers()}
-function addVoucherBonus(i){CONFIG.vouchers[i].bonus=CONFIG.vouchers[i].bonus||[];CONFIG.vouchers[i].bonus.push({tipo:'parcelas',valor:6});saveConfig();renderVouchers()}
-function removeVoucherBonus(i,b){CONFIG.vouchers[i].bonus.splice(b,1);saveConfig();activeVoucher=null;selectedBenefits.clear();renderVouchers();recalcPayment()}
-function removeVoucher(i){CONFIG.vouchers.splice(i,1);saveConfig();activeVoucher=null;selectedBenefits.clear();renderVouchers();recalcPayment()}
+function money(n){return (Number(n)||0).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})}
+function num(v){if(typeof v==='number')return v||0;return parseFloat(String(v||'').replace(/\./g,'').replace(',','.').replace(/[^\d.-]/g,''))||0}
+function uid(){return 'custom-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,7)}
+function remoteHeaders(){return {'apikey':SUPABASE_PUBLISHABLE_KEY,'Content-Type':'application/json'}}
+async function rpc(name,payload){const res=await fetch(SUPABASE_URL+'/rest/v1/rpc/'+name,{method:'POST',headers:remoteHeaders(),body:JSON.stringify(payload||{})});const text=await res.text();let data=null;if(text){try{data=JSON.parse(text)}catch(e){data=text}}if(!res.ok){const msg=data&&typeof data==='object'&&(data.message||data.hint||data.details);throw new Error(msg||String(data||('HTTP '+res.status)))}return data}
+function normalizeMasterConfig(raw){const s=raw&&typeof raw==='object'?raw:{};const products=Array.isArray(s.products)?s.products.map((p,idx)=>({id:String(p&&p.id||('product-'+idx)).replace(/[^a-zA-Z0-9_-]/g,''),name:String(p&&p.name||'Produto'),description:String(p&&p.description||''),price:Math.max(Number(p&&p.price)||0,0),active:p&&p.active!==false,group:String(p&&p.group||'other')})).filter(p=>p.id):DEFAULT_MASTER_CONFIG.products.map(p=>({...p}));const discountRules=Array.isArray(s.discountRules)&&s.discountRules.length?s.discountRules.map(r=>({minItems:Math.max(parseInt(r&&r.minItems)||0,0),minTotal:Math.max(Number(r&&r.minTotal)||0,0),percent:Math.min(Math.max(Number(r&&r.percent)||0,0),100)})):DEFAULT_MASTER_CONFIG.discountRules.map(r=>({...r}));return{products,discountRules}}
+function normalizeSellerConfig(raw){const s=raw&&typeof raw==='object'?raw:{},p=s.presentation&&typeof s.presentation==='object'?s.presentation:{};const customSlides=Array.isArray(p.customSlides)?p.customSlides.map(c=>({id:String(c&&c.id||uid()),title:String(c&&c.title||'Slide personalizado'),body:String(c&&c.body||''),theme:c&&c.theme==='light'?'light':'dark',productIds:Array.isArray(c&&c.productIds)?c.productIds.map(String):[]})):[];const valid=new Set([...BASE_IDS,...customSlides.map(c=>c.id)]),hasOrder=Array.isArray(p.slideOrder);const slideOrder=hasOrder?p.slideOrder.map(String).filter((id,idx,a)=>valid.has(id)&&a.indexOf(id)===idx):[...BASE_IDS];return{presentation:{slideOrder,customSlides}}}
+function sellerStorageKey(){return SELLER_STORAGE_PREFIX+(AUTH.user&&AUTH.user.id?AUTH.user.id:'guest')}
+function setCloudStatus(text,state){const e=el('cloudStatus');if(!e)return;e.textContent=text;e.className='cloud-status'+(state?' '+state:'')}
+function saveSellerLocal(){if(!AUTH.user)return;try{localStorage.setItem(sellerStorageKey(),JSON.stringify(SELLER_CONFIG))}catch(e){}}
+function loadSellerLocal(){if(!AUTH.user)return normalizeSellerConfig(DEFAULT_SELLER_CONFIG);try{const x=localStorage.getItem(sellerStorageKey());return x?normalizeSellerConfig(JSON.parse(x)):normalizeSellerConfig(DEFAULT_SELLER_CONFIG)}catch(e){return normalizeSellerConfig(DEFAULT_SELLER_CONFIG)}}
+function saveMasterLocal(){try{localStorage.setItem(MASTER_STORAGE_KEY,JSON.stringify(MASTER_CONFIG))}catch(e){}}
+function loadMasterLocal(){try{const x=localStorage.getItem(MASTER_STORAGE_KEY);return x?normalizeMasterConfig(JSON.parse(x)):normalizeMasterConfig(DEFAULT_MASTER_CONFIG)}catch(e){return normalizeMasterConfig(DEFAULT_MASTER_CONFIG)}}
+async function saveSellerRemote(){if(!AUTH.token||!sellerReady)return;setCloudStatus('Salvando apresentação de '+AUTH.user.username+'...','saving');try{await rpc('ppt_save_config',{p_token:AUTH.token,p_presentation_key:PRESENTATION_KEY,p_config:normalizeSellerConfig(SELLER_CONFIG)});setCloudStatus('Apresentação salva para '+AUTH.user.username,'ok')}catch(e){console.error(e);setCloudStatus('Falha ao salvar apresentação. Cache local preservado.','error')}}
+function scheduleSellerSave(){saveSellerLocal();clearTimeout(sellerSaveTimer);sellerSaveTimer=setTimeout(saveSellerRemote,450)}
+async function loadSellerRemote(){if(!AUTH.token)return;SELLER_CONFIG=loadSellerLocal();try{const data=await rpc('ppt_load_config',{p_token:AUTH.token,p_presentation_key:PRESENTATION_KEY});if(data&&typeof data==='object'&&Object.keys(data).length)SELLER_CONFIG=normalizeSellerConfig(data);sellerReady=true;saveSellerLocal();renderPresentation(true);if(!(data&&typeof data==='object'&&Object.keys(data).length))await saveSellerRemote()}catch(e){console.error(e);sellerReady=true;renderPresentation(true);setCloudStatus('Apresentação offline: usando cache local.','error')}}
+async function saveMasterRemote(){if(!AUTH.token||!masterReady||!AUTH.user||AUTH.user.role!=='master')return;saveMasterLocal();setCloudStatus('Salvando catálogo mestre...','saving');try{await rpc('ppt_save_master_config',{p_token:AUTH.token,p_presentation_key:PRESENTATION_KEY,p_config:MASTER_CONFIG});setCloudStatus('Catálogo mestre sincronizado','ok')}catch(e){console.error(e);setCloudStatus('Falha ao salvar catálogo mestre.','error')}}
+function scheduleMasterSave(){saveMasterLocal();clearTimeout(masterSaveTimer);masterSaveTimer=setTimeout(saveMasterRemote,450)}
+async function loadMasterRemote(){if(!AUTH.token)return;MASTER_CONFIG=loadMasterLocal();try{const data=await rpc('ppt_load_master_config',{p_token:AUTH.token,p_presentation_key:PRESENTATION_KEY});const has=data&&typeof data==='object'&&!Array.isArray(data)&&Object.keys(data).length;if(has)MASTER_CONFIG=normalizeMasterConfig(data);masterReady=true;saveMasterLocal();renderProducts();renderOffer();renderCustomProductChecks();if(settingsOpen&&AUTH.user.role==='master'){renderCatalog();renderDiscountRules()}if(!has&&AUTH.user.role==='master')await saveMasterRemote()}catch(e){console.error(e);masterReady=true;const msg=String(e&&e.message||'');if(/ppt_load_master_config|PGRST202|Could not find the function/i.test(msg))setCloudStatus('Execute o SQL V3 para ativar catálogo mestre e descontos.','error');else setCloudStatus('Catálogo mestre offline: usando cache local.','error');renderProducts();renderOffer();renderCustomProductChecks()}}
+async function setAuthenticatedUser(row,token){AUTH.token=token||row.token;AUTH.user={id:row.user_id,username:row.username,role:row.role};localStorage.setItem(SESSION_STORAGE_KEY,JSON.stringify({token:AUTH.token}));el('userSession').hidden=false;el('userSessionName').textContent=AUTH.user.username;el('userSessionRole').textContent=AUTH.user.role==='master'?'Mestre':'Vendedor';document.querySelectorAll('.master-only').forEach(x=>x.style.display=AUTH.user.role==='master'?'inline-flex':'none');el('authOverlay').classList.add('off');el('loginError').textContent='';SELLER_CONFIG=loadSellerLocal();MASTER_CONFIG=loadMasterLocal();renderPresentation(true);renderProducts();renderOffer();await Promise.all([loadSellerRemote(),loadMasterRemote()]);setDefaultSettingsTab()}
+async function loginUser(){const username=el('loginUsername').value.trim(),password=el('loginPassword').value;el('loginError').textContent='';if(!username||!password){el('loginError').textContent='Informe usuário e senha.';return}el('loginSubmit').disabled=true;el('loginSubmit').textContent='Entrando...';try{const rows=await rpc('ppt_login',{p_username:username,p_password:password}),row=Array.isArray(rows)?rows[0]:null;if(!row)throw new Error('Usuário ou senha inválidos.');await setAuthenticatedUser(row,row.token);el('loginPassword').value=''}catch(e){const msg=String(e&&e.message||'');if(/Could not find the function|PGRST202|ppt_login/i.test(msg))el('loginError').textContent='O sistema de contas ainda não está instalado no Supabase.';else if(/Failed to fetch|NetworkError|Load failed/i.test(msg))el('loginError').textContent='Não foi possível conectar ao Supabase.';else el('loginError').textContent=msg||'Não foi possível entrar.'}finally{el('loginSubmit').disabled=false;el('loginSubmit').textContent='Entrar'}}
+async function restoreSession(){try{const raw=localStorage.getItem(SESSION_STORAGE_KEY);if(!raw)return;const saved=JSON.parse(raw);if(!saved||!saved.token)return;const rows=await rpc('ppt_session_info',{p_token:saved.token}),row=Array.isArray(rows)?rows[0]:null;if(!row){localStorage.removeItem(SESSION_STORAGE_KEY);return}await setAuthenticatedUser(row,saved.token)}catch(e){localStorage.removeItem(SESSION_STORAGE_KEY)}}
+async function logoutUser(){const token=AUTH.token;AUTH={token:null,user:null};localStorage.removeItem(SESSION_STORAGE_KEY);try{if(token)await rpc('ppt_logout',{p_token:token})}catch(e){}location.reload()}
+function customSlideHTML(c){const theme=c.theme==='light'?'light':'deep',links=c.productIds.map(id=>MASTER_CONFIG.products.find(p=>p.id===id)).filter(Boolean).map(p=>'<button onclick="jumpToDeliverable(\''+escapeHTML(p.id)+'\')">'+escapeHTML(p.name)+'</button>').join('');return '<section class="slide custom-slide '+theme+'" data-slide-id="'+escapeHTML(c.id)+'" data-slide-title="'+escapeHTML(c.title)+'"><div class="custom-content"><div class="eyebrow">Slide personalizado</div><div class="big">'+escapeHTML(c.title)+'</div><div class="lead">'+escapeHTML(c.body)+'</div>'+(links?'<div class="custom-links">'+links+'</div>':'')+'</div></section>'}
+function rebuildCustomSlides(){document.querySelectorAll('.custom-slide').forEach(e=>e.remove());const anchor=document.querySelector('.slide-combo');SELLER_CONFIG.presentation.customSlides.forEach(c=>anchor.insertAdjacentHTML('beforebegin',customSlideHTML(c)))}
+function orderedSlides(){const map=new Map([...document.querySelectorAll('section.slide')].map(s=>[s.dataset.slideId,s]));return SELLER_CONFIG.presentation.slideOrder.map(id=>map.get(id)).filter(Boolean)}
+function renderPresentation(resetIndex){rebuildCustomSlides();const ordered=orderedSlides(),all=[...document.querySelectorAll('section.slide')];all.forEach(s=>{s.classList.remove('on');s.style.display='none'});if(resetIndex)currentIndex=Math.min(currentIndex,Math.max(ordered.length-1,0));renderDots();show(currentIndex);if(mosaicOpen)renderMosaic()}
+function renderDots(){el('dots').innerHTML='';orderedSlides().forEach((s,idx)=>{const d=document.createElement('div');d.className='dot';d.title=s.dataset.slideTitle||('Slide '+(idx+1));d.onclick=()=>show(idx);el('dots').appendChild(d)})}
+function show(k){const list=orderedSlides();if(!list.length)return;currentIndex=Math.max(0,Math.min(Number(k)||0,list.length-1));document.querySelectorAll('section.slide').forEach(s=>{s.classList.remove('on');s.style.display='none'});const cur=list[currentIndex];cur.style.display='flex';cur.classList.add('on');[...el('dots').children].forEach((d,n)=>d.classList.toggle('on',n===currentIndex));const nav=el('dots').parentElement;nav.className='nav';nav.classList.toggle('dark',cur.classList.contains('dark')||cur.classList.contains('deep')||cur.classList.contains('cover'));nav.classList.toggle('at-start',currentIndex===0);nav.classList.toggle('at-end',currentIndex===list.length-1);if(cur.dataset.slideId==='combo')renderProducts();if(cur.dataset.slideId==='offer')renderOffer()}
+function go(d){if(settingsOpen||mosaicOpen)return;const next=currentIndex+d;if(next<0||next>=orderedSlides().length)return;show(next)}
+function fit(){const wrap=document.querySelector('.wrap'),st=el('stage'),vertical=document.body.classList.contains('v');let w,h;if(!vertical){w=wrap.clientWidth;h=wrap.clientHeight}else{const ratio=9/16,aw=wrap.clientWidth-24,ah=wrap.clientHeight-24;w=aw;h=w/ratio;if(h>ah){h=ah;w=h*ratio}}st.style.width=w+'px';st.style.height=h+'px';const u=vertical?w/54:Math.min(w/100,h/56.25);document.documentElement.style.setProperty('--u',Math.max(u,5)+'px')}
+function setMode(m){document.body.classList.toggle('h',m==='h');document.body.classList.toggle('v',m==='v');el('bH').classList.toggle('on',m==='h');el('bV').classList.toggle('on',m==='v');fit()}
 window.addEventListener('resize',fit);
-['hora','horas'].forEach(id=>document.getElementById(id).addEventListener('input',recalc));
-paySinal.addEventListener('input',()=>{activeVoucher=null;selectedBenefits.clear();recalcPayment()});
-paySinal.addEventListener('blur',()=>{paySinal.value=money(Math.min(Math.max(num(paySinal.value),0),getBasePrice()));recalcPayment()});
-voucherCode.addEventListener('keydown',e=>{if(e.key==='Enter')aplicarVoucher()});
-cfgPrecoBase.addEventListener('change',()=>syncPriceUI(true));cfgPrecoBase.addEventListener('blur',()=>syncPriceUI(true));
-cfgApostilaAtiva.addEventListener('change',syncApostila);cfgApostilaValor.addEventListener('input',syncApostila);
-prazo.textContent=new Date().toLocaleDateString('pt-BR',{day:'numeric',month:'long'});
-cfgPrecoBase.value=money(getBasePrice());cfgApostilaAtiva.checked=!!CONFIG.apostila.ativa;cfgApostilaValor.value=CONFIG.apostila.valor;
-syncApostila();syncPriceUI(false);show(0);fit();recalc();recalcPayment();
-restoreSession();
-window.addEventListener('online',()=>{if(AUTH.token)loadRemoteConfig()});
-document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!settingsOpen&&!remoteSaving&&AUTH.token)loadRemoteConfig()});
-</script>
+document.addEventListener('keydown',e=>{if(settingsOpen){if(e.key==='Escape')toggleSettings(false);return}if(mosaicOpen){if(e.key==='Escape')toggleMosaic(false);return}if(e.target.closest('input,select,textarea,[contenteditable="true"]'))return;if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();go(1)}if(e.key==='ArrowLeft'){e.preventDefault();go(-1)}});
 
+function activeProducts(){return MASTER_CONFIG.products.filter(p=>p.active)}
+function productById(id){return MASTER_CONFIG.products.find(p=>p.id===id)}
+function toggleProduct(id,checked){const p=productById(id);if(!p||!p.active)return;if(p.group==='conversation'&&checked)MASTER_CONFIG.products.filter(x=>x.group==='conversation').forEach(x=>selectedProducts.delete(x.id));if(checked)selectedProducts.add(id);else selectedProducts.delete(id);renderProducts();renderOffer()}
+function projectTotals(){const items=[...selectedProducts].map(productById).filter(p=>p&&p.active),subtotal=items.reduce((a,p)=>a+(Number(p.price)||0),0),count=items.length;const rules=MASTER_CONFIG.discountRules.filter(r=>(!r.minItems||count>=r.minItems)&&(!r.minTotal||subtotal>=r.minTotal)),best=rules.sort((a,b)=>b.percent-a.percent)[0]||{percent:0,minItems:0,minTotal:0},percent=Math.min(Math.max(Number(best.percent)||0,0),100),discount=subtotal*percent/100,final=Math.max(subtotal-discount,0);return{items,subtotal,count,rule:best,percent,discount,final}}
+function renderProducts(){const box=el('productBuilder');if(!box)return;const list=activeProducts();box.innerHTML=list.map(p=>'<label class="product-card '+(selectedProducts.has(p.id)?'on':'')+'"><input type="checkbox" '+(selectedProducts.has(p.id)?'checked':'')+' onchange="toggleProduct(\''+escapeHTML(p.id)+'\',this.checked)"><div><div class="pn">'+escapeHTML(p.name)+'</div><div class="pd">'+escapeHTML(p.description)+'</div></div><div class="pp">R$ '+money(p.price)+'</div></label>').join('')||'<div class="offer-empty">Nenhum produto ativo. A conta mestre precisa configurar o catálogo.</div>';const t=projectTotals();el('comboTotalTop').textContent='R$ '+money(t.final);el('comboCountTop').textContent=t.count+' '+(t.count===1?'item':'itens');el('comboSubtotal').textContent='R$ '+money(t.subtotal);el('comboDiscountPreview').textContent=t.percent.toLocaleString('pt-BR')+'%';el('comboFinalPreview').textContent='R$ '+money(t.final)}
+function renderOffer(){const t=projectTotals();if(!el('offerFrom'))return;el('offerFrom').textContent='R$ '+money(t.subtotal);el('offerTo').textContent='R$ '+money(t.final);el('offerSubtotal').textContent='R$ '+money(t.subtotal);el('offerDiscountAmount').textContent='R$ '+money(t.discount);el('offerFinal').textContent='R$ '+money(t.final);if(t.count===0){el('offerSaving').textContent='Selecione os itens no slide anterior.';el('offerRule').textContent='A condição é calculada automaticamente pela composição do projeto.'}else if(t.percent>0){el('offerSaving').textContent='Você economiza R$ '+money(t.discount)+' • '+t.percent.toLocaleString('pt-BR')+'% de desconto';el('offerRule').textContent='Condição liberada pela regra de '+(t.rule.minItems?('mínimo '+t.rule.minItems+' itens'):'composição')+(t.rule.minTotal?(' e valor mínimo de R$ '+money(t.rule.minTotal)):'')+'.'}else{el('offerSaving').textContent='Projeto montado sem desconto automático.';el('offerRule').textContent='Nenhuma regra de desconto configurada foi atingida.'}el('offerItems').innerHTML=t.items.length?t.items.map(p=>'<div class="offer-item"><span>'+escapeHTML(p.name)+'</span><b>R$ '+money(p.price)+'</b></div>').join(''):'<div class="offer-empty">Nenhum entregável selecionado.</div>'}
+function jumpToDeliverable(id){selectedProducts.add(id);renderProducts();renderOffer();const idx=SELLER_CONFIG.presentation.slideOrder.indexOf('combo');if(idx>=0)show(idx)}
+
+function toggleMosaic(force){mosaicOpen=typeof force==='boolean'?force:!mosaicOpen;el('mosaicOverlay').classList.toggle('on',mosaicOpen);el('mosaicOverlay').setAttribute('aria-hidden',String(!mosaicOpen));el('bMosaic').classList.toggle('on',mosaicOpen);if(mosaicOpen){renderMosaic();clearCustomSlideEditor()}}
+function slideTitle(id){const b=BASE_SLIDES.find(x=>x.id===id);if(b)return b.title;const c=SELLER_CONFIG.presentation.customSlides.find(x=>x.id===id);return c?c.title:id}
+function renderMosaic(){const order=SELLER_CONFIG.presentation.slideOrder;el('mosaicGrid').innerHTML=order.map((id,idx)=>{const custom=SELLER_CONFIG.presentation.customSlides.some(c=>c.id===id);return '<div class="mosaic-card" draggable="true" data-id="'+escapeHTML(id)+'" ondragstart="startSlideDrag(event,\''+escapeHTML(id)+'\')" ondragover="overSlideDrag(event)" ondrop="dropSlide(event,\''+escapeHTML(id)+'\')" ondragend="endSlideDrag(event)"><div><div class="mosaic-num">Slide '+(idx+1)+'</div><b>'+escapeHTML(slideTitle(id))+'</b></div><div class="mosaic-actions"><button onclick="moveSlide(\''+escapeHTML(id)+'\',-1)">←</button><button onclick="moveSlide(\''+escapeHTML(id)+'\',1)">→</button>'+(custom?'<button onclick="editCustomSlide(\''+escapeHTML(id)+'\')">Editar</button>':'')+'<button onclick="hideSlide(\''+escapeHTML(id)+'\')">Ocultar</button>'+(custom?'<button onclick="deleteCustomSlide(\''+escapeHTML(id)+'\')">Excluir</button>':'')+'</div></div>'}).join('');const allIds=[...BASE_IDS,...SELLER_CONFIG.presentation.customSlides.map(c=>c.id)],hidden=allIds.filter(id=>!order.includes(id));el('mosaicHidden').innerHTML=hidden.map(id=>'<div class="hidden-slide"><span>'+escapeHTML(slideTitle(id))+'</span><button onclick="restoreSlide(\''+escapeHTML(id)+'\')">Adicionar</button></div>').join('')||'<span class="settings-desc">Nenhum slide oculto.</span>';renderCustomProductChecks()}
+function startSlideDrag(e,id){dragSlideId=id;e.currentTarget.classList.add('dragging');e.dataTransfer.effectAllowed='move'}function overSlideDrag(e){e.preventDefault();e.currentTarget.classList.add('drag-over')}function endSlideDrag(){document.querySelectorAll('.mosaic-card').forEach(x=>x.classList.remove('dragging','drag-over'))}
+function dropSlide(e,target){e.preventDefault();document.querySelectorAll('.mosaic-card').forEach(x=>x.classList.remove('drag-over'));if(!dragSlideId||dragSlideId===target)return;const a=SELLER_CONFIG.presentation.slideOrder,from=a.indexOf(dragSlideId),to=a.indexOf(target);if(from<0||to<0)return;a.splice(from,1);a.splice(to,0,dragSlideId);scheduleSellerSave();renderPresentation(false);renderMosaic()}
+function moveSlide(id,delta){const a=SELLER_CONFIG.presentation.slideOrder,idx=a.indexOf(id),to=idx+delta;if(idx<0||to<0||to>=a.length)return;[a[idx],a[to]]=[a[to],a[idx]];scheduleSellerSave();renderPresentation(false);renderMosaic()}
+function hideSlide(id){SELLER_CONFIG.presentation.slideOrder=SELLER_CONFIG.presentation.slideOrder.filter(x=>x!==id);scheduleSellerSave();currentIndex=Math.min(currentIndex,Math.max(SELLER_CONFIG.presentation.slideOrder.length-1,0));renderPresentation(false);renderMosaic()}
+function restoreSlide(id){if(!SELLER_CONFIG.presentation.slideOrder.includes(id))SELLER_CONFIG.presentation.slideOrder.push(id);scheduleSellerSave();renderPresentation(false);renderMosaic()}
+function deleteCustomSlide(id){SELLER_CONFIG.presentation.customSlides=SELLER_CONFIG.presentation.customSlides.filter(x=>x.id!==id);SELLER_CONFIG.presentation.slideOrder=SELLER_CONFIG.presentation.slideOrder.filter(x=>x!==id);scheduleSellerSave();clearCustomSlideEditor();renderPresentation(false);renderMosaic()}
+function renderCustomProductChecks(){const box=el('customSlideProducts');if(!box)return;const selected=new Set([...box.querySelectorAll('input:checked')].map(x=>x.value));box.innerHTML=activeProducts().map(p=>'<label><input type="checkbox" value="'+escapeHTML(p.id)+'" '+(selected.has(p.id)?'checked':'')+'>'+escapeHTML(p.name)+'</label>').join('')}
+function clearCustomSlideEditor(){el('customSlideId').value='';el('customSlideTitle').value='';el('customSlideBody').value='';el('customSlideTheme').value='dark';renderCustomProductChecks();[...el('customSlideProducts').querySelectorAll('input')].forEach(x=>x.checked=false)}
+function editCustomSlide(id){const c=SELLER_CONFIG.presentation.customSlides.find(x=>x.id===id);if(!c)return;el('customSlideId').value=c.id;el('customSlideTitle').value=c.title;el('customSlideBody').value=c.body;el('customSlideTheme').value=c.theme;renderCustomProductChecks();const set=new Set(c.productIds);[...el('customSlideProducts').querySelectorAll('input')].forEach(x=>x.checked=set.has(x.value))}
+function saveCustomSlide(){const id=el('customSlideId').value||uid(),title=el('customSlideTitle').value.trim(),body=el('customSlideBody').value.trim(),theme=el('customSlideTheme').value,productIds=[...el('customSlideProducts').querySelectorAll('input:checked')].map(x=>x.value);if(!title){el('mosaicStatus').textContent='Dê um título ao slide.';el('mosaicStatus').className='cloud-status error';return}const idx=SELLER_CONFIG.presentation.customSlides.findIndex(x=>x.id===id),obj={id,title,body,theme,productIds};if(idx>=0)SELLER_CONFIG.presentation.customSlides[idx]=obj;else{SELLER_CONFIG.presentation.customSlides.push(obj);SELLER_CONFIG.presentation.slideOrder.push(id)}scheduleSellerSave();el('mosaicStatus').textContent='Slide salvo para '+AUTH.user.username+'.';el('mosaicStatus').className='cloud-status ok';clearCustomSlideEditor();renderPresentation(false);renderMosaic()}
+function addWildcard(type){const map={linkedin:{title:'Pitch + LinkedIn',body:'Conecte a dor do lead com posicionamento profissional, visibilidade e apresentação no mercado offshore.',theme:'light',productIds:['recorded']},interview:{title:'Entrevista de emprego em inglês técnico',body:'Use este slide quando a principal dor estiver em se apresentar, responder perguntas e sustentar uma entrevista em inglês.',theme:'dark',productIds:['interview']},booklet:{title:'Apostila física de apoio',body:'Material físico para acompanhar o estudo, revisar pontos importantes e manter uma referência rápida fora da plataforma.',theme:'light',productIds:['booklet']},testimonial:{title:'Depoimento por tema',body:'Insira aqui um depoimento real relacionado à dor que apareceu na conversa. Edite o título, a fala e os entregáveis ligados a esse caso.',theme:'dark',productIds:[]}};const t=map[type];if(!t)return;const c={id:uid(),...t};SELLER_CONFIG.presentation.customSlides.push(c);SELLER_CONFIG.presentation.slideOrder.push(c.id);scheduleSellerSave();renderPresentation(false);renderMosaic();editCustomSlide(c.id)}
+
+function toggleSettings(force){settingsOpen=typeof force==='boolean'?force:!settingsOpen;el('settingsOverlay').classList.toggle('on',settingsOpen);el('settingsOverlay').setAttribute('aria-hidden',String(!settingsOpen));el('bSettings').classList.toggle('on',settingsOpen);if(settingsOpen){setDefaultSettingsTab();if(AUTH.user&&AUTH.user.role==='master'){renderCatalog();renderDiscountRules();renderUsers()}}}
+function setDefaultSettingsTab(){if(!AUTH.user)return;setSettingsTab(AUTH.user.role==='master'?'catalogo':'conta')}
+function setSettingsTab(tab){if((tab==='catalogo'||tab==='descontos'||tab==='usuarios')&&AUTH.user&&AUTH.user.role!=='master')tab='conta';document.querySelectorAll('.settings-tabs button').forEach(b=>b.classList.remove('on'));const id='settingsTab'+tab.charAt(0).toUpperCase()+tab.slice(1),btn=el(id);if(btn)btn.classList.add('on');document.querySelectorAll('[data-settings-panel]').forEach(p=>p.classList.toggle('on',p.dataset.settingsPanel===tab));if(tab==='catalogo')renderCatalog();if(tab==='descontos')renderDiscountRules();if(tab==='usuarios')renderUsers()}
+function renderCatalog(){if(!el('catalogList'))return;el('catalogList').innerHTML=MASTER_CONFIG.products.map((p,idx)=>'<div class="catalog-row"><label>Produto<input data-product-index="'+idx+'" data-key="name" value="'+escapeHTML(p.name)+'"></label><label>Preço R$<input data-product-index="'+idx+'" data-key="price" inputmode="decimal" value="'+money(p.price)+'"></label><label class="catalog-active"><input type="checkbox" data-product-index="'+idx+'" data-key="active" '+(p.active?'checked':'')+'> Disponível</label></div>').join('');el('catalogList').querySelectorAll('[data-product-index]').forEach(x=>x.addEventListener(x.type==='checkbox'?'change':'input',updateCatalogField))}
+function updateCatalogField(e){const idx=Number(e.target.dataset.productIndex),key=e.target.dataset.key,p=MASTER_CONFIG.products[idx];if(!p)return;if(key==='active')p.active=e.target.checked;else if(key==='price')p.price=Math.max(num(e.target.value),0);else p.name=e.target.value;scheduleMasterSave();renderProducts();renderOffer();renderCustomProductChecks()}
+function renderDiscountRules(){if(!el('discountRules'))return;el('discountRules').innerHTML=MASTER_CONFIG.discountRules.map((r,idx)=>'<div class="discount-row"><label>Mínimo de itens<input data-rule-index="'+idx+'" data-key="minItems" value="'+r.minItems+'"></label><label>Valor mínimo R$<input data-rule-index="'+idx+'" data-key="minTotal" value="'+money(r.minTotal)+'"></label><label>Desconto %<input data-rule-index="'+idx+'" data-key="percent" value="'+r.percent+'"></label><button class="settings-remove" onclick="removeDiscountRule('+idx+')">×</button></div>').join('')||'<div class="settings-desc">Nenhuma regra configurada.</div>';el('discountRules').querySelectorAll('[data-rule-index]').forEach(x=>x.addEventListener('input',e=>{const idx=Number(e.target.dataset.ruleIndex),key=e.target.dataset.key,r=MASTER_CONFIG.discountRules[idx];if(key==='minItems')r[key]=Math.max(parseInt(e.target.value)||0,0);else if(key==='percent')r[key]=Math.min(Math.max(num(e.target.value),0),100);else r[key]=Math.max(num(e.target.value),0);scheduleMasterSave();renderProducts();renderOffer()}))}
+function addDiscountRule(){MASTER_CONFIG.discountRules.push({minItems:0,minTotal:0,percent:0});scheduleMasterSave();renderDiscountRules()}
+function removeDiscountRule(i){MASTER_CONFIG.discountRules.splice(i,1);scheduleMasterSave();renderDiscountRules();renderProducts();renderOffer()}
+async function renderUsers(){if(!AUTH.user||AUTH.user.role!=='master'||!AUTH.token)return;el('userList').innerHTML='<div class="settings-desc">Carregando contas...</div>';try{const rows=await rpc('ppt_list_users',{p_token:AUTH.token});el('userList').innerHTML=(rows||[]).map(u=>'<div class="user-row"><div class="user-main"><b>'+escapeHTML(u.username)+'</b><span>'+(u.role==='master'?'Conta mestre':'Vendedor')+'</span></div><span class="user-state '+(u.active?'':'off')+'">'+(u.active?'Ativa':'Bloqueada')+'</span><div class="user-actions">'+(u.role==='master'?'':'<button class="user-action" onclick="resetSellerPassword(\''+u.user_id+'\',\''+escapeHTML(u.username).replace(/'/g,'&#039;')+'\')">Senha</button><button class="user-action '+(u.active?'danger':'')+'" onclick="setSellerActive(\''+u.user_id+'\','+(!u.active)+')">'+(u.active?'Bloquear':'Ativar')+'</button>')+'</div></div>').join('')||'<div class="settings-desc">Nenhuma conta criada.</div>'}catch(e){el('userList').innerHTML='<div class="account-status bad">'+escapeHTML(e.message)+'</div>'}}
+async function createSeller(){const name=el('newUserName').value.trim(),password=el('newUserPassword').value;el('accountStatus').className='account-status';el('accountStatus').textContent='';if(!name||password.length<3){el('accountStatus').classList.add('bad');el('accountStatus').textContent='Informe nome e senha com pelo menos 3 caracteres.';return}try{await rpc('ppt_create_user',{p_token:AUTH.token,p_username:name,p_password:password});el('newUserName').value='';el('newUserPassword').value='';el('accountStatus').classList.add('ok');el('accountStatus').textContent='Conta criada. Ela terá sua própria personalização de slides e usará o catálogo mestre.';await renderUsers()}catch(e){el('accountStatus').classList.add('bad');el('accountStatus').textContent=e.message}}
+async function setSellerActive(id,active){try{await rpc('ppt_set_user_active',{p_token:AUTH.token,p_user_id:id,p_active:!!active});await renderUsers()}catch(e){el('accountStatus').className='account-status bad';el('accountStatus').textContent=e.message}}
+async function resetSellerPassword(id,name){const pw=prompt('Nova senha para '+name+':');if(pw===null)return;if(pw.length<3){alert('A senha precisa ter pelo menos 3 caracteres.');return}try{await rpc('ppt_master_reset_password',{p_token:AUTH.token,p_user_id:id,p_new_password:pw});el('accountStatus').className='account-status ok';el('accountStatus').textContent='Senha de '+name+' redefinida.'}catch(e){el('accountStatus').className='account-status bad';el('accountStatus').textContent=e.message}}
+async function changeMyPassword(){const current=el('currentPassword').value,next=el('newPassword').value;el('passwordStatus').className='account-status';el('passwordStatus').textContent='';if(!current||next.length<3){el('passwordStatus').classList.add('bad');el('passwordStatus').textContent='Confira a senha atual e use pelo menos 3 caracteres na nova.';return}try{await rpc('ppt_change_password',{p_token:AUTH.token,p_current_password:current,p_new_password:next});el('currentPassword').value='';el('newPassword').value='';el('passwordStatus').classList.add('ok');el('passwordStatus').textContent='Senha alterada.'}catch(e){el('passwordStatus').classList.add('bad');el('passwordStatus').textContent=e.message}}
+fit();renderPresentation(true);renderProducts();renderOffer();restoreSession();
+window.addEventListener('online',()=>{if(AUTH.token){loadSellerRemote();loadMasterRemote()}});
+</script>
 </body></html>
