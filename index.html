@@ -687,6 +687,7 @@ body.v .slide-deck .deck-shot:nth-child(3) img{width:100%;height:auto;max-height
 .testimonial-slide .lead{max-width:34ch;font-size:calc(var(--u)*1.75);line-height:1.32;color:rgba(255,255,255,.76)}
 .testimonial-player-shell{width:min(100%,calc(var(--u)*30));justify-self:center;border-radius:calc(var(--u)*1.15);overflow:hidden;background:#000;box-shadow:0 calc(var(--u)*1.1) calc(var(--u)*3.5) rgba(0,0,0,.32);border:1px solid rgba(255,255,255,.12)}
 .testimonial-player-shell vturb-smartplayer{display:block!important;width:100%!important;max-width:none!important;margin:0!important}
+.vturb-lazy-player{display:block;width:100%;min-height:100%;background:#000}
 .testimonial-player-placeholder{position:relative;width:100%;padding:125% 0 0;background:linear-gradient(150deg,#0B0625,#000);display:block}
 .testimonial-player-placeholder:after{content:'▶';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:calc(var(--u)*4);height:calc(var(--u)*4);border-radius:999px;background:rgba(255,107,0,.94);display:grid;place-items:center;color:#fff;font:900 calc(var(--u)*1.35) 'Archivo';padding-left:calc(var(--u)*.18);box-shadow:0 10px 28px rgba(0,0,0,.28)}
 .mosaic-preview-stage .testimonial-player-shell{box-shadow:none}.mosaic-preview-stage vturb-smartplayer{display:none!important}.mosaic-preview-stage .testimonial-player-shell:before{content:'▶';position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(145deg,#100735,#050022);color:#FF6B00;font:900 72px 'Archivo';z-index:3}.mosaic-preview-stage .testimonial-player-shell{position:relative;min-height:470px}
@@ -925,9 +926,11 @@ function normalizeSellerConfig(raw){
   const customSlides=Array.isArray(p.customSlides)?p.customSlides.map(c=>({
     id:String(c&&c.id||uid()),label:String(c&&c.label||'Desafio'),title:String(c&&c.title||'Novo desafio'),body:String(c&&c.body||''),theme:c&&c.theme==='light'?'light':'dark',
     kind:c&&c.kind==='testimonial'?'testimonial':'custom',testimonialId:String(c&&c.testimonialId||''),vturbAccountId:String(c&&c.vturbAccountId||''),vturbPlayerId:String(c&&c.vturbPlayerId||''),mediaUrl:String(c&&c.mediaUrl||'')
-  })):[];
+  })) : [];
   const valid=new Set([...BASE_IDS,...customSlides.map(c=>c.id)]),hasOrder=Array.isArray(p.slideOrder);
-  const slideOrder=hasOrder?p.slideOrder.map(String).filter((id,idx,a)=>valid.has(id)&&a.indexOf(id)===idx):[...DEFAULT_SLIDE_ORDER];
+  let slideOrder=hasOrder?p.slideOrder.map(String).filter((id,idx,a)=>valid.has(id)&&a.indexOf(id)===idx):[...DEFAULT_SLIDE_ORDER];
+  // Nunca deixa uma configuração antiga/corrompida apagar toda a apresentação.
+  if(!slideOrder.length)slideOrder=[...DEFAULT_SLIDE_ORDER].filter(id=>valid.has(id));
   return{presentation:{clientName:String(p.clientName||''),slideOrder,customSlides}}
 }
 function sellerStorageKey(){return SELLER_STORAGE_PREFIX+(AUTH.user&&AUTH.user.id?AUTH.user.id:'guest')}
@@ -948,18 +951,57 @@ async function restoreSession(){try{const raw=localStorage.getItem(SESSION_STORA
 async function logoutUser(){const token=AUTH.token;AUTH={token:null,user:null};localStorage.removeItem(SESSION_STORAGE_KEY);try{if(token)await rpc('ppt_logout',{p_token:token})}catch(e){}location.reload()}
 function testimonialSlideHTML(c){
   const account=escapeHTML(c.vturbAccountId||VTURB_ACCOUNT_ID),player=escapeHTML(c.vturbPlayerId||'');
-  const playerHTML=player?'<div class="testimonial-player-shell"><vturb-smartplayer id="vid-'+player+'" data-vturb-account="'+account+'" data-vturb-player="'+player+'" style="display:block;margin:0 auto;width:100%;max-width:none"><div class="testimonial-player-placeholder"></div></vturb-smartplayer></div>':'<div class="testimonial-player-shell"><div class="testimonial-player-placeholder"></div></div>';
+  // O player real só é criado quando este slide estiver visível. Isso evita que o VTurb
+  // inicialize players escondidos ou miniaturas do mosaico e interfira no palco principal.
+  const playerHTML=player?'<div class="testimonial-player-shell"><div class="vturb-lazy-player" data-vturb-account="'+account+'" data-vturb-player="'+player+'"><div class="testimonial-player-placeholder"></div></div></div>':'<div class="testimonial-player-shell"><div class="testimonial-player-placeholder"></div></div>';
   return '<section class="slide custom-slide deep testimonial-slide" data-slide-id="'+escapeHTML(c.id)+'" data-slide-title="'+escapeHTML(c.title)+'"><div class="testimonial-layout"><div class="testimonial-copy"><div class="eyebrow">Depoimento • '+escapeHTML(c.title||'Aluno')+'</div><div class="big">'+escapeHTML(c.label||'Resultado real')+'</div><div class="lead">'+escapeHTML(c.body||'')+'</div></div>'+playerHTML+'</div></section>'
 }
 function customSlideHTML(c){if(c&&c.kind==='testimonial')return testimonialSlideHTML(c);const theme=c.theme==='light'?'light':'deep';return '<section class="slide custom-slide '+theme+'" data-slide-id="'+escapeHTML(c.id)+'" data-slide-title="'+escapeHTML(c.title)+'"><div class="custom-content"><div class="eyebrow">'+escapeHTML(c.label||'Desafio')+'</div><div class="big">'+escapeHTML(c.title)+'</div><div class="lead">'+escapeHTML(c.body)+'</div></div></section>'}
-function ensureVturbPlayers(root=document){root.querySelectorAll('vturb-smartplayer[data-vturb-player]').forEach(player=>{const pid=player.dataset.vturbPlayer,account=player.dataset.vturbAccount||VTURB_ACCOUNT_ID;if(!pid||player.dataset.scriptRequested==='1')return;player.dataset.scriptRequested='1';const key='vturb-script-'+pid;if(document.getElementById(key))return;const sc=document.createElement('script');sc.id=key;sc.src='https://scripts.converteai.net/'+account+'/players/'+pid+'/v4/player.js';sc.async=true;document.head.appendChild(sc)})}
+function ensureVturbPlayers(root=document){
+  root.querySelectorAll('.vturb-lazy-player[data-vturb-player]').forEach(host=>{
+    const pid=host.dataset.vturbPlayer,account=host.dataset.vturbAccount||VTURB_ACCOUNT_ID;
+    if(!pid||host.dataset.mounted==='1')return;
+    host.dataset.mounted='1';
+    host.innerHTML='<vturb-smartplayer id="vid-'+escapeHTML(pid)+'" style="display:block;margin:0 auto;width:100%;max-width:none"><div class="testimonial-player-placeholder"></div></vturb-smartplayer>';
+    const key='vturb-script-'+pid;
+    if(document.getElementById(key))return;
+    const sc=document.createElement('script');sc.id=key;sc.src='https://scripts.converteai.net/'+account+'/players/'+pid+'/v4/player.js';sc.async=true;document.head.appendChild(sc)
+  })
+}
 
 function realSlides(){return [...el('stage').querySelectorAll(':scope > section.slide')]}
 function rebuildCustomSlides(){el('stage').querySelectorAll(':scope > .custom-slide').forEach(e=>e.remove());const anchor=el('stage').querySelector(':scope > .slide-combo');if(!anchor)return;SELLER_CONFIG.presentation.customSlides.forEach(c=>anchor.insertAdjacentHTML('beforebegin',customSlideHTML(c)))}
 function orderedSlides(){const map=new Map(realSlides().map(s=>[s.dataset.slideId,s]));return SELLER_CONFIG.presentation.slideOrder.map(id=>map.get(id)).filter(Boolean)}
-function renderPresentation(resetIndex){rebuildCustomSlides();applyClientName();const ordered=orderedSlides(),all=realSlides();all.forEach(s=>{s.classList.remove('on');s.style.display='none'});if(resetIndex)currentIndex=Math.min(currentIndex,Math.max(ordered.length-1,0));renderDots();show(currentIndex);if(mosaicOpen)renderMosaic()}
+function renderPresentation(resetIndex){
+  rebuildCustomSlides();applyClientName();
+  let ordered=orderedSlides(),all=realSlides();
+  // Recuperação automática: uma ordem vazia/corrompida nunca pode deixar o palco em branco.
+  if(!ordered.length){
+    SELLER_CONFIG.presentation.slideOrder=[...DEFAULT_SLIDE_ORDER];
+    ordered=orderedSlides();
+    saveSellerLocal();
+    if(AUTH.token&&sellerReady)clearTimeout(sellerSaveTimer),sellerSaveTimer=setTimeout(saveSellerRemote,250);
+  }
+  all.forEach(s=>{s.classList.remove('on');s.style.display='none'});
+  if(resetIndex||currentIndex>=ordered.length)currentIndex=Math.min(currentIndex,Math.max(ordered.length-1,0));
+  renderDots();show(currentIndex);if(mosaicOpen)renderMosaic()
+}
 function renderDots(){el('dots').innerHTML='';orderedSlides().forEach((s,idx)=>{const d=document.createElement('div');d.className='dot';d.title=s.dataset.slideTitle||('Slide '+(idx+1));d.onclick=()=>show(idx);el('dots').appendChild(d)})}
-function show(k){const list=orderedSlides();if(!list.length)return;currentIndex=Math.max(0,Math.min(Number(k)||0,list.length-1));realSlides().forEach(s=>{s.classList.remove('on');s.style.display='none'});const cur=list[currentIndex];cur.style.display='flex';cur.classList.add('on');[...el('dots').children].forEach((d,n)=>d.classList.toggle('on',n===currentIndex));const nav=el('dots').parentElement;nav.className='nav';nav.classList.toggle('dark',cur.classList.contains('dark')||cur.classList.contains('deep')||cur.classList.contains('cover'));nav.classList.toggle('at-start',currentIndex===0);nav.classList.toggle('at-end',currentIndex===list.length-1);if(cur.dataset.slideId==='combo')renderProducts();if(cur.dataset.slideId==='offer')renderOffer();if(cur.classList.contains('testimonial-slide'))ensureVturbPlayers(cur)}
+function show(k){
+  let list=orderedSlides();
+  if(!list.length){
+    SELLER_CONFIG.presentation.slideOrder=[...DEFAULT_SLIDE_ORDER];
+    list=orderedSlides();
+    if(!list.length)return;
+  }
+  currentIndex=Math.max(0,Math.min(Number(k)||0,list.length-1));
+  realSlides().forEach(s=>{s.classList.remove('on');s.style.display='none'});
+  const cur=list[currentIndex];if(!cur)return;
+  cur.style.display='flex';cur.classList.add('on');
+  [...el('dots').children].forEach((d,n)=>d.classList.toggle('on',n===currentIndex));
+  const nav=el('dots').parentElement;nav.className='nav';nav.classList.toggle('dark',cur.classList.contains('dark')||cur.classList.contains('deep')||cur.classList.contains('cover'));nav.classList.toggle('at-start',currentIndex===0);nav.classList.toggle('at-end',currentIndex===list.length-1);
+  if(cur.dataset.slideId==='combo')renderProducts();if(cur.dataset.slideId==='offer')renderOffer();if(cur.classList.contains('testimonial-slide'))requestAnimationFrame(()=>ensureVturbPlayers(cur))
+}
 function go(d){if(settingsOpen||mosaicOpen)return;const next=currentIndex+d;if(next<0||next>=orderedSlides().length)return;show(next)}
 function fit(){const wrap=document.querySelector('.wrap'),st=el('stage'),vertical=document.body.classList.contains('v');let w,h;if(!vertical){w=wrap.clientWidth;h=wrap.clientHeight}else{const ratio=9/16,aw=wrap.clientWidth-24,ah=wrap.clientHeight-24;w=aw;h=w/ratio;if(h>ah){h=ah;w=h*ratio}}st.style.width=w+'px';st.style.height=h+'px';const u=vertical?w/54:Math.min(w/100,h/56.25);document.documentElement.style.setProperty('--u',Math.max(u,5)+'px')}
 function setMode(m){document.body.classList.toggle('h',m==='h');document.body.classList.toggle('v',m==='v');el('bH').classList.toggle('on',m==='h');el('bV').classList.toggle('on',m==='v');fit()}
@@ -974,7 +1016,6 @@ function renderProducts(){const box=el('productBuilder');if(!box)return;if(selec
 function renderOffer(){const t=projectTotals();if(!el('offerFrom'))return;el('offerFrom').textContent='R$ '+money(t.subtotal);el('offerTo').textContent='R$ '+money(t.final);el('offerSubtotal').textContent='R$ '+money(t.subtotal);el('offerDiscountAmount').textContent='R$ '+money(t.discount);el('offerFinal').textContent='R$ '+money(t.final);if(t.count===0){el('offerSaving').textContent='Selecione os itens no slide anterior.';el('offerRule').textContent='Condição exclusiva de diagnóstico, calculada pela composição do projeto.'}else if(t.percent>0){el('offerSaving').textContent='Você economiza R$ '+money(t.discount)+' • '+t.percent.toLocaleString('pt-BR')+'% de desconto';el('offerRule').textContent='Condição liberada pela regra de '+(t.rule.minItems?('mínimo '+t.rule.minItems+' itens'):'composição')+(t.rule.minTotal?(' e valor mínimo de R$ '+money(t.rule.minTotal)):'')+'.'}else{el('offerSaving').textContent='Projeto montado sem desconto automático.';el('offerRule').textContent='Condição exclusiva de diagnóstico sem desconto automático aplicado.'}el('offerItems').innerHTML=t.items.length?t.items.map(p=>'<div class="offer-item"><span>'+escapeHTML(p.name)+'</span><b>R$ '+money(p.price)+'</b></div>').join(''):'<div class="offer-empty">Nenhum entregável selecionado.</div>'}
 function jumpToDeliverable(id){selectedProducts.add(id);renderProducts();renderOffer();const idx=SELLER_CONFIG.presentation.slideOrder.indexOf('combo');if(idx>=0)show(idx)}
 
-function toggleMosaic(force){mosaicOpen=typeof force==='boolean'?force:!mosaicOpen;el('mosaicOverlay').classList.toggle('on',mosaicOpen);el('mosaicOverlay').setAttribute('aria-hidden',String(!mosaicOpen));el('bMosaic').classList.toggle('on',mosaicOpen);if(mosaicOpen){renderMosaic();newCustomSlide(null,false)}}
 let pendingInsertAfter=null;
 function slideTitle(id){const b=BASE_SLIDES.find(x=>x.id===id);if(b)return b.title;const c=SELLER_CONFIG.presentation.customSlides.find(x=>x.id===id);return c?c.title:id}
 function slidePreviewInfo(id){const custom=SELLER_CONFIG.presentation.customSlides.find(c=>c.id===id);if(custom)return{label:custom.label||'Desafio',title:custom.title,theme:custom.theme==='light'?'light':'deep',custom:true,testimonial:custom.kind==='testimonial'};const node=realSlides().find(s=>s.dataset.slideId===id),theme=node?(node.classList.contains('cover')?'cover':node.classList.contains('deep')?'deep':node.classList.contains('dark')?'dark':'light'):'light';const labels={cover:'Abertura',authority:'Autoridade',level:'Ponto de partida',live:'Conversação',recorded:'Base estrutural',deck:'App do aluno',career:'Pitch + LinkedIn',interview:'Entrevista',booklet:'Material físico',combo:'Planejamento',offer:'Diagnóstico'};return{label:labels[id]||'Slide',title:slideTitle(id),theme,custom:false}}
