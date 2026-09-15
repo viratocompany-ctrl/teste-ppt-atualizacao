@@ -728,6 +728,39 @@ body.v .testimonial-slide .big{font-size:calc(var(--u)*4.6);max-width:12ch}
 body.v .testimonial-slide .lead{font-size:calc(var(--u)*1.35)}
 body.v .testimonial-player-shell{width:min(100%,calc(var(--u)*31))}
 
+
+/* ===== Ajustes finais: abertura, projeto e navegação ===== */
+body.h .cover-grid{grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:calc(var(--u)*3.2);align-items:center}
+body.h .cover-copy-simple{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;min-height:calc(var(--u)*38)}
+body.h .cover-brand-row{display:flex;align-items:center;gap:calc(var(--u)*1.2);margin-bottom:calc(var(--u)*2.4)}
+body.h .cover .cover-brand-row .brand-logo{height:calc(var(--u)*6.4);width:auto;max-width:calc(var(--u)*16);object-fit:contain;margin:0}
+body.h .cover .cover-brand-row .kicker{position:static!important;margin:0!important;align-self:center;font-size:calc(var(--u)*1.08);padding:calc(var(--u)*.56) calc(var(--u)*1.05);white-space:nowrap}
+body.h .cover .diagnostic-promise{margin-top:0;max-width:46ch;padding:calc(var(--u)*1.25) calc(var(--u)*1.35);border-left-width:calc(var(--u)*.32);background:rgba(255,255,255,.075)}
+body.h .cover .diagnostic-promise b{font-size:calc(var(--u)*1.45)}
+body.h .cover .diagnostic-promise span{font-size:calc(var(--u)*1.18);line-height:1.4;margin-top:calc(var(--u)*.38)}
+body.h .cover .client-plan{margin-top:calc(var(--u)*1.5);font-size:calc(var(--u)*1.35)}
+body.h .cover .foot{margin-top:calc(var(--u)*1.75);font-size:calc(var(--u)*.95)}
+body.h .cover-visual{min-height:calc(var(--u)*43);justify-content:center;align-items:flex-end}
+body.h .cover-visual:before{width:calc(var(--u)*36);height:calc(var(--u)*36);bottom:calc(var(--u)*.7)}
+body.h .cover-visual .mari{height:calc(var(--u)*46);max-height:calc(var(--u)*46);max-width:100%}
+body.h .slide-combo{padding-bottom:calc(var(--u)*2.5)}
+body.h .slide-combo .product-builder{margin-top:calc(var(--u)*.75);flex:1}
+.combo-count-mini{min-width:calc(var(--u)*12.8)!important;text-align:left}
+.combo-count-mini span{font-size:calc(var(--u)*.8)!important}
+.combo-count-mini b{font-size:calc(var(--u)*1.75)!important;margin-top:calc(var(--u)*.16)!important}
+.combo-footer{display:none!important}
+/* Bolinhas na lateral esquerda e setas compactas no canto inferior direito */
+.nav{left:calc(var(--u)*1.15);right:calc(var(--u)*1.15);bottom:calc(var(--u)*1.05);align-items:flex-end}
+.dots{position:absolute;left:0;top:50%;transform:translateY(-50%);flex-direction:column;gap:calc(var(--u)*.36);margin:0;padding:calc(var(--u)*.48) calc(var(--u)*.38)}
+.dot{width:calc(var(--u)*.52);height:calc(var(--u)*.52)}
+.dot.on{width:calc(var(--u)*.52);height:calc(var(--u)*1.45)}
+.nav-arrows{margin-left:auto;gap:calc(var(--u)*.32)}
+.arrow{width:calc(var(--u)*2);height:calc(var(--u)*2);font-size:calc(var(--u)*1.02)}
+/* Vertical: mantém o topo da abertura organizado com a nova estrutura */
+body.v .cover-brand-row{display:flex;align-items:center;gap:calc(var(--u)*.8);margin-bottom:calc(var(--u)*1.2)}
+body.v .cover .cover-brand-row .brand-logo{margin:0;height:calc(var(--u)*5.2);max-width:42%}
+body.v .cover .cover-brand-row .kicker{position:static!important;margin:0!important;font-size:calc(var(--u)*.78);padding:calc(var(--u)*.4) calc(var(--u)*.7);white-space:nowrap}
+
 </style>
 </head>
 <body class="h">
@@ -755,7 +788,7 @@ body.v .testimonial-player-shell{width:min(100%,calc(var(--u)*31))}
   <div class="user-session" id="userSession" hidden><div class="user-badge"><span id="userSessionName">Usuário</span><span class="user-role" id="userSessionRole">Vendedor</span></div><button class="user-logout" onclick="logoutUser()">Sair</button></div>
 </div>
 <div class="wrap"><div class="stage" id="stage">
-<section class="slide cover" data-slide-id="cover" data-slide-title="Abertura"><div class="cover-grid"><div><img alt="High Level" class="brand-logo" src="./assets/marca/high-level-logo.webp"/><div class="kicker">S.O.S Inglês Técnico Offshore</div><div class="big">Inglês que você usa <em>falando.</em></div><div class="lead">Programa completo de 12 meses, com conversação ao vivo no centro.</div><div class="proofs"><span>+25 anos de High Level</span><span>Inglês em contexto offshore</span></div><div class="diagnostic-promise"><b>Diagnóstico + planejamento de estudo</b><span>para transformar o inglês de um problema em um divisor de águas na sua carreira.</span></div><div class="client-plan" id="coverClientPlan" hidden>Plano de estudo de <b id="coverClientName"></b></div><div class="foot">High Level Consultoria de Idiomas</div></div><div class="cover-visual"><img alt="Mari" class="mari" src="./assets/marca/mari.webp"/><div class="badge"><b>12 meses</b><span>de programa completo</span></div></div></div></section>
+<section class="slide cover" data-slide-id="cover" data-slide-title="Abertura"><div class="cover-grid"><div class="cover-copy-simple"><div class="cover-brand-row"><img alt="S.O.S Inglês Técnico Offshore" class="brand-logo" src="./assets/marca/high-level-logo.webp"/><div class="kicker">S.O.S Inglês Técnico Offshore</div></div><div class="diagnostic-promise"><b>Diagnóstico + planejamento de estudo</b><span>para transformar o inglês de um problema em um divisor de águas na sua carreira.</span></div><div class="client-plan" id="coverClientPlan" hidden>Plano de estudo de <b id="coverClientName"></b></div><div class="foot">High Level Consultoria de Idiomas</div></div><div class="cover-visual"><img alt="Mari" class="mari" src="./assets/marca/mari.webp"/></div></div></section>
 <section class="slide dark slide-authority" data-slide-id="authority" data-slide-title="High Level"><div class="authority"><div class="authority-photo"><img alt="Treinamento na sede da High Level" src="./assets/marca/hl-sede.webp"/></div><div class="authority-copy"><div class="eyebrow">Quem já confiou o inglês da equipe</div><div class="big"><em>25 anos</em> formando times inteiros.</div><div class="lead">Consultoria, não curso de prateleira. O programa é moldado ao objetivo de quem estuda.</div><div class="partner-label">Experiência com equipes e processos seletivos de empresas como</div><div class="logos"><div class="logo-card"><img alt="Shell" src="./assets/parceiros/shell.webp"/></div><div class="logo-card"><img alt="BW Offshore" src="./assets/parceiros/bw-offshore.webp"/></div><div class="logo-card"><img alt="ABS" src="./assets/parceiros/abs.webp"/></div><div class="logo-card"><img alt="Ellis" src="./assets/parceiros/ellis.webp"/></div></div></div></div></section>
 <section class="slide light slide-level" data-slide-id="level" data-slide-title="Nivelamento"><div class="split"><div><div class="eyebrow">Ponto de partida</div><div class="big">Começa pelo <em>nivelamento.</em></div><div class="lead">O teste define por onde você entra e em quais turmas você fala.</div><div class="steps"><div class="step"><i>01</i><div><b>Teste</b><span>No app, resultado na hora.</span></div></div><div class="step"><i>02</i><div><b>Trilha</b><span>O módulo certo para o seu nível.</span></div></div><div class="step"><i>03</i><div><b>Agenda</b><span>Horários abertos para esse nível.</span></div></div></div></div><div class="phone-stage"><img alt="Agenda no DECK" src="./assets/produto/deck-agenda.webp"/></div></div></section>
 <section class="slide dark slide-live" data-slide-id="live" data-slide-title="120h ao vivo"><div class="split"><div><div class="eyebrow">O núcleo do programa</div><div class="big"><em>120 horas</em> falando ao vivo.</div><div class="grid g3"><div class="cell stat"><div class="k">120h</div><div class="v">de conversação ao vivo</div></div><div class="cell stat"><div class="k">6</div><div class="v">alunos por turma, no máximo</div></div><div class="cell stat"><div class="k">Seg a sex</div><div class="v">aulas disponíveis</div></div></div><div class="chips"><span class="chip">Horários flexíveis</span><span class="chip">Temas diferentes em cada aula</span><span class="chip">100% em contexto offshore</span></div></div><div class="media"><img alt="Aula ao vivo" src="./assets/produto/aovivo.webp"/><div class="caption">Aula real ao vivo</div></div></div></section>
@@ -802,17 +835,11 @@ body.v .testimonial-player-shell{width:min(100%,calc(var(--u)*31))}
 </section>
 <section class="slide light slide-combo" data-slide-id="combo" data-slide-title="Planejamento personalizado">
   <div class="combo-head">
-    <div class="combo-head-main">
-      <div class="eyebrow">Projeto personalizado</div>
-      <div class="combo-client" id="comboClientPlan" hidden>Plano de estudo de <b id="comboClientName"></b></div>
-    </div>
-    <div class="combo-total-mini"><span>Total planejado</span><b id="comboTotalTop">R$ 0,00</b><small id="comboCountTop">0 itens</small></div>
+    <div class="combo-head-main"><div class="eyebrow">Projeto personalizado</div></div>
+    <div class="combo-total-mini combo-count-mini"><span>Itens selecionados</span><b id="comboCountTop">0 de 6</b></div>
   </div>
   <div class="product-builder" id="productBuilder"></div>
-  <div class="combo-footer">
-    <div><span>Selecionados</span><b id="comboCountBottom">0 de 0</b></div>
-    <div class="combo-footer-total"><span>Total</span><b id="comboSubtotal">R$ 0,00</b></div>
-  </div>
+
 </section>
 <section class="slide deep slide-final-offer" data-slide-id="offer" data-slide-title="Condição exclusiva de diagnóstico">
   <div class="offer-wrap">
@@ -1058,7 +1085,7 @@ function projectTotals(){const items=[...selectedProducts].map(productById).filt
 function shortProductName(id,name){const labels={glossary:'Glossário + guia técnico',recorded:'Aulas gravadas',interview:'Entrevista em inglês',deck:'Deck + IA + Memory Card',booklet:'Apostila física'};return labels[id]||name}
 function standardProductCard(p,image){const on=selectedProducts.has(p.id),label=shortProductName(p.id,p.name);return '<label class="product-card group-'+escapeHTML(p.group)+' '+(on?'on':'')+'"><input type="checkbox" '+(on?'checked':'')+' onchange="toggleProduct(\''+escapeHTML(p.id)+'\',this.checked)"><div class="product-card-media"><img src="'+escapeHTML(image)+'" alt="'+escapeHTML(label)+'"><span class="product-price-badge"><span>R$ '+money(p.price)+'</span></span><span class="product-check">✓</span><div class="product-card-overlay"><div class="pn">'+escapeHTML(label)+'</div></div></div></label>'}
 function conversationProductCard(p60,p120){const visible=[p60,p120].filter(p=>p&&p.active);if(!visible.length)return '';const selected=visible.some(p=>selectedProducts.has(p.id));const activePick=visible.find(p=>selectedProducts.has(p.id))||visible.find(p=>p.id==='live120')||visible[0];const opts=visible.map(p=>{const on=selectedProducts.has(p.id)||(!selected && activePick && p.id===activePick.id);const checked=selectedProducts.has(p.id);const hours=p.id==='live60'?'60h':'120h';return '<label class="conversation-option '+(on?'on':'')+'"><input type="checkbox" '+(checked?'checked':'')+' onchange="toggleConversation(\''+p.id+'\')"><b>'+hours+'</b><span>R$ '+money(p.price)+'</span></label>'}).join('');return '<div class="product-card conversation-card '+(selected?'on':'')+'"><div class="product-card-media"><img src="'+PRODUCT_VISUALS.conversation+'" alt="Conversação ao vivo"><span class="product-price-badge"><span>R$ '+money(activePick.price)+'</span></span><span class="product-check">✓</span><div class="product-card-overlay"><div class="pn">Conversação ao vivo</div></div><div class="product-panel"><div class="conversation-options">'+opts+'</div></div></div></div>'}
-function renderProducts(){const box=el('productBuilder');if(!box)return;if(selectedProducts.has('guide')){selectedProducts.delete('guide');selectedProducts.add('glossary')}selectedProducts.delete('live80');const cards=[];const glossary=productById('glossary'),recorded=productById('recorded'),interview=productById('interview'),live60=productById('live60'),live120=productById('live120'),deck=productById('deck'),booklet=productById('booklet');if(glossary&&glossary.active)cards.push(standardProductCard(glossary,PRODUCT_VISUALS.glossary));cards.push(conversationProductCard(live60,live120));if(recorded&&recorded.active)cards.push(standardProductCard(recorded,PRODUCT_VISUALS.recorded));if(interview&&interview.active)cards.push(standardProductCard(interview,PRODUCT_VISUALS.interview));if(deck&&deck.active)cards.push(standardProductCard(deck,PRODUCT_VISUALS.deck));if(booklet&&booklet.active)cards.push(standardProductCard(booklet,PRODUCT_VISUALS.booklet));const html=cards.filter(Boolean);box.innerHTML=html.join('')||'<div class="offer-empty">Nenhum produto ativo. A conta mestre precisa configurar o catálogo.</div>';const t=projectTotals();el('comboTotalTop').textContent='R$ '+money(t.subtotal);el('comboCountTop').textContent=t.count+' '+(t.count===1?'item':'itens');el('comboSubtotal').textContent='R$ '+money(t.subtotal);const c=el('comboCountBottom');if(c)c.textContent=t.count+' de '+html.length}
+function renderProducts(){const box=el('productBuilder');if(!box)return;if(selectedProducts.has('guide')){selectedProducts.delete('guide');selectedProducts.add('glossary')}selectedProducts.delete('live80');const cards=[];const glossary=productById('glossary'),recorded=productById('recorded'),interview=productById('interview'),live60=productById('live60'),live120=productById('live120'),deck=productById('deck'),booklet=productById('booklet');if(glossary&&glossary.active)cards.push(standardProductCard(glossary,PRODUCT_VISUALS.glossary));cards.push(conversationProductCard(live60,live120));if(recorded&&recorded.active)cards.push(standardProductCard(recorded,PRODUCT_VISUALS.recorded));if(interview&&interview.active)cards.push(standardProductCard(interview,PRODUCT_VISUALS.interview));if(deck&&deck.active)cards.push(standardProductCard(deck,PRODUCT_VISUALS.deck));if(booklet&&booklet.active)cards.push(standardProductCard(booklet,PRODUCT_VISUALS.booklet));const html=cards.filter(Boolean);box.innerHTML=html.join('')||'<div class="offer-empty">Nenhum produto ativo. A conta mestre precisa configurar o catálogo.</div>';const t=projectTotals();const topCount=el('comboCountTop');if(topCount)topCount.textContent=t.count+' de '+html.length}
 function renderOffer(){const t=projectTotals();if(!el('offerFrom'))return;el('offerFrom').textContent='R$ '+money(t.subtotal);el('offerTo').textContent='R$ '+money(t.final);el('offerSubtotal').textContent='R$ '+money(t.subtotal);el('offerDiscountAmount').textContent='R$ '+money(t.discount);el('offerFinal').textContent='R$ '+money(t.final);if(t.count===0){el('offerSaving').textContent='Selecione os itens no slide anterior.';el('offerRule').textContent='Condição exclusiva de diagnóstico, calculada pela composição do projeto.'}else if(t.percent>0){el('offerSaving').textContent='Você economiza R$ '+money(t.discount)+' • '+t.percent.toLocaleString('pt-BR')+'% de desconto';el('offerRule').textContent='Condição liberada pela regra de '+(t.rule.minItems?('mínimo '+t.rule.minItems+' itens'):'composição')+(t.rule.minTotal?(' e valor mínimo de R$ '+money(t.rule.minTotal)):'')+'.'}else{el('offerSaving').textContent='Projeto montado sem desconto automático.';el('offerRule').textContent='Condição exclusiva de diagnóstico sem desconto automático aplicado.'}el('offerItems').innerHTML=t.items.length?t.items.map(p=>'<div class="offer-item"><span>'+escapeHTML(p.name)+'</span><b>R$ '+money(p.price)+'</b></div>').join(''):'<div class="offer-empty">Nenhum entregável selecionado.</div>'}
 function jumpToDeliverable(id){selectedProducts.add(id);renderProducts();renderOffer();const idx=SELLER_CONFIG.presentation.slideOrder.indexOf('combo');if(idx>=0)show(idx)}
 
