@@ -447,44 +447,41 @@ body.h .slide{padding-left:calc(var(--u)*6);padding-right:calc(var(--u)*6)}
 .diagnostic-promise{margin-top:calc(var(--u)*1.35);max-width:48ch;padding:calc(var(--u)*1.05) calc(var(--u)*1.2);border-left:calc(var(--u)*.28) solid var(--orange);background:rgba(255,255,255,.055);border-radius:0 calc(var(--u)*.9) calc(var(--u)*.9) 0}
 .diagnostic-promise b{display:block;font-family:'Archivo';font-size:calc(var(--u)*1.35);color:#fff}
 .diagnostic-promise span{display:block;margin-top:calc(var(--u)*.3);font-size:calc(var(--u)*1.12);line-height:1.35;color:#C9C6DC}
-.slide-combo{justify-content:flex-start;padding-top:calc(var(--u)*2.25);padding-bottom:calc(var(--u)*2.55)}
-.combo-head{display:grid;grid-template-columns:1fr auto;gap:calc(var(--u)*1.4);align-items:center}.combo-head-main{display:flex;flex-direction:column;gap:calc(var(--u)*.28)}
-.slide-combo .big{display:none}
-.combo-total-mini{min-width:calc(var(--u)*13.8);padding:calc(var(--u)*.72) calc(var(--u)*1);border:calc(var(--u)*.08) solid var(--line);background:#fff;border-radius:calc(var(--u)*.82);box-shadow:0 calc(var(--u)*.4) calc(var(--u)*1.2) rgba(15,10,46,.05)}
-.combo-total-mini span,.combo-total-mini small{display:block;color:var(--txt3);font-size:calc(var(--u)*.74)}
-.combo-total-mini b{display:block;color:var(--navy2);font-family:'Archivo';font-size:calc(var(--u)*1.7);margin:calc(var(--u)*.14) 0}
-.combo-client{font-family:'Archivo';font-size:calc(var(--u)*1.4);font-weight:850;color:var(--navy2);line-height:1.05}
-.product-builder{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:calc(var(--u)*.62);margin-top:calc(var(--u)*.55);overflow:visible;min-height:0;flex:1}
-.product-card{position:relative;display:flex;flex-direction:column;min-height:0;padding:0;border:calc(var(--u)*.09) solid var(--line);background:#fff;border-radius:calc(var(--u)*.9);cursor:pointer;overflow:hidden;transition:transform .16s,border-color .16s,box-shadow .16s}
-.product-card:hover{transform:translateY(calc(var(--u)*-.08));border-color:rgba(255,107,0,.5);box-shadow:0 calc(var(--u)*.55) calc(var(--u)*1.4) rgba(15,10,46,.08)}
-.product-card.on{border-color:var(--orange);box-shadow:0 0 0 calc(var(--u)*.11) rgba(255,107,0,.16),0 calc(var(--u)*.55) calc(var(--u)*1.4) rgba(15,10,46,.08)}
-.product-card-media{position:relative;flex:1;min-height:0;background:linear-gradient(180deg,#07103A 0%,#10235B 100%);overflow:hidden;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;padding:0}
-.product-card-media img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:0}
+.slide-combo{justify-content:flex-start;padding-top:calc(var(--u)*1.85);padding-bottom:calc(var(--u)*2.4);background:#F7F8FA}
+.combo-head{display:grid;grid-template-columns:1fr auto;gap:calc(var(--u)*1.3);align-items:start}
+.combo-head-main{display:flex;flex-direction:column;gap:calc(var(--u)*.22)}
+.slide-combo .big,.combo-client{display:none!important}
+.combo-total-mini{min-width:calc(var(--u)*15.6);padding:calc(var(--u)*.82) calc(var(--u)*1.05);border:1px solid #E6E8F0;background:#fff;border-radius:calc(var(--u)*.95);box-shadow:0 calc(var(--u)*.45) calc(var(--u)*1.2) rgba(15,10,46,.04)}
+.combo-total-mini span,.combo-total-mini small{display:block;color:#8D90A6;font-size:calc(var(--u)*.74)}
+.combo-total-mini b{display:block;color:var(--navy2);font-family:'Archivo';font-size:calc(var(--u)*1.78);margin:calc(var(--u)*.14) 0}
+.product-builder{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:calc(var(--u)*.7);margin-top:calc(var(--u)*.62);overflow:visible;min-height:0;flex:1}
+.product-card{position:relative;display:flex;flex-direction:column;min-height:0;padding:0;border:1px solid #DCE0EA;background:#fff;border-radius:calc(var(--u)*.9);cursor:pointer;overflow:hidden;transition:transform .16s,border-color .16s,box-shadow .16s;box-shadow:0 calc(var(--u)*.35) calc(var(--u)*1) rgba(15,10,46,.04)}
+.product-card:hover{transform:translateY(calc(var(--u)*-.08));border-color:rgba(255,107,0,.55);box-shadow:0 calc(var(--u)*.75) calc(var(--u)*1.9) rgba(15,10,46,.08)}
+.product-card.on{border-color:var(--orange);box-shadow:0 0 0 calc(var(--u)*.12) rgba(255,107,0,.15),0 calc(var(--u)*.8) calc(var(--u)*2) rgba(15,10,46,.08)}
 .product-card>input{position:absolute;opacity:0;pointer-events:none}
-.product-card .pn{font-family:'Archivo';font-size:calc(var(--u)*.92);font-weight:850;color:var(--navy2);line-height:1.02}
-.product-card .pp{font-family:'Archivo';font-size:calc(var(--u)*.72);font-weight:900;color:#fff;white-space:nowrap}
-.product-price-badge{position:absolute;top:calc(var(--u)*.7);right:calc(var(--u)*.78);z-index:3;width:calc(var(--u)*3.15);height:calc(var(--u)*3.15);display:grid;place-items:center;background:var(--orange);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);box-shadow:0 calc(var(--u)*.28) calc(var(--u)*.7) rgba(0,0,0,.18)}
-.product-price-badge span{display:block;transform:rotate(-45deg);font-family:'Archivo';font-size:calc(var(--u)*.52);line-height:1.02;font-weight:900;color:#fff;text-align:center;padding:0 calc(var(--u)*.12)}
-.product-check{position:absolute;top:calc(var(--u)*.58);left:calc(var(--u)*.58);z-index:3;width:calc(var(--u)*1.5);height:calc(var(--u)*1.5);border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.96);border:calc(var(--u)*.09) solid rgba(5,0,34,.12);font-family:'Archivo';font-size:calc(var(--u)*.8);font-weight:900;color:transparent;box-shadow:0 calc(var(--u)*.2) calc(var(--u)*.55) rgba(0,0,0,.12)}
-.product-card.on .product-check{background:var(--orange);border-color:var(--orange);color:#fff}
-.product-card-overlay{position:absolute;left:calc(var(--u)*.5);right:calc(var(--u)*.5);bottom:calc(var(--u)*.5);z-index:2;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:calc(var(--u)*.45);padding:calc(var(--u)*.5) calc(var(--u)*.58);background:rgba(255,255,255,.95);border:calc(var(--u)*.08) solid rgba(255,255,255,.85);border-radius:calc(var(--u)*.7);box-shadow:0 calc(var(--u)*.25) calc(var(--u)*.7) rgba(0,0,0,.14);backdrop-filter:blur(10px)}
-.product-add-pill{display:inline-flex;align-items:center;justify-content:center;min-width:calc(var(--u)*3.2);padding:calc(var(--u)*.36) calc(var(--u)*.6);border-radius:999px;background:var(--navy2);font-family:'Archivo';font-size:calc(var(--u)*.66);font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:.04em}
-.product-card.on .product-add-pill{background:var(--orange)}
+.product-card-media{position:relative;display:block;background:#0A1545;overflow:hidden;aspect-ratio:16/8.3;min-height:0}
+.product-card-media img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.product-card-overlay{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;align-items:flex-end;min-height:calc(var(--u)*2.3);padding:calc(var(--u)*.56) calc(var(--u)*.66);background:linear-gradient(180deg,rgba(3,8,28,0) 0%,rgba(3,8,28,.16) 18%,rgba(3,8,28,.86) 100%)}
+.product-card .pn{font-family:'Archivo';font-size:calc(var(--u)*.96);font-weight:850;color:#fff;line-height:1.02;text-shadow:0 1px 2px rgba(0,0,0,.14)}
+.product-add-pill,.product-card .pp,.conversation-title{display:none!important}
+.product-price-badge{position:absolute;top:calc(var(--u)*.58);left:calc(var(--u)*.62);z-index:3;display:inline-flex;align-items:center;justify-content:center;min-width:calc(var(--u)*4.25);height:calc(var(--u)*1.7);padding:0 calc(var(--u)*.62);background:var(--orange);border-radius:calc(var(--u)*.48);box-shadow:0 calc(var(--u)*.2) calc(var(--u)*.6) rgba(0,0,0,.18)}
+.product-price-badge span{display:block;font-family:'Archivo';font-size:calc(var(--u)*.74);line-height:1;font-weight:900;color:#fff;transform:none;white-space:nowrap}
+.product-check{position:absolute;top:calc(var(--u)*.58);right:calc(var(--u)*.6);left:auto;z-index:3;width:calc(var(--u)*1.42);height:calc(var(--u)*1.42);border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.97);border:1px solid rgba(8,14,46,.18);font-family:'Archivo';font-size:calc(var(--u)*.72);font-weight:900;color:transparent;box-shadow:0 calc(var(--u)*.18) calc(var(--u)*.48) rgba(0,0,0,.12)}
+.product-card.on .product-check{border-color:var(--orange);color:var(--orange);background:#fff}
 .product-card.conversation-card{cursor:default}
 .product-card.conversation-card:hover{transform:none}
-.product-card.conversation-card .product-panel{padding:calc(var(--u)*.38) calc(var(--u)*.48) calc(var(--u)*.5);background:#fff}
-.conversation-title{font-family:'Archivo';font-size:calc(var(--u)*.84);font-weight:850;color:var(--navy2);margin-bottom:calc(var(--u)*.3)}
-.conversation-options{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--u)*.34)}
-.conversation-option{position:relative;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:calc(var(--u)*.34);align-items:center;padding:calc(var(--u)*.34) calc(var(--u)*.42);border:calc(var(--u)*.08) solid #E7DCE5;border-radius:calc(var(--u)*.55);background:#FFFDFB;cursor:pointer;transition:.15s}
-.conversation-option:hover{border-color:rgba(255,107,0,.55)}
-.conversation-option.on{border-color:var(--orange);background:#FFF4E9;box-shadow:inset 0 0 0 calc(var(--u)*.05) rgba(255,107,0,.13)}
-.conversation-option input{grid-row:1/3;width:calc(var(--u)*.86);height:calc(var(--u)*.86);accent-color:var(--orange);margin:0}
+.product-card.conversation-card .product-panel{position:absolute;right:calc(var(--u)*.66);bottom:calc(var(--u)*.52);z-index:4;padding:0;background:transparent}
+.conversation-options{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:calc(var(--u)*.14);background:rgba(255,255,255,.98);border:1px solid rgba(15,10,46,.1);border-radius:calc(var(--u)*.5);box-shadow:0 calc(var(--u)*.25) calc(var(--u)*.7) rgba(0,0,0,.15);backdrop-filter:blur(8px)}
+.conversation-option{position:relative;display:grid;grid-template-columns:auto auto;grid-template-rows:auto;column-gap:calc(var(--u)*.26);align-items:center;padding:calc(var(--u)*.28) calc(var(--u)*.46);border:none;border-radius:calc(var(--u)*.42);background:transparent;cursor:pointer;transition:.15s;min-width:calc(var(--u)*3.65)}
+.conversation-option:hover{background:#FFF4E9}
+.conversation-option.on{background:#FFF4E9;box-shadow:inset 0 0 0 1px rgba(255,107,0,.18)}
+.conversation-option input{width:calc(var(--u)*.78);height:calc(var(--u)*.78);accent-color:var(--orange);margin:0}
 .conversation-option b{font-family:'Archivo';font-size:calc(var(--u)*.78);color:var(--navy2);line-height:1}
-.conversation-option span{font-family:'Archivo';font-size:calc(var(--u)*.72);font-weight:850;color:var(--orange);line-height:1.05;margin-top:calc(var(--u)*.1)}
-.combo-footer{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--u)*.65);margin-top:calc(var(--u)*.75)}
-.combo-footer>div{padding:calc(var(--u)*.62) calc(var(--u)*.9);background:#fff;border:calc(var(--u)*.08) solid var(--line);border-radius:calc(var(--u)*.78)}
-.combo-footer span{display:block;font-size:calc(var(--u)*.68);color:var(--txt3);text-transform:uppercase;letter-spacing:.05em;font-weight:700}
-.combo-footer b{display:block;margin-top:calc(var(--u)*.1);font-family:'Archivo';font-size:calc(var(--u)*1.18);color:var(--navy2)}
+.conversation-option span{display:none}
+.combo-footer{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--u)*.72);margin-top:calc(var(--u)*.72)}
+.combo-footer>div{padding:calc(var(--u)*.44) calc(var(--u)*.88);background:#fff;border:1px solid #E6E8F0;border-radius:calc(var(--u)*.78)}
+.combo-footer span{display:block;font-size:calc(var(--u)*.68);color:#8D90A6;text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+.combo-footer b{display:block;margin-top:calc(var(--u)*.08);font-family:'Archivo';font-size:calc(var(--u)*1.2);color:var(--navy2)}
 .combo-footer-total{background:var(--navy)!important;border-color:var(--navy)!important}.combo-footer-total span{color:#AAA6C3}.combo-footer-total b{color:#fff}
 .offer-wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:calc(var(--u)*3);align-items:center;width:100%}
 .slide-final-offer .big{font-size:calc(var(--u)*5.7);max-width:13ch}
@@ -673,21 +670,20 @@ body.v .slide-booklet .booklet-video-label{font-size:calc(var(--u)*.88)}
 .mosaic-preview-stage .booklet-player-shell .vturb-lazy-player{pointer-events:none}
 
 /* Planejamento */
-body.h .slide-combo{padding-top:calc(var(--u)*2);padding-bottom:calc(var(--u)*5.3);justify-content:flex-start}
-body.h .slide-combo .combo-head{align-items:center}
+body.h .slide-combo{padding-top:calc(var(--u)*1.85);padding-bottom:calc(var(--u)*2.4);justify-content:flex-start}
+body.h .slide-combo .combo-head{align-items:start}
 body.h .slide-combo .big{display:none}
 body.h .slide-combo .product-builder{grid-template-rows:repeat(2,minmax(0,1fr))}
-body.h .slide-combo .product-card-media{min-height:calc(var(--u)*7.6);aspect-ratio:4/3}
-body.h .slide-combo .eyebrow{margin-bottom:calc(var(--u)*.18)}
-body.h .combo-total-mini{min-width:calc(var(--u)*15);padding:calc(var(--u)*.7) calc(var(--u)*.9)}
-body.h .combo-total-mini b{font-size:calc(var(--u)*1.65)}
-body.h .product-builder{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:calc(var(--u)*.42);margin-top:calc(var(--u)*.55);min-height:0}
-body.h .product-card{padding:0;gap:0;border-radius:calc(var(--u)*.65)}
-body.h .product-card .pn{font-size:calc(var(--u)*.92);line-height:1.02}
-body.h .product-card .pp{font-size:calc(var(--u)*.84)}
-body.h .combo-footer{margin-top:calc(var(--u)*.55);gap:calc(var(--u)*.45)}
-body.h .combo-footer>div{padding:calc(var(--u)*.5) calc(var(--u)*.75)}
-body.h .combo-footer b{font-size:calc(var(--u)*1.12)}
+body.h .slide-combo .product-card-media{min-height:calc(var(--u)*8.5);aspect-ratio:16/8.3}
+body.h .slide-combo .eyebrow{margin-bottom:0}
+body.h .combo-total-mini{min-width:calc(var(--u)*15.6);padding:calc(var(--u)*.82) calc(var(--u)*1.05)}
+body.h .combo-total-mini b{font-size:calc(var(--u)*1.78)}
+body.h .product-builder{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:calc(var(--u)*.7);margin-top:calc(var(--u)*.62);min-height:0}
+body.h .product-card{padding:0;gap:0;border-radius:calc(var(--u)*.9)}
+body.h .product-card .pn{font-size:calc(var(--u)*.96);line-height:1.02}
+body.h .combo-footer{margin-top:calc(var(--u)*.72);gap:calc(var(--u)*.72)}
+body.h .combo-footer>div{padding:calc(var(--u)*.44) calc(var(--u)*.88)}
+body.h .combo-footer b{font-size:calc(var(--u)*1.2)}
 
 /* Oferta final */
 body.h .slide-final-offer .offer-wrap{grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:calc(var(--u)*3.2);align-items:center}
@@ -1060,8 +1056,8 @@ function toggleProduct(id,checked){const p=productById(id);if(!p||!p.active||id=
 function toggleConversation(id){const wasSelected=selectedProducts.has(id);MASTER_CONFIG.products.filter(x=>x.group==='conversation').forEach(x=>selectedProducts.delete(x.id));if(!wasSelected){const p=productById(id);if(p&&p.active&&id!=='live80')selectedProducts.add(id)}renderProducts();renderOffer()}
 function projectTotals(){const items=[...selectedProducts].map(productById).filter(p=>p&&p.active&&p.id!=='live80'),subtotal=items.reduce((a,p)=>a+(Number(p.price)||0),0),count=items.length;const rules=MASTER_CONFIG.discountRules.filter(r=>(!r.minItems||count>=r.minItems)&&(!r.minTotal||subtotal>=r.minTotal)),best=rules.sort((a,b)=>b.percent-a.percent)[0]||{percent:0,minItems:0,minTotal:0},percent=Math.min(Math.max(Number(best.percent)||0,0),100),discount=subtotal*percent/100,final=Math.max(subtotal-discount,0);return{items,subtotal,count,rule:best,percent,discount,final}}
 function shortProductName(id,name){const labels={glossary:'Glossário + guia técnico',recorded:'Aulas gravadas',interview:'Entrevista em inglês',deck:'Deck + IA + Memory Card',booklet:'Apostila física'};return labels[id]||name}
-function standardProductCard(p,image){const on=selectedProducts.has(p.id),label=shortProductName(p.id,p.name),action=on?'adicionado':'adicionar';return '<label class="product-card group-'+escapeHTML(p.group)+' '+(on?'on':'')+'"><input type="checkbox" '+(on?'checked':'')+' onchange="toggleProduct(\''+escapeHTML(p.id)+'\',this.checked)"><div class="product-card-media"><img src="'+escapeHTML(image)+'" alt="'+escapeHTML(label)+'"><span class="product-price-badge"><span>R$ '+money(p.price)+'</span></span><span class="product-check">✓</span><div class="product-card-overlay"><div class="pn">'+escapeHTML(label)+'</div><div class="product-add-pill">'+action+'</div></div></div></label>'}
-function conversationProductCard(p60,p120){const visible=[p60,p120].filter(p=>p&&p.active);if(!visible.length)return '';const selected=visible.some(p=>selectedProducts.has(p.id));const opts=visible.map(p=>{const on=selectedProducts.has(p.id);const hours=p.id==='live60'?'60h':'120h';return '<label class="conversation-option '+(on?'on':'')+'"><input type="checkbox" '+(on?'checked':'')+' onchange="toggleConversation(\''+p.id+'\')"><b>'+hours+'</b><span>R$ '+money(p.price)+'</span></label>'}).join('');return '<div class="product-card conversation-card '+(selected?'on':'')+'"><div class="product-card-media"><img src="'+PRODUCT_VISUALS.conversation+'" alt="Conversação ao vivo"><span class="product-check">✓</span><div class="product-card-overlay"><div class="pn">Conversação ao vivo</div><div class="product-add-pill">escolher</div></div></div><div class="product-panel"><div class="conversation-options">'+opts+'</div></div></div>'}
+function standardProductCard(p,image){const on=selectedProducts.has(p.id),label=shortProductName(p.id,p.name);return '<label class="product-card group-'+escapeHTML(p.group)+' '+(on?'on':'')+'"><input type="checkbox" '+(on?'checked':'')+' onchange="toggleProduct(\''+escapeHTML(p.id)+'\',this.checked)"><div class="product-card-media"><img src="'+escapeHTML(image)+'" alt="'+escapeHTML(label)+'"><span class="product-price-badge"><span>R$ '+money(p.price)+'</span></span><span class="product-check">✓</span><div class="product-card-overlay"><div class="pn">'+escapeHTML(label)+'</div></div></div></label>'}
+function conversationProductCard(p60,p120){const visible=[p60,p120].filter(p=>p&&p.active);if(!visible.length)return '';const selected=visible.some(p=>selectedProducts.has(p.id));const activePick=visible.find(p=>selectedProducts.has(p.id))||visible[0];const opts=visible.map(p=>{const on=selectedProducts.has(p.id);const hours=p.id==='live60'?'60h':'120h';return '<label class="conversation-option '+(on?'on':'')+'"><input type="checkbox" '+(on?'checked':'')+' onchange="toggleConversation(\''+p.id+'\')"><b>'+hours+'</b><span>R$ '+money(p.price)+'</span></label>'}).join('');return '<div class="product-card conversation-card '+(selected?'on':'')+'"><div class="product-card-media"><img src="'+PRODUCT_VISUALS.conversation+'" alt="Conversação ao vivo"><span class="product-price-badge"><span>R$ '+money(activePick.price)+'</span></span><span class="product-check">✓</span><div class="product-card-overlay"><div class="pn">Conversação ao vivo</div></div><div class="product-panel"><div class="conversation-options">'+opts+'</div></div></div></div>'}
 function renderProducts(){const box=el('productBuilder');if(!box)return;if(selectedProducts.has('guide')){selectedProducts.delete('guide');selectedProducts.add('glossary')}selectedProducts.delete('live80');const cards=[];const glossary=productById('glossary'),recorded=productById('recorded'),interview=productById('interview'),live60=productById('live60'),live120=productById('live120'),deck=productById('deck'),booklet=productById('booklet');if(glossary&&glossary.active)cards.push(standardProductCard(glossary,PRODUCT_VISUALS.glossary));cards.push(conversationProductCard(live60,live120));if(recorded&&recorded.active)cards.push(standardProductCard(recorded,PRODUCT_VISUALS.recorded));if(interview&&interview.active)cards.push(standardProductCard(interview,PRODUCT_VISUALS.interview));if(deck&&deck.active)cards.push(standardProductCard(deck,PRODUCT_VISUALS.deck));if(booklet&&booklet.active)cards.push(standardProductCard(booklet,PRODUCT_VISUALS.booklet));const html=cards.filter(Boolean);box.innerHTML=html.join('')||'<div class="offer-empty">Nenhum produto ativo. A conta mestre precisa configurar o catálogo.</div>';const t=projectTotals();el('comboTotalTop').textContent='R$ '+money(t.subtotal);el('comboCountTop').textContent=t.count+' '+(t.count===1?'item':'itens');el('comboSubtotal').textContent='R$ '+money(t.subtotal);const c=el('comboCountBottom');if(c)c.textContent=t.count+' de '+html.length}
 function renderOffer(){const t=projectTotals();if(!el('offerFrom'))return;el('offerFrom').textContent='R$ '+money(t.subtotal);el('offerTo').textContent='R$ '+money(t.final);el('offerSubtotal').textContent='R$ '+money(t.subtotal);el('offerDiscountAmount').textContent='R$ '+money(t.discount);el('offerFinal').textContent='R$ '+money(t.final);if(t.count===0){el('offerSaving').textContent='Selecione os itens no slide anterior.';el('offerRule').textContent='Condição exclusiva de diagnóstico, calculada pela composição do projeto.'}else if(t.percent>0){el('offerSaving').textContent='Você economiza R$ '+money(t.discount)+' • '+t.percent.toLocaleString('pt-BR')+'% de desconto';el('offerRule').textContent='Condição liberada pela regra de '+(t.rule.minItems?('mínimo '+t.rule.minItems+' itens'):'composição')+(t.rule.minTotal?(' e valor mínimo de R$ '+money(t.rule.minTotal)):'')+'.'}else{el('offerSaving').textContent='Projeto montado sem desconto automático.';el('offerRule').textContent='Condição exclusiva de diagnóstico sem desconto automático aplicado.'}el('offerItems').innerHTML=t.items.length?t.items.map(p=>'<div class="offer-item"><span>'+escapeHTML(p.name)+'</span><b>R$ '+money(p.price)+'</b></div>').join(''):'<div class="offer-empty">Nenhum entregável selecionado.</div>'}
 function jumpToDeliverable(id){selectedProducts.add(id);renderProducts();renderOffer();const idx=SELLER_CONFIG.presentation.slideOrder.indexOf('combo');if(idx>=0)show(idx)}
