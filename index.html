@@ -743,23 +743,49 @@ body.h .cover .foot{margin-top:calc(var(--u)*1.75);font-size:calc(var(--u)*.95)}
 body.h .cover-visual{min-height:calc(var(--u)*43);justify-content:center;align-items:flex-end}
 body.h .cover-visual:before{width:calc(var(--u)*36);height:calc(var(--u)*36);bottom:calc(var(--u)*.7)}
 body.h .cover-visual .mari{height:calc(var(--u)*46);max-height:calc(var(--u)*46);max-width:100%}
+/* ===== Abertura alinhada ao layout de referência ===== */
+body.h .cover-grid{grid-template-columns:minmax(0,1.38fr) minmax(0,.62fr);gap:calc(var(--u)*1.9);align-items:center;width:100%;height:100%}
+body.h .cover-copy-simple{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;min-height:0;padding-left:calc(var(--u)*.6);padding-top:calc(var(--u)*.2)}
+body.h .cover-brand-row{display:flex;align-items:center;gap:calc(var(--u)*1.35);margin:0 0 calc(var(--u)*4.3) 0}
+body.h .cover .cover-brand-row .brand-logo{height:calc(var(--u)*6.2);width:auto;max-width:calc(var(--u)*16);object-fit:contain;margin:0}
+body.h .cover-brand-divider{display:block;width:calc(var(--u)*.12);height:calc(var(--u)*5.3);background:var(--orange);opacity:.78}
+body.h .cover-brand-name{font-family:'Archivo';font-size:calc(var(--u)*1.62);line-height:1.14;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}
+body.h .cover-main-title{font-family:'Archivo';font-size:calc(var(--u)*5.35);line-height:.99;font-weight:800;letter-spacing:-.025em;color:#fff;max-width:16.5ch}
+body.h .cover-main-subtitle{margin-top:calc(var(--u)*2.45);font-family:'Inter';font-size:calc(var(--u)*2.18);line-height:1.38;font-weight:400;color:#B8B5D4;max-width:34ch}
+body.h .cover .client-plan{margin-top:calc(var(--u)*3.15);font-family:'Archivo';font-size:calc(var(--u)*1.65);font-weight:800;letter-spacing:0;color:var(--orange-l)}
+body.h .cover .foot{margin-top:calc(var(--u)*2.7);font-family:'Archivo Narrow';font-size:calc(var(--u)*1.05);font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#8E8AA9}
+body.h .cover-visual{min-height:calc(var(--u)*49);height:100%;justify-content:flex-end;align-items:flex-end;padding-right:calc(var(--u)*.35)}
+body.h .cover-visual:before{width:calc(var(--u)*38);height:calc(var(--u)*38);right:calc(var(--u)*1.1);left:auto;bottom:calc(var(--u)*4.2);background:radial-gradient(circle,rgba(255,107,0,.16),rgba(255,107,0,.035) 52%,transparent 70%);border:calc(var(--u)*.08) solid rgba(255,107,0,.18)}
+body.h .cover-visual .mari{height:calc(var(--u)*50.5);max-height:calc(var(--u)*50.5);max-width:115%;object-fit:contain;object-position:bottom right;filter:drop-shadow(0 calc(var(--u)*1.1) calc(var(--u)*2.5) rgba(0,0,0,.26))}
 body.h .slide-combo{padding-bottom:calc(var(--u)*2.5)}
 body.h .slide-combo .product-builder{margin-top:calc(var(--u)*.75);flex:1}
 .combo-count-mini{min-width:calc(var(--u)*12.8)!important;text-align:left}
 .combo-count-mini span{font-size:calc(var(--u)*.8)!important}
 .combo-count-mini b{font-size:calc(var(--u)*1.75)!important;margin-top:calc(var(--u)*.16)!important}
 .combo-footer{display:none!important}
-/* Bolinhas na lateral esquerda e setas compactas no canto inferior direito */
-.nav{left:calc(var(--u)*1.15);right:calc(var(--u)*1.15);bottom:calc(var(--u)*1.05);align-items:flex-end}
-.dots{position:absolute;left:0;top:50%;transform:translateY(-50%);flex-direction:column;gap:calc(var(--u)*.36);margin:0;padding:calc(var(--u)*.48) calc(var(--u)*.38)}
+/* Navegação compacta na base: bolinhas horizontais e setas no canto direito */
+.nav{left:calc(var(--u)*1.15);right:calc(var(--u)*1.15);bottom:calc(var(--u)*.9);align-items:center}
+.dots{position:static;left:auto;top:auto;transform:none;flex-direction:row;gap:calc(var(--u)*.36);margin:0 auto 0 0;padding:calc(var(--u)*.38) calc(var(--u)*.5)}
 .dot{width:calc(var(--u)*.52);height:calc(var(--u)*.52)}
-.dot.on{width:calc(var(--u)*.52);height:calc(var(--u)*1.45)}
+.dot.on{width:calc(var(--u)*1.45);height:calc(var(--u)*.52)}
 .nav-arrows{margin-left:auto;gap:calc(var(--u)*.32)}
 .arrow{width:calc(var(--u)*2);height:calc(var(--u)*2);font-size:calc(var(--u)*1.02)}
+/* Cards do planejamento ocupam toda a altura, sem faixa branca vazia */
+body.h .slide-combo .product-card{height:100%;background:#0A1545}
+body.h .slide-combo .product-card-media{height:100%;min-height:0;aspect-ratio:auto;flex:1}
+body.h .slide-combo .product-card-overlay{min-height:calc(var(--u)*2.75);padding:calc(var(--u)*.66) calc(var(--u)*.72)}
+body.h .slide-combo .product-card .pn{font-size:calc(var(--u)*1.28);line-height:1.04}
 /* Vertical: mantém o topo da abertura organizado com a nova estrutura */
 body.v .cover-brand-row{display:flex;align-items:center;gap:calc(var(--u)*.8);margin-bottom:calc(var(--u)*1.2)}
 body.v .cover .cover-brand-row .brand-logo{margin:0;height:calc(var(--u)*5.2);max-width:42%}
 body.v .cover .cover-brand-row .kicker{position:static!important;margin:0!important;font-size:calc(var(--u)*.78);padding:calc(var(--u)*.4) calc(var(--u)*.7);white-space:nowrap}
+
+
+body.v .cover-brand-row{display:flex;align-items:center;gap:calc(var(--u)*.8);margin-bottom:calc(var(--u)*1.25)}
+body.v .cover-brand-divider{display:block;width:calc(var(--u)*.11);height:calc(var(--u)*4.4);background:var(--orange);opacity:.78}
+body.v .cover-brand-name{font-family:'Archivo';font-size:calc(var(--u)*1.25);line-height:1.12;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--orange)}
+body.v .cover-main-title{font-family:'Archivo';font-size:calc(var(--u)*4.2);line-height:1;font-weight:850;letter-spacing:-.02em;color:#fff;max-width:12ch}
+body.v .cover-main-subtitle{margin-top:calc(var(--u)*1.2);font-size:calc(var(--u)*1.45);line-height:1.35;color:#C9C6DC;max-width:29ch}
 
 </style>
 </head>
@@ -788,7 +814,7 @@ body.v .cover .cover-brand-row .kicker{position:static!important;margin:0!import
   <div class="user-session" id="userSession" hidden><div class="user-badge"><span id="userSessionName">Usuário</span><span class="user-role" id="userSessionRole">Vendedor</span></div><button class="user-logout" onclick="logoutUser()">Sair</button></div>
 </div>
 <div class="wrap"><div class="stage" id="stage">
-<section class="slide cover" data-slide-id="cover" data-slide-title="Abertura"><div class="cover-grid"><div class="cover-copy-simple"><div class="cover-brand-row"><img alt="S.O.S Inglês Técnico Offshore" class="brand-logo" src="./assets/marca/high-level-logo.webp"/><div class="kicker">S.O.S Inglês Técnico Offshore</div></div><div class="diagnostic-promise"><b>Diagnóstico + planejamento de estudo</b><span>para transformar o inglês de um problema em um divisor de águas na sua carreira.</span></div><div class="client-plan" id="coverClientPlan" hidden>Plano de estudo de <b id="coverClientName"></b></div><div class="foot">High Level Consultoria de Idiomas</div></div><div class="cover-visual"><img alt="Mari" class="mari" src="./assets/marca/mari.webp"/></div></div></section>
+<section class="slide cover" data-slide-id="cover" data-slide-title="Abertura"><div class="cover-grid"><div class="cover-copy-simple"><div class="cover-brand-row"><img alt="S.O.S" class="brand-logo" src="./assets/marca/high-level-logo.webp"/><span class="cover-brand-divider" aria-hidden="true"></span><div class="cover-brand-name">Inglês Técnico<br>Offshore</div></div><div class="cover-main-title">Diagnóstico e planejamento<br>do seu inglês.</div><div class="cover-main-subtitle">Para transformar o inglês de um problema<br>em um divisor de águas na sua carreira.</div><div class="client-plan" id="coverClientPlan" hidden>Plano de estudo de <b id="coverClientName"></b></div><div class="foot">High Level Consultoria de Idiomas</div></div><div class="cover-visual"><img alt="Mari" class="mari" src="./assets/marca/mari.webp"/></div></div></section>
 <section class="slide dark slide-authority" data-slide-id="authority" data-slide-title="High Level"><div class="authority"><div class="authority-photo"><img alt="Treinamento na sede da High Level" src="./assets/marca/hl-sede.webp"/></div><div class="authority-copy"><div class="eyebrow">Quem já confiou o inglês da equipe</div><div class="big"><em>25 anos</em> formando times inteiros.</div><div class="lead">Consultoria, não curso de prateleira. O programa é moldado ao objetivo de quem estuda.</div><div class="partner-label">Experiência com equipes e processos seletivos de empresas como</div><div class="logos"><div class="logo-card"><img alt="Shell" src="./assets/parceiros/shell.webp"/></div><div class="logo-card"><img alt="BW Offshore" src="./assets/parceiros/bw-offshore.webp"/></div><div class="logo-card"><img alt="ABS" src="./assets/parceiros/abs.webp"/></div><div class="logo-card"><img alt="Ellis" src="./assets/parceiros/ellis.webp"/></div></div></div></div></section>
 <section class="slide light slide-level" data-slide-id="level" data-slide-title="Nivelamento"><div class="split"><div><div class="eyebrow">Ponto de partida</div><div class="big">Começa pelo <em>nivelamento.</em></div><div class="lead">O teste define por onde você entra e em quais turmas você fala.</div><div class="steps"><div class="step"><i>01</i><div><b>Teste</b><span>No app, resultado na hora.</span></div></div><div class="step"><i>02</i><div><b>Trilha</b><span>O módulo certo para o seu nível.</span></div></div><div class="step"><i>03</i><div><b>Agenda</b><span>Horários abertos para esse nível.</span></div></div></div></div><div class="phone-stage"><img alt="Agenda no DECK" src="./assets/produto/deck-agenda.webp"/></div></div></section>
 <section class="slide dark slide-live" data-slide-id="live" data-slide-title="120h ao vivo"><div class="split"><div><div class="eyebrow">O núcleo do programa</div><div class="big"><em>120 horas</em> falando ao vivo.</div><div class="grid g3"><div class="cell stat"><div class="k">120h</div><div class="v">de conversação ao vivo</div></div><div class="cell stat"><div class="k">6</div><div class="v">alunos por turma, no máximo</div></div><div class="cell stat"><div class="k">Seg a sex</div><div class="v">aulas disponíveis</div></div></div><div class="chips"><span class="chip">Horários flexíveis</span><span class="chip">Temas diferentes em cada aula</span><span class="chip">100% em contexto offshore</span></div></div><div class="media"><img alt="Aula ao vivo" src="./assets/produto/aovivo.webp"/><div class="caption">Aula real ao vivo</div></div></div></section>
