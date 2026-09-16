@@ -1165,6 +1165,86 @@ body.h .bonus-price-card.loss{
 body.h .bonus-price-card.loss span{color:#FFC18F}
 body.h .bonus-price-card.loss strong{color:var(--orange);font-size:calc(var(--u)*3.65)}
 
+
+/* ===== Ajuste: condição sem desconto + bônus com leitura forte ===== */
+body.h .slide-final-offer .closing-finance-single .closing-diagnosis{
+  width:min(100%,calc(var(--u)*72));
+  min-height:calc(var(--u)*6.8);
+}
+body.h .slide-final-offer .closing-finance-single .closing-diagnosis:before{display:none!important;content:none!important}
+body.h .slide-final-offer .closing-finance-single .closing-diagnosis span{
+  font-size:calc(var(--u)*1.02);
+  font-weight:800;
+  letter-spacing:.035em;
+  text-transform:uppercase;
+  color:#C9C6DC;
+}
+body.h .slide-final-offer .closing-finance-single .closing-diagnosis strong{
+  font-size:calc(var(--u)*4.05);
+}
+
+/* Benefícios: imagem maior e mais protagonista. */
+body.h .slide-closing-bonus .closing-benefits{
+  gap:calc(var(--u)*1);
+}
+body.h .slide-closing-bonus .closing-benefit-card{
+  grid-template-columns:calc(var(--u)*24.5) minmax(0,1fr);
+  min-height:calc(var(--u)*14.2);
+  padding:calc(var(--u)*.68);
+  column-gap:calc(var(--u)*1.2);
+}
+body.h .slide-closing-bonus .closing-benefit-media,
+body.h .slide-closing-bonus .closing-cash-icon{
+  height:calc(var(--u)*12.9);
+  border-radius:calc(var(--u)*.85);
+}
+body.h .slide-closing-bonus .closing-benefit-media img{
+  width:100%;height:100%;object-fit:cover;object-position:center;
+}
+body.h .slide-closing-bonus .closing-benefit-name{
+  font-size:calc(var(--u)*1.58);
+}
+body.h .slide-closing-bonus .closing-benefit-detail{
+  font-size:calc(var(--u)*.98);
+}
+body.h .slide-closing-bonus .closing-benefit-button{
+  font-size:calc(var(--u)*.92);
+  padding:calc(var(--u)*.72) calc(var(--u)*1.12);
+}
+body.h .slide-closing-bonus .closing-cash-icon{
+  font-size:calc(var(--u)*3.35);
+}
+
+/* Comparação financeira: rótulos grandes e autoexplicativos. */
+body.h .bonus-price-card{
+  min-height:calc(var(--u)*9.25);
+  padding:calc(var(--u)*1.05) calc(var(--u)*1.18);
+}
+body.h .bonus-price-card span{
+  display:block;
+  font-size:calc(var(--u)*1.02)!important;
+  line-height:1.05;
+  font-family:'Archivo Narrow';
+  font-weight:900;
+  letter-spacing:.045em;
+  text-transform:uppercase;
+  margin-bottom:calc(var(--u)*.32);
+}
+body.h .bonus-price-card.today strong{
+  font-size:calc(var(--u)*3.8);
+}
+body.h .bonus-price-card.later strong{
+  font-size:calc(var(--u)*3.2);
+}
+body.h .bonus-price-card.loss strong{
+  font-size:calc(var(--u)*3.9);
+}
+body.h .bonus-price-card small{
+  font-size:calc(var(--u)*.84);
+  line-height:1.34;
+  margin-top:calc(var(--u)*.38);
+}
+
 </style>
 </head>
 <body class="h">
@@ -1256,7 +1336,7 @@ body.h .bonus-price-card.loss strong{color:var(--orange);font-size:calc(var(--u)
 
     <div class="closing-finance closing-finance-single">
       <div class="closing-diagnosis">
-        <span>Todo esse pacote fica por</span>
+        <span>Valor total do pacote</span>
         <strong id="offerTo">R$ 0,00</strong>
       </div>
     </div>
@@ -1274,17 +1354,17 @@ body.h .bonus-price-card.loss strong{color:var(--orange);font-size:calc(var(--u)
 
     <div class="bonus-comparison">
       <div class="bonus-price-card today">
-        <span>Fechando hoje</span>
+        <span>Fechando na reunião</span>
         <strong id="bonusTodayTotal">R$ 0,00</strong>
         <small id="bonusTodayNote">Condição de diagnóstico aplicada.</small>
       </div>
       <div class="bonus-price-card later">
-        <span>Em outro momento</span>
+        <span>Fechando em outro momento</span>
         <strong id="bonusLaterTotal">R$ 0,00</strong>
         <small id="bonusLaterNote">Sem a condição e sem o benefício escolhido.</small>
       </div>
       <div class="bonus-price-card loss">
-        <span>Economia total fechando hoje</span>
+        <span>Economia na matrícula</span>
         <strong id="bonusLoss">R$ 0,00</strong>
         <small id="bonusLossNote">Diferença total entre fechar hoje e depois.</small>
       </div>
@@ -1589,8 +1669,8 @@ function conversationProductCard(p60,p120){const visible=[p60,p120].filter(p=>p&
 function renderProducts(){const box=el('productBuilder');if(!box)return;if(selectedProducts.has('guide')){selectedProducts.delete('guide');selectedProducts.add('glossary')}selectedProducts.delete('live80');const cards=[];const glossary=productById('glossary'),recorded=productById('recorded'),interview=productById('interview'),live60=productById('live60'),live120=productById('live120'),deck=productById('deck'),booklet=productById('booklet');if(glossary&&glossary.active)cards.push(standardProductCard(glossary,PRODUCT_VISUALS.glossary));cards.push(conversationProductCard(live60,live120));if(recorded&&recorded.active)cards.push(standardProductCard(recorded,PRODUCT_VISUALS.recorded));if(interview&&interview.active)cards.push(standardProductCard(interview,PRODUCT_VISUALS.interview));if(deck&&deck.active)cards.push(standardProductCard(deck,PRODUCT_VISUALS.deck));if(booklet&&booklet.active)cards.push(standardProductCard(booklet,PRODUCT_VISUALS.booklet));const html=cards.filter(Boolean);box.innerHTML=html.join('')||'<div class="offer-empty">Nenhum produto ativo. A conta mestre precisa configurar o catálogo.</div>';const t=projectTotals();const topValue=el('comboSubtotalTop');if(topValue)topValue.textContent='R$ '+money(t.subtotal);const topCount=el('comboCountTop');if(topCount)topCount.textContent=t.count+' de '+html.length}
 function renderOffer(){
   const to=el('offerTo');if(!to)return;
-  const selected=projectTotals(),project=calculateProjectTotals(selected.items),state={selected};renderClosingProducts(state);
-  to.textContent='R$ '+money(project.final)
+  const selected=projectTotals(),state={selected};renderClosingProducts(state);
+  to.textContent='R$ '+money(selected.subtotal)
 }
 function jumpToDeliverable(id){selectedProducts.add(id);renderProducts();renderOffer();const idx=SELLER_CONFIG.presentation.slideOrder.indexOf('combo');if(idx>=0)show(idx)}
 
