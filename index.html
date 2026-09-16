@@ -862,6 +862,82 @@ body.v .cover-brand-name{font-family:'Archivo';font-size:calc(var(--u)*1.25);lin
 body.v .cover-main-title{font-family:'Archivo';font-size:calc(var(--u)*4.2);line-height:1;font-weight:850;letter-spacing:-.02em;color:#fff;max-width:12ch}
 body.v .cover-main-subtitle{margin-top:calc(var(--u)*1.2);font-size:calc(var(--u)*1.45);line-height:1.35;color:#C9C6DC;max-width:29ch}
 
+
+/* ===== Fechamento separado: condição + benefício ===== */
+body.h .slide-final-offer{padding:calc(var(--u)*2.15) calc(var(--u)*5.4) calc(var(--u)*4.5);justify-content:flex-start;overflow:hidden}
+body.h .slide-final-offer .closing-shell{gap:calc(var(--u)*.7);height:100%}
+body.h .slide-final-offer .closing-head{flex:0 0 auto}
+body.h .slide-final-offer .closing-head .eyebrow{margin:0;font-size:calc(var(--u)*1.05)}
+body.h .slide-final-offer .closing-products{flex:0 0 auto;gap:calc(var(--u)*.55);align-content:start}
+body.h .slide-final-offer .closing-products.count-1{grid-template-columns:minmax(0,calc(var(--u)*48));justify-content:center}
+body.h .slide-final-offer .closing-products.count-2{grid-template-columns:repeat(2,minmax(0,calc(var(--u)*40)));justify-content:center}
+body.h .slide-final-offer .closing-products.count-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+body.h .slide-final-offer .closing-products.count-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+body.h .slide-final-offer .closing-products.count-5{grid-template-columns:repeat(6,minmax(0,1fr))}
+body.h .slide-final-offer .closing-products.count-5 .closing-product:nth-child(-n+3){grid-column:span 2}
+body.h .slide-final-offer .closing-products.count-5 .closing-product:nth-child(4){grid-column:2 / span 2}
+body.h .slide-final-offer .closing-products.count-5 .closing-product:nth-child(5){grid-column:4 / span 2}
+body.h .slide-final-offer .closing-products.count-6{grid-template-columns:repeat(3,minmax(0,1fr))}
+body.h .slide-final-offer .closing-product{aspect-ratio:16/8.3;min-height:0}
+body.h .slide-final-offer .closing-product-copy{padding:calc(var(--u)*1.7) calc(var(--u)*.66) calc(var(--u)*.5)}
+body.h .slide-final-offer .closing-product-name{font-size:calc(var(--u)*.94)}
+body.h .slide-final-offer .closing-product-mode{font-size:calc(var(--u)*.65)}
+body.h .slide-final-offer .closing-included{font-size:calc(var(--u)*.54);padding:calc(var(--u)*.2) calc(var(--u)*.36)}
+body.h .slide-final-offer .closing-finance{flex:0 0 auto;margin-top:auto;grid-template-columns:.82fr 1.18fr .92fr;gap:calc(var(--u)*.7);padding-top:calc(var(--u)*.55);border-top:1px solid rgba(255,255,255,.1)}
+body.h .slide-final-offer .closing-original,body.h .slide-final-offer .closing-diagnosis{padding:calc(var(--u)*.8) calc(var(--u)*.95)}
+body.h .slide-final-offer .closing-original:before{font-size:calc(var(--u)*.62)}
+body.h .slide-final-offer .closing-original s{font-size:calc(var(--u)*2.05)}
+body.h .slide-final-offer .closing-diagnosis strong{font-size:calc(var(--u)*3.5)}
+body.h .slide-final-offer .closing-saving{padding:calc(var(--u)*.75) calc(var(--u)*.9)}
+body.h .slide-final-offer .closing-saving b{font-size:calc(var(--u)*1.4)}
+
+.slide-closing-bonus{overflow:hidden}
+.bonus-shell{width:100%;height:100%;display:flex;flex-direction:column;justify-content:center;gap:calc(var(--u)*1.15)}
+.bonus-head .eyebrow{margin-bottom:calc(var(--u)*.34);font-size:calc(var(--u)*1.05)}
+.bonus-title{font-family:'Archivo';font-size:calc(var(--u)*3.35);font-weight:900;line-height:.98;letter-spacing:-.03em;color:#fff}
+.bonus-support{margin-top:calc(var(--u)*.55);font-size:calc(var(--u)*1.02);line-height:1.35;color:#AAA6C3;max-width:72ch}
+.slide-closing-bonus .closing-benefits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*.8);margin-top:calc(var(--u)*.2)}
+.slide-closing-bonus .closing-benefits.single{grid-template-columns:minmax(0,calc(var(--u)*58));justify-content:start}
+.slide-closing-bonus .closing-benefit-card{grid-template-columns:calc(var(--u)*14.5) minmax(0,1fr) auto;gap:calc(var(--u)*.85);min-height:calc(var(--u)*8.6);padding:calc(var(--u)*.48);border-radius:calc(var(--u)*.9);background:rgba(255,255,255,.055)}
+.slide-closing-bonus .closing-benefit-media{height:calc(var(--u)*7.6);border-radius:calc(var(--u)*.65);padding:0;background:#09123A}
+.slide-closing-bonus .closing-benefit-media img{width:100%;height:100%;object-fit:cover;object-position:center}
+.slide-closing-bonus .closing-benefit-name{font-size:calc(var(--u)*1.08)}
+.slide-closing-bonus .closing-benefit-detail{font-size:calc(var(--u)*.76);line-height:1.35;margin-top:calc(var(--u)*.28)}
+.slide-closing-bonus .closing-benefit-button{font-size:calc(var(--u)*.72);padding:calc(var(--u)*.58) calc(var(--u)*.82)}
+.slide-closing-bonus .closing-cash-icon{height:calc(var(--u)*7.6);font-size:calc(var(--u)*2.05);border-radius:calc(var(--u)*.65)}
+.slide-closing-bonus .closing-cash-icon small{font-size:calc(var(--u)*.72)}
+.bonus-comparison{display:grid;grid-template-columns:1fr 1fr 1.12fr;gap:calc(var(--u)*.72);margin-top:calc(var(--u)*.15);padding-top:calc(var(--u)*.82);border-top:1px solid rgba(255,255,255,.1)}
+.bonus-price-card{min-height:calc(var(--u)*8.2);padding:calc(var(--u)*.85) calc(var(--u)*1);border:1px solid rgba(255,255,255,.12);border-radius:calc(var(--u)*.85);background:rgba(255,255,255,.045);display:flex;flex-direction:column;justify-content:center}
+.bonus-price-card span{font-family:'Archivo Narrow';font-size:calc(var(--u)*.72);font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#AAA6C3}
+.bonus-price-card strong{display:block;margin-top:calc(var(--u)*.2);font-family:'Archivo';font-size:calc(var(--u)*2.15);font-weight:900;line-height:1;color:#fff;letter-spacing:-.03em}
+.bonus-price-card small{display:block;margin-top:calc(var(--u)*.34);font-size:calc(var(--u)*.68);line-height:1.32;color:#8F8BB0}
+.bonus-price-card.today{border-color:rgba(255,107,0,.5);background:linear-gradient(135deg,rgba(255,107,0,.13),rgba(255,107,0,.035))}
+.bonus-price-card.today strong{color:var(--orange)}
+.bonus-price-card.later strong{text-decoration:line-through;text-decoration-color:var(--orange);text-decoration-thickness:calc(var(--u)*.12);text-decoration-skip-ink:none;color:#E8E5F2}
+.bonus-price-card.loss{border-color:rgba(255,107,0,.38);background:rgba(255,107,0,.085)}
+.bonus-price-card.loss strong{font-size:calc(var(--u)*2.4);color:var(--orange-l)}
+
+/* Seleção de produtos: valor aparece apenas no resumo superior */
+.slide-combo .product-price-badge{display:none!important}
+.slide-combo .conversation-option{grid-template-columns:auto 1fr;grid-template-rows:auto;padding:calc(var(--u)*.45) calc(var(--u)*.68);min-width:calc(var(--u)*4.5)}
+.slide-combo .conversation-option input{grid-row:auto;width:calc(var(--u)*.92);height:calc(var(--u)*.92)}
+.slide-combo .conversation-option b{font-size:calc(var(--u)*.95)}
+.slide-combo .conversation-option span{display:none!important}
+
+body.v .slide-final-offer{overflow:auto;padding-bottom:calc(var(--u)*6.2)}
+body.v .slide-final-offer .closing-products,body.v .slide-final-offer .closing-products.count-1,body.v .slide-final-offer .closing-products.count-2,body.v .slide-final-offer .closing-products.count-3,body.v .slide-final-offer .closing-products.count-4,body.v .slide-final-offer .closing-products.count-5,body.v .slide-final-offer .closing-products.count-6{grid-template-columns:1fr 1fr;justify-content:stretch}
+body.v .slide-final-offer .closing-products.count-5 .closing-product{grid-column:auto!important}
+body.v .slide-closing-bonus{overflow:auto;padding-top:calc(var(--u)*3.5);padding-bottom:calc(var(--u)*6.2)}
+body.v .bonus-shell{height:auto;justify-content:flex-start;gap:calc(var(--u)*1)}
+body.v .bonus-title{font-size:calc(var(--u)*3.8)}
+body.v .bonus-support{font-size:calc(var(--u)*1.18)}
+body.v .slide-closing-bonus .closing-benefits,body.v .slide-closing-bonus .closing-benefits.single{grid-template-columns:1fr;justify-content:stretch}
+body.v .slide-closing-bonus .closing-benefit-card{grid-template-columns:calc(var(--u)*10) minmax(0,1fr);min-height:calc(var(--u)*8)}
+body.v .slide-closing-bonus .closing-benefit-media,body.v .slide-closing-bonus .closing-cash-icon{height:calc(var(--u)*7)}
+body.v .slide-closing-bonus .closing-benefit-button{grid-column:1/-1;justify-self:stretch;text-align:center}
+body.v .bonus-comparison{grid-template-columns:1fr;gap:calc(var(--u)*.55)}
+body.v .bonus-price-card{min-height:calc(var(--u)*6.8)}
+
 </style>
 </head>
 <body class="h">
@@ -949,33 +1025,49 @@ body.v .cover-main-subtitle{margin-top:calc(var(--u)*1.2);font-size:calc(var(--u
   <div class="closing-shell">
     <div class="closing-head">
       <div class="eyebrow">Condição exclusiva de diagnóstico</div>
-      <div class="closing-title">Seu projeto personalizado</div>
     </div>
 
     <div class="closing-products" id="closingProducts"></div>
 
     <div class="closing-finance">
       <div class="closing-original">
-        <span>Valor dos produtos selecionados</span>
+        <span>Em outro momento</span>
         <s id="offerFrom">R$ 0,00</s>
       </div>
       <div class="closing-diagnosis">
-        <span>Condição de diagnóstico</span>
+        <span>Condição liberada hoje</span>
         <strong id="offerTo">R$ 0,00</strong>
       </div>
       <div class="closing-saving" id="offerSaving">Você economiza R$ 0,00 • 0% de desconto</div>
     </div>
+  </div>
+</section>
+<section class="slide deep slide-closing-bonus" data-slide-id="bonus" data-slide-title="Benefício de fechamento">
+  <div class="bonus-shell">
+    <div class="bonus-head">
+      <div class="eyebrow">Benefício exclusivo de fechamento</div>
+      <div class="bonus-title">Escolha seu benefício extra.</div>
+      <div class="bonus-support" id="closingBenefitSupport">Além da condição liberada no diagnóstico, escolha 1 benefício para fechar hoje.</div>
+    </div>
 
-    <div class="closing-breakdown" id="closingBreakdown" hidden></div>
+    <div class="closing-benefits" id="closingBenefits"></div>
 
-    <div class="closing-benefit-section">
-      <div class="closing-benefit-head">
-        <div>
-          <div class="closing-benefit-title" id="closingBenefitTitle">Escolha seu benefício de fechamento no diagnóstico</div>
-          <div class="closing-benefit-support" id="closingBenefitSupport">Além do desconto, escolha 1 bônus para complementar seu projeto.</div>
-        </div>
+    <div class="bonus-comparison">
+      <div class="bonus-price-card today">
+        <span>Fechando hoje</span>
+        <strong id="bonusTodayTotal">R$ 0,00</strong>
+        <small id="bonusTodayNote">Condição de diagnóstico aplicada.</small>
       </div>
-      <div class="closing-benefits" id="closingBenefits"></div>
+      <div class="bonus-price-card later">
+        <span>Em outro momento</span>
+        <strong id="bonusLaterTotal">R$ 0,00</strong>
+        <small id="bonusLaterNote">Sem a condição e sem o benefício escolhido.</small>
+      </div>
+      <div class="bonus-price-card loss">
+        <span>Valor que você deixa de aproveitar</span>
+        <strong id="bonusLoss">R$ 0,00</strong>
+        <small id="bonusLossNote">Diferença total entre fechar hoje e depois.</small>
+      </div>
     </div>
   </div>
 </section>
@@ -1056,9 +1148,9 @@ const PRESENTATION_KEY='sos-offshore-presentation-v3';
 const SESSION_STORAGE_KEY='highlevel-ppt-session-v3';
 const SELLER_STORAGE_PREFIX='highlevel-ppt-seller-v3:';
 const MASTER_STORAGE_KEY='highlevel-ppt-master-v3';
-const BASE_SLIDES=[{id:'cover',title:'Abertura'},{id:'authority',title:'High Level'},{id:'level',title:'Nivelamento'},{id:'live',title:'120h ao vivo'},{id:'recorded',title:'Aulas gravadas'},{id:'deck',title:'DECK'},{id:'career',title:'Pitch + LinkedIn'},{id:'interview',title:'Entrevista completa'},{id:'booklet',title:'Apostila física'},{id:'combo',title:'Planejamento personalizado'},{id:'offer',title:'Condição exclusiva de diagnóstico'}];
+const BASE_SLIDES=[{id:'cover',title:'Abertura'},{id:'authority',title:'High Level'},{id:'level',title:'Nivelamento'},{id:'live',title:'120h ao vivo'},{id:'recorded',title:'Aulas gravadas'},{id:'deck',title:'DECK'},{id:'career',title:'Pitch + LinkedIn'},{id:'interview',title:'Entrevista completa'},{id:'booklet',title:'Apostila física'},{id:'combo',title:'Planejamento personalizado'},{id:'offer',title:'Condição exclusiva de diagnóstico'},{id:'bonus',title:'Benefício de fechamento'}];
 const BASE_IDS=BASE_SLIDES.map(x=>x.id);
-const DEFAULT_SLIDE_ORDER=['cover','authority','level','live','recorded','deck','career','combo','offer'];
+const DEFAULT_SLIDE_ORDER=['cover','authority','level','live','recorded','deck','career','combo','offer','bonus'];
 const PRODUCT_DISPLAY_ORDER=['glossary','live60','live120','recorded','interview','deck','booklet'];
 const VTURB_ACCOUNT_ID='2aac0681-fa5e-4d00-8829-8daf90155e21';
 const BUILTIN_TESTIMONIALS=[
@@ -1075,7 +1167,7 @@ const DEFAULT_MASTER_CONFIG={products:[
 {id:'deck',name:'DECK • IA + Memory Card + nivelamento',description:'IA, S.O.S Memory Card e nivelamento para análise de evolução.',price:0,active:true,group:'app'},
 {id:'booklet',name:'Apostila física de apoio',description:'Material físico de apoio ao programa.',price:297,active:true,group:'material'}
 ],discountRules:[{minItems:0,minTotal:0,percent:0}],testimonials:BUILTIN_TESTIMONIALS.map(t=>({...t}))};
-const DEFAULT_SELLER_CONFIG={presentation:{clientName:'',slideOrder:[...DEFAULT_SLIDE_ORDER],customSlides:[]}};
+const DEFAULT_SELLER_CONFIG={presentation:{version:2,clientName:'',slideOrder:[...DEFAULT_SLIDE_ORDER],customSlides:[]}};
 let AUTH={token:null,user:null},MASTER_CONFIG=normalizeMasterConfig(DEFAULT_MASTER_CONFIG),SELLER_CONFIG=normalizeSellerConfig(DEFAULT_SELLER_CONFIG);
 let currentIndex=0,settingsOpen=false,mosaicOpen=false,dragSlideId=null,sellerReady=false,masterReady=false,sellerSaveTimer=null,masterSaveTimer=null;
 let selectedProducts=new Set();
@@ -1110,9 +1202,12 @@ function normalizeSellerConfig(raw){
   })) : [];
   const valid=new Set([...BASE_IDS,...customSlides.map(c=>c.id)]),hasOrder=Array.isArray(p.slideOrder);
   let slideOrder=hasOrder?p.slideOrder.map(String).filter((id,idx,a)=>valid.has(id)&&a.indexOf(id)===idx):[...DEFAULT_SLIDE_ORDER];
+  const version=Math.max(parseInt(p.version)||1,1);
+  // Migra configurações antigas uma única vez: o novo slide de benefício entra após a condição.
+  if(version<2&&!slideOrder.includes('bonus')&&valid.has('bonus')){const pos=slideOrder.indexOf('offer');if(pos>=0)slideOrder.splice(pos+1,0,'bonus');else slideOrder.push('bonus')}
   // Nunca deixa uma configuração antiga/corrompida apagar toda a apresentação.
   if(!slideOrder.length)slideOrder=[...DEFAULT_SLIDE_ORDER].filter(id=>valid.has(id));
-  return{presentation:{clientName:String(p.clientName||''),slideOrder,customSlides}}
+  return{presentation:{version:2,clientName:String(p.clientName||''),slideOrder,customSlides}}
 }
 function sellerStorageKey(){return SELLER_STORAGE_PREFIX+(AUTH.user&&AUTH.user.id?AUTH.user.id:'guest')}
 function setCloudStatus(text,state){const e=el('cloudStatus');if(!e)return;e.textContent=text;e.className='cloud-status'+(state?' '+state:'')}
@@ -1181,7 +1276,7 @@ function show(k){
   cur.style.display='flex';cur.classList.add('on');
   [...el('dots').children].forEach((d,n)=>d.classList.toggle('on',n===currentIndex));
   const nav=el('dots').parentElement;nav.className='nav';nav.classList.toggle('dark',cur.classList.contains('dark')||cur.classList.contains('deep')||cur.classList.contains('cover'));nav.classList.toggle('at-start',currentIndex===0);nav.classList.toggle('at-end',currentIndex===list.length-1);
-  if(cur.dataset.slideId==='combo')renderProducts();if(cur.dataset.slideId==='offer')renderOffer();if(cur.querySelector('.vturb-lazy-player[data-vturb-player]'))requestAnimationFrame(()=>ensureVturbPlayers(cur))
+  if(cur.dataset.slideId==='combo')renderProducts();if(cur.dataset.slideId==='offer')renderOffer();if(cur.dataset.slideId==='bonus')renderBonus();if(cur.querySelector('.vturb-lazy-player[data-vturb-player]'))requestAnimationFrame(()=>ensureVturbPlayers(cur))
 }
 function go(d){if(settingsOpen||mosaicOpen)return;const next=currentIndex+d;if(next<0||next>=orderedSlides().length)return;show(next)}
 function fit(){const wrap=document.querySelector('.wrap'),st=el('stage'),vertical=document.body.classList.contains('v');let w,h;if(!vertical){w=wrap.clientWidth;h=wrap.clientHeight}else{const ratio=9/16,aw=wrap.clientWidth-24,ah=wrap.clientHeight-24;w=aw;h=w/ratio;if(h>ah){h=ah;w=h*ratio}}st.style.width=w+'px';st.style.height=h+'px';const u=vertical?w/54:Math.min(w/100,h/56.25);document.documentElement.style.setProperty('--u',Math.max(u,5)+'px')}
@@ -1199,73 +1294,85 @@ const PRODUCT_VISUALS={
 };
 function activeProducts(){const byId=new Map(MASTER_CONFIG.products.filter(p=>p.active&&p.id!=='live80').map(p=>[p.id,p])),ordered=PRODUCT_DISPLAY_ORDER.map(id=>byId.get(id)).filter(Boolean),extra=MASTER_CONFIG.products.filter(p=>p.active&&p.id!=='live80'&&!PRODUCT_DISPLAY_ORDER.includes(p.id));return [...ordered,...extra]}
 function productById(id){return MASTER_CONFIG.products.find(p=>p.id===id)}
-function toggleProduct(id,checked){const p=productById(id);if(!p||!p.active||id==='live80')return;if(p.group==='conversation'&&checked)MASTER_CONFIG.products.filter(x=>x.group==='conversation').forEach(x=>selectedProducts.delete(x.id));if(checked)selectedProducts.add(id);else selectedProducts.delete(id);renderProducts();renderOffer()}
-function toggleConversation(id){const wasSelected=selectedProducts.has(id);MASTER_CONFIG.products.filter(x=>x.group==='conversation').forEach(x=>selectedProducts.delete(x.id));if(!wasSelected){const p=productById(id);if(p&&p.active&&id!=='live80')selectedProducts.add(id)}renderProducts();renderOffer()}
+function toggleProduct(id,checked){const p=productById(id);if(!p||!p.active||id==='live80')return;if(p.group==='conversation'&&checked)MASTER_CONFIG.products.filter(x=>x.group==='conversation').forEach(x=>selectedProducts.delete(x.id));if(checked)selectedProducts.add(id);else selectedProducts.delete(id);renderProducts();renderOffer();renderBonus()}
+function toggleConversation(id){const wasSelected=selectedProducts.has(id);MASTER_CONFIG.products.filter(x=>x.group==='conversation').forEach(x=>selectedProducts.delete(x.id));if(!wasSelected){const p=productById(id);if(p&&p.active&&id!=='live80')selectedProducts.add(id)}renderProducts();renderOffer();renderBonus()}
 function calculateProjectTotals(items){const clean=(items||[]).filter(p=>p&&p.active&&p.id!=='live80'),subtotal=clean.reduce((a,p)=>a+(Number(p.price)||0),0),count=clean.length;const rules=MASTER_CONFIG.discountRules.filter(r=>(!r.minItems||count>=r.minItems)&&(!r.minTotal||subtotal>=r.minTotal)),best=[...rules].sort((a,b)=>b.percent-a.percent)[0]||{percent:0,minItems:0,minTotal:0},percent=Math.min(Math.max(Number(best.percent)||0,0),100),discount=subtotal*percent/100,final=Math.max(subtotal-discount,0);return{items:clean,subtotal,count,rule:best,percent,discount,final}}
 function projectTotals(){return calculateProjectTotals([...selectedProducts].map(productById))}
+function allowedClosingBonuses(state){
+  const out=[];
+  if(state.hasInterview&&state.hasBooklet){out.push('cash100');return out}
+  if(state.hasInterview){if(state.booklet&&state.booklet.active)out.push('booklet');out.push('cash100');return out}
+  if(state.hasBooklet){if(state.interview&&state.interview.active)out.push('interview');out.push('cash100');return out}
+  if(state.booklet&&state.booklet.active)out.push('booklet');
+  if(state.interview&&state.interview.active)out.push('interview');
+  return out
+}
 function validateClosingBenefit(){
-  const interview=productById('interview'),booklet=productById('booklet');
-  const hasInterview=!!(interview&&interview.active&&selectedProducts.has('interview'));
-  const hasBooklet=!!(booklet&&booklet.active&&selectedProducts.has('booklet'));
-  const special=hasInterview||hasBooklet;
-  if(special){
-    if(selectedClosingBonus==='interview')selectedClosingBonus=null;
-    if(selectedClosingBonus==='booklet'&&!(booklet&&booklet.active))selectedClosingBonus=null;
-    if(selectedClosingBonus&&!['booklet','cash100'].includes(selectedClosingBonus))selectedClosingBonus=null;
-  }else{
-    if(selectedClosingBonus==='cash100')selectedClosingBonus=null;
-    if(selectedClosingBonus==='booklet'&&!(booklet&&booklet.active))selectedClosingBonus=null;
-    if(selectedClosingBonus==='interview'&&!(interview&&interview.active))selectedClosingBonus=null;
-    if(selectedClosingBonus&&!['booklet','interview'].includes(selectedClosingBonus))selectedClosingBonus=null;
-  }
-  closingBookletAddon=false;
+  const selected=projectTotals(),booklet=productById('booklet'),interview=productById('interview');
+  const probe={hasInterview:selected.items.some(p=>p.id==='interview'),hasBooklet:selected.items.some(p=>p.id==='booklet'),booklet,interview};
+  const allowed=allowedClosingBonuses(probe);
+  if(selectedClosingBonus&&!allowed.includes(selectedClosingBonus))selectedClosingBonus=null;
 }
 function closingState(){
   validateClosingBenefit();
-  const selected=projectTotals(),hasInterview=selected.items.some(p=>p.id==='interview'),hasBooklet=selected.items.some(p=>p.id==='booklet');
-  let billableItems=[...selected.items],convertedBonus=null;
-  if(selectedClosingBonus==='booklet'&&hasBooklet){billableItems=billableItems.filter(p=>p.id!=='booklet');convertedBonus='booklet'}
-  const project=calculateProjectTotals(billableItems),booklet=productById('booklet'),interview=productById('interview');
-  const extraCashDiscount=selectedClosingBonus==='cash100'?Math.min(100,project.final):0;
-  const total=Math.max(project.final-extraCashDiscount,0),overallSaving=Math.max(selected.subtotal-total,0);
-  return{selected,project,hasInterview,hasBooklet,convertedBonus,booklet,interview,extraCashDiscount,total,overallSaving,specialBonusMode:hasInterview||hasBooklet}
+  const selected=projectTotals(),project=calculateProjectTotals(selected.items),booklet=productById('booklet'),interview=productById('interview');
+  const hasInterview=selected.items.some(p=>p.id==='interview'),hasBooklet=selected.items.some(p=>p.id==='booklet');
+  const base={selected,project,booklet,interview,hasInterview,hasBooklet};
+  const allowed=allowedClosingBonuses(base);
+  const extraCashDiscount=selectedClosingBonus==='cash100'&&allowed.includes('cash100')?Math.min(100,project.final):0;
+  let bonusProduct=null;
+  if(selectedClosingBonus==='booklet'&&allowed.includes('booklet'))bonusProduct=booklet;
+  if(selectedClosingBonus==='interview'&&allowed.includes('interview'))bonusProduct=interview;
+  const bonusValue=bonusProduct?Math.max(Number(bonusProduct.price)||0,0):0;
+  const total=Math.max(project.final-extraCashDiscount,0);
+  const laterEquivalent=Math.max(selected.subtotal+bonusValue,0);
+  const lostValue=Math.max(laterEquivalent-total,0);
+  return{...base,allowed,extraCashDiscount,bonusProduct,bonusValue,total,laterEquivalent,lostValue}
 }
 function closingProductVisual(id){if(id==='live60'||id==='live120')return PRODUCT_VISUALS.conversation;return PRODUCT_VISUALS[id]||''}
-function closingProductLabel(p){if(!p)return'';if(p.id==='live60')return'Conversação ao vivo';if(p.id==='live120')return'Conversação ao vivo';return shortProductName(p.id,p.name)}
+function closingProductLabel(p){if(!p)return'';if(p.id==='live60'||p.id==='live120')return'Conversação ao vivo';return shortProductName(p.id,p.name)}
 function closingProductMode(p){if(!p)return'';if(p.id==='live60')return'60h';if(p.id==='live120')return'120h';return''}
-function renderClosingProducts(state){const box=el('closingProducts');if(!box)return;const items=state.selected.items,count=items.length;box.className='closing-products count-'+Math.min(count,6);if(!count){box.innerHTML='<div class="closing-empty">Nenhum produto selecionado no planejamento.</div>';return}box.innerHTML=items.map(p=>{const converted=state.convertedBonus===p.id,label=closingProductLabel(p),mode=closingProductMode(p),img=closingProductVisual(p.id);return '<div class="closing-product"><div class="closing-product-media"><img src="'+escapeHTML(img)+'" alt="'+escapeHTML(label)+'"></div><div class="closing-product-copy"><div class="closing-product-name">'+escapeHTML(label)+'</div>'+(mode?'<div class="closing-product-mode">'+escapeHTML(mode)+'</div>':'')+'<div class="closing-included">'+(converted?'Bônus':'Incluído')+'</div></div></div>'}).join('')}
-function toggleClosingBonus(type){const state=closingState(),allowed=state.specialBonusMode?['booklet','cash100']:['booklet','interview'];if(!allowed.includes(type))return;selectedClosingBonus=selectedClosingBonus===type?null:type;renderOffer()}
-function toggleClosingBookletAddon(){return}
-function closingBonusCard(type,state){const isBooklet=type==='booklet',on=selectedClosingBonus===type,p=isBooklet?state.booklet:state.interview;if(!p||!p.active)return'';const img=isBooklet?PRODUCT_VISUALS.booklet:PRODUCT_VISUALS.interview,name=isBooklet?'Apostila física de apoio':'Curso completo de entrevista de emprego em inglês';let detail='Bônus adicional ao projeto, sem alterar o valor final.';if(isBooklet&&state.hasBooklet)detail='Sua apostila já está no projeto. Ao escolher este bônus, ela deixa de ser cobrada.';return '<div class="closing-benefit-card '+(on?'on':'')+'"><span class="closing-benefit-check">✓</span><div class="closing-benefit-media"><img src="'+escapeHTML(img)+'" alt="'+escapeHTML(name)+'"></div><div class="closing-benefit-copy"><div class="closing-benefit-name">'+escapeHTML(name)+'</div><div class="closing-benefit-detail">'+escapeHTML(detail)+'</div></div><button class="closing-benefit-button" type="button" onclick="toggleClosingBonus(\''+type+'\')">'+(on?'Bônus escolhido':'Escolher bônus')+'</button></div>'}
-function closingCashCard(state){const on=selectedClosingBonus==='cash100';return '<div class="closing-benefit-card '+(on?'on':'')+'"><span class="closing-benefit-check">✓</span><div class="closing-cash-icon">- R$ 100<small>OFF</small></div><div class="closing-benefit-copy"><div class="closing-benefit-name">R$ 100 de desconto a mais no programa</div><div class="closing-benefit-detail">Aplicado diretamente sobre o valor final após a condição de diagnóstico.</div></div><button class="closing-benefit-button" type="button" onclick="toggleClosingBonus(\'cash100\')">'+(on?'Desconto escolhido':'Escolher desconto')+'</button></div>'}
+function renderClosingProducts(state){const box=el('closingProducts');if(!box)return;const items=state.selected.items,count=items.length;box.className='closing-products count-'+Math.min(count,6);if(!count){box.innerHTML='<div class="closing-empty">Nenhum produto selecionado no planejamento.</div>';return}box.innerHTML=items.map(p=>{const label=closingProductLabel(p),mode=closingProductMode(p),img=closingProductVisual(p.id);return '<div class="closing-product"><div class="closing-product-media"><img src="'+escapeHTML(img)+'" alt="'+escapeHTML(label)+'"></div><div class="closing-product-copy"><div class="closing-product-name">'+escapeHTML(label)+'</div>'+(mode?'<div class="closing-product-mode">'+escapeHTML(mode)+'</div>':'')+'<div class="closing-included">Incluído</div></div></div>'}).join('')}
+function toggleClosingBonus(type){const state=closingState();if(!state.allowed.includes(type))return;selectedClosingBonus=selectedClosingBonus===type?null:type;renderBonus()}
+function closingBonusCard(type,state){const isBooklet=type==='booklet',on=selectedClosingBonus===type,p=isBooklet?state.booklet:state.interview;if(!p||!p.active)return'';const img=isBooklet?PRODUCT_VISUALS.booklet:PRODUCT_VISUALS.interview,name=isBooklet?'Apostila física de apoio':'Curso completo de entrevista de emprego em inglês';return '<div class="closing-benefit-card '+(on?'on':'')+'"><span class="closing-benefit-check">✓</span><div class="closing-benefit-media"><img src="'+escapeHTML(img)+'" alt="'+escapeHTML(name)+'"></div><div class="closing-benefit-copy"><div class="closing-benefit-name">'+escapeHTML(name)+'</div><div class="closing-benefit-detail">Bônus incluído sem aumentar o valor do projeto.</div></div><button class="closing-benefit-button" type="button" onclick="toggleClosingBonus(\''+type+'\')">'+(on?'Bônus escolhido':'Escolher bônus')+'</button></div>'}
+function closingCashCard(state){const on=selectedClosingBonus==='cash100';return '<div class="closing-benefit-card '+(on?'on':'')+'"><span class="closing-benefit-check">✓</span><div class="closing-cash-icon">- R$ 100<small>OFF</small></div><div class="closing-benefit-copy"><div class="closing-benefit-name">R$ 100 de desconto a mais no programa</div><div class="closing-benefit-detail">Desconto adicional aplicado sobre a condição de diagnóstico.</div></div><button class="closing-benefit-button" type="button" onclick="toggleClosingBonus(\'cash100\')">'+(on?'Desconto escolhido':'Escolher desconto')+'</button></div>'}
 function renderClosingBenefits(state){
-  const title=el('closingBenefitTitle'),support=el('closingBenefitSupport'),box=el('closingBenefits');if(!title||!support||!box)return;
-  box.className='closing-benefits';
-  if(!state.selected.count){title.textContent='Escolha seu benefício de fechamento no diagnóstico';support.textContent='Selecione os produtos do projeto antes de definir o benefício.';box.innerHTML='';return}
-  title.textContent='Escolha seu benefício de fechamento no diagnóstico';
-  if(state.specialBonusMode){
-    support.textContent='Como um desses benefícios já faz parte do projeto, escolha a apostila física como bônus ou R$ 100 de desconto a mais no programa.';
-    const cards=[];if(state.booklet&&state.booklet.active)cards.push(closingBonusCard('booklet',state));cards.push(closingCashCard(state));box.innerHTML=cards.join('');return
-  }
-  support.textContent='Além do desconto, escolha 1 bônus para complementar seu projeto.';
-  box.innerHTML=closingBonusCard('booklet',state)+closingBonusCard('interview',state)
+  const box=el('closingBenefits'),support=el('closingBenefitSupport');if(!box||!support)return;
+  if(!state.selected.count){support.textContent='Selecione os produtos do projeto antes de definir o benefício.';box.innerHTML='';return}
+  let cards=[];
+  state.allowed.forEach(type=>{cards.push(type==='cash100'?closingCashCard(state):closingBonusCard(type,state))});
+  box.className='closing-benefits'+(cards.length===1?' single':'');
+  if(state.hasInterview&&state.hasBooklet)support.textContent='Como a apostila e o curso de entrevista já fazem parte do projeto, a condição extra disponível é R$ 100 de desconto.';
+  else if(state.hasInterview)support.textContent='O curso de entrevista já está no projeto. Escolha a apostila como bônus ou R$ 100 de desconto a mais.';
+  else if(state.hasBooklet)support.textContent='A apostila já está no projeto. Escolha o curso de entrevista como bônus ou R$ 100 de desconto a mais.';
+  else support.textContent='Escolha 1 bônus para complementar o projeto sem aumentar o valor.';
+  box.innerHTML=cards.join('')||'<div class="closing-no-benefit">Nenhum benefício disponível para esta composição.</div>'
+}
+function renderBonus(){
+  const state=closingState();renderClosingBenefits(state);
+  const today=el('bonusTodayTotal'),later=el('bonusLaterTotal'),loss=el('bonusLoss'),todayNote=el('bonusTodayNote'),laterNote=el('bonusLaterNote'),lossNote=el('bonusLossNote');
+  if(today)today.textContent='R$ '+money(state.total);
+  if(later)later.textContent='R$ '+money(state.laterEquivalent);
+  if(loss)loss.textContent='R$ '+money(state.lostValue);
+  if(todayNote){if(selectedClosingBonus==='cash100')todayNote.textContent='Condição de diagnóstico + R$ 100 de desconto extra.';else if(state.bonusProduct)todayNote.textContent='Condição de diagnóstico + '+closingProductLabel(state.bonusProduct)+' como bônus.';else todayNote.textContent='Condição de diagnóstico aplicada. Escolha um benefício acima.'}
+  if(laterNote){if(state.bonusProduct)laterNote.textContent='Mesmo planejamento + '+closingProductLabel(state.bonusProduct)+' pelo valor normal.';else laterNote.textContent='Planejamento pelo valor normal, sem a condição liberada hoje.'}
+  if(lossNote){if(selectedClosingBonus==='cash100')lossNote.textContent='Desconto do diagnóstico + R$ 100 extras que deixam de valer depois.';else if(state.bonusProduct)lossNote.textContent='Economia do diagnóstico + valor do bônus que deixa de estar incluído.';else lossNote.textContent='Diferença atual sem considerar um benefício extra.'}
 }
 function shortProductName(id,name){const labels={glossary:'Glossário + guia técnico',recorded:'Aulas gravadas',interview:'Entrevista em inglês',deck:'Deck + IA + Memory Card',booklet:'Apostila física'};return labels[id]||name}
-function standardProductCard(p,image){const on=selectedProducts.has(p.id),label=shortProductName(p.id,p.name);return '<label class="product-card group-'+escapeHTML(p.group)+' '+(on?'on':'')+'"><input type="checkbox" '+(on?'checked':'')+' onchange="toggleProduct(\''+escapeHTML(p.id)+'\',this.checked)"><div class="product-card-media"><img src="'+escapeHTML(image)+'" alt="'+escapeHTML(label)+'"><span class="product-price-badge"><span>R$ '+money(p.price)+'</span></span><span class="product-check">✓</span><div class="product-card-overlay"><div class="pn">'+escapeHTML(label)+'</div></div></div></label>'}
-function conversationProductCard(p60,p120){const visible=[p60,p120].filter(p=>p&&p.active);if(!visible.length)return '';const selected=visible.some(p=>selectedProducts.has(p.id));const activePick=visible.find(p=>selectedProducts.has(p.id))||visible.find(p=>p.id==='live120')||visible[0];const opts=visible.map(p=>{const on=selectedProducts.has(p.id)||(!selected && activePick && p.id===activePick.id);const checked=selectedProducts.has(p.id);const hours=p.id==='live60'?'60h':'120h';return '<label class="conversation-option '+(on?'on':'')+'"><input type="checkbox" '+(checked?'checked':'')+' onchange="toggleConversation(\''+p.id+'\')"><b>'+hours+'</b><span>R$ '+money(p.price)+'</span></label>'}).join('');return '<div class="product-card conversation-card '+(selected?'on':'')+'"><div class="product-card-media"><img src="'+PRODUCT_VISUALS.conversation+'" alt="Conversação ao vivo"><span class="product-price-badge"><span>R$ '+money(activePick.price)+'</span></span><span class="product-check">✓</span><div class="product-card-overlay"><div class="pn">Conversação ao vivo</div></div><div class="product-panel"><div class="conversation-options">'+opts+'</div></div></div></div>'}
+function standardProductCard(p,image){const on=selectedProducts.has(p.id),label=shortProductName(p.id,p.name);return '<label class="product-card group-'+escapeHTML(p.group)+' '+(on?'on':'')+'"><input type="checkbox" '+(on?'checked':'')+' onchange="toggleProduct(\''+escapeHTML(p.id)+'\',this.checked)"><div class="product-card-media"><img src="'+escapeHTML(image)+'" alt="'+escapeHTML(label)+'"><span class="product-check">✓</span><div class="product-card-overlay"><div class="pn">'+escapeHTML(label)+'</div></div></div></label>'}
+function conversationProductCard(p60,p120){const visible=[p60,p120].filter(p=>p&&p.active);if(!visible.length)return '';const selected=visible.some(p=>selectedProducts.has(p.id));const activePick=visible.find(p=>selectedProducts.has(p.id))||visible.find(p=>p.id==='live120')||visible[0];const opts=visible.map(p=>{const on=selectedProducts.has(p.id)||(!selected&&activePick&&p.id===activePick.id);const checked=selectedProducts.has(p.id);const hours=p.id==='live60'?'60h':'120h';return '<label class="conversation-option '+(on?'on':'')+'"><input type="checkbox" '+(checked?'checked':'')+' onchange="toggleConversation(\''+p.id+'\')"><b>'+hours+'</b></label>'}).join('');return '<div class="product-card conversation-card '+(selected?'on':'')+'"><div class="product-card-media"><img src="'+PRODUCT_VISUALS.conversation+'" alt="Conversação ao vivo"><span class="product-check">✓</span><div class="product-card-overlay"><div class="pn">Conversação ao vivo</div></div><div class="product-panel"><div class="conversation-options">'+opts+'</div></div></div></div>'}
 function renderProducts(){const box=el('productBuilder');if(!box)return;if(selectedProducts.has('guide')){selectedProducts.delete('guide');selectedProducts.add('glossary')}selectedProducts.delete('live80');const cards=[];const glossary=productById('glossary'),recorded=productById('recorded'),interview=productById('interview'),live60=productById('live60'),live120=productById('live120'),deck=productById('deck'),booklet=productById('booklet');if(glossary&&glossary.active)cards.push(standardProductCard(glossary,PRODUCT_VISUALS.glossary));cards.push(conversationProductCard(live60,live120));if(recorded&&recorded.active)cards.push(standardProductCard(recorded,PRODUCT_VISUALS.recorded));if(interview&&interview.active)cards.push(standardProductCard(interview,PRODUCT_VISUALS.interview));if(deck&&deck.active)cards.push(standardProductCard(deck,PRODUCT_VISUALS.deck));if(booklet&&booklet.active)cards.push(standardProductCard(booklet,PRODUCT_VISUALS.booklet));const html=cards.filter(Boolean);box.innerHTML=html.join('')||'<div class="offer-empty">Nenhum produto ativo. A conta mestre precisa configurar o catálogo.</div>';const t=projectTotals();const topValue=el('comboSubtotalTop');if(topValue)topValue.textContent='R$ '+money(t.subtotal);const topCount=el('comboCountTop');if(topCount)topCount.textContent=t.count+' de '+html.length}
 function renderOffer(){
   if(!el('offerFrom'))return;
-  const state=closingState();renderClosingProducts(state);renderClosingBenefits(state);
-  el('offerFrom').textContent='R$ '+money(state.selected.subtotal);el('offerTo').textContent='R$ '+money(state.total);
-  const save=el('offerSaving');if(save){let note='Desconto do diagnóstico: '+state.project.percent.toLocaleString('pt-BR')+'%';if(state.extraCashDiscount>0)note+=' + R$ 100 de desconto extra';else if(state.convertedBonus==='booklet')note+=' + apostila como bônus';else if(selectedClosingBonus==='booklet'&&!state.hasBooklet)note+=' + apostila como bônus';else if(selectedClosingBonus==='interview')note+=' + curso de entrevista como bônus';save.innerHTML='<span>Economia total na condição de hoje</span><b>R$ '+money(state.overallSaving)+'</b><small>'+escapeHTML(note)+'</small>'}
-  const breakdown=el('closingBreakdown');if(breakdown){if(state.extraCashDiscount>0){breakdown.hidden=false;breakdown.innerHTML='<div>Projeto com diagnóstico<b>R$ '+money(state.project.final)+'</b></div><div>Desconto extra escolhido<b>- R$ '+money(state.extraCashDiscount)+'</b></div><div>Total para fechamento<b>R$ '+money(state.total)+'</b></div>'}else if(state.convertedBonus==='booklet'){breakdown.hidden=false;breakdown.innerHTML='<div>Projeto com diagnóstico<b>R$ '+money(state.project.final)+'</b></div><div>Apostila como bônus<b>Incluída sem cobrança</b></div><div>Total para fechamento<b>R$ '+money(state.total)+'</b></div>'}else{breakdown.hidden=true;breakdown.innerHTML=''}}
+  const selected=projectTotals(),project=calculateProjectTotals(selected.items),state={selected};renderClosingProducts(state);
+  el('offerFrom').textContent='R$ '+money(selected.subtotal);el('offerTo').textContent='R$ '+money(project.final);
+  const save=el('offerSaving');if(save)save.innerHTML='<span>Economia liberada no diagnóstico</span><b>R$ '+money(project.discount)+'</b><small>'+project.percent.toLocaleString('pt-BR')+'% de desconto na composição selecionada</small>'
 }
 function jumpToDeliverable(id){selectedProducts.add(id);renderProducts();renderOffer();const idx=SELLER_CONFIG.presentation.slideOrder.indexOf('combo');if(idx>=0)show(idx)}
 
 let pendingInsertAfter=null;
 function slideTitle(id){const b=BASE_SLIDES.find(x=>x.id===id);if(b)return b.title;const c=SELLER_CONFIG.presentation.customSlides.find(x=>x.id===id);return c?c.title:id}
-function slidePreviewInfo(id){const custom=SELLER_CONFIG.presentation.customSlides.find(c=>c.id===id);if(custom)return{label:custom.label||'Desafio',title:custom.title,theme:custom.theme==='light'?'light':'deep',custom:true,testimonial:custom.kind==='testimonial'};const node=realSlides().find(s=>s.dataset.slideId===id),theme=node?(node.classList.contains('cover')?'cover':node.classList.contains('deep')?'deep':node.classList.contains('dark')?'dark':'light'):'light';const labels={cover:'Abertura',authority:'Autoridade',level:'Ponto de partida',live:'Conversação',recorded:'Base estrutural',deck:'App do aluno',career:'Pitch + LinkedIn',interview:'Entrevista',booklet:'Material físico',combo:'Planejamento',offer:'Diagnóstico'};return{label:labels[id]||'Slide',title:slideTitle(id),theme,custom:false}}
+function slidePreviewInfo(id){const custom=SELLER_CONFIG.presentation.customSlides.find(c=>c.id===id);if(custom)return{label:custom.label||'Desafio',title:custom.title,theme:custom.theme==='light'?'light':'deep',custom:true,testimonial:custom.kind==='testimonial'};const node=realSlides().find(s=>s.dataset.slideId===id),theme=node?(node.classList.contains('cover')?'cover':node.classList.contains('deep')?'deep':node.classList.contains('dark')?'dark':'light'):'light';const labels={cover:'Abertura',authority:'Autoridade',level:'Ponto de partida',live:'Conversação',recorded:'Base estrutural',deck:'App do aluno',career:'Pitch + LinkedIn',interview:'Entrevista',booklet:'Material físico',combo:'Planejamento',offer:'Diagnóstico',bonus:'Benefício'};return{label:labels[id]||'Slide',title:slideTitle(id),theme,custom:false}}
 function applyClientName(){const name=String(SELLER_CONFIG.presentation.clientName||'').trim();[['coverClientPlan','coverClientName'],['comboClientPlan','comboClientName']].forEach(([wrapId,nameId])=>{const w=el(wrapId),n=el(nameId);if(!w||!n)return;n.textContent=name;w.hidden=!name});const input=el('clientNameInput');if(input&&document.activeElement!==input)input.value=name}
 function updateClientName(value){SELLER_CONFIG.presentation.clientName=String(value||'').trim();applyClientName();scheduleSellerSave();renderMosaic()}
 function nextCustomTitle(label){const base=String(label||'Desafio');const n=SELLER_CONFIG.presentation.customSlides.filter(c=>String(c.label||'').toLowerCase()===base.toLowerCase()).length+1;return base+' '+n}
@@ -1298,16 +1405,16 @@ function toggleSettings(force){settingsOpen=typeof force==='boolean'?force:!sett
 function setDefaultSettingsTab(){if(!AUTH.user)return;setSettingsTab(AUTH.user.role==='master'?'catalogo':'conta')}
 function setSettingsTab(tab){if((tab==='catalogo'||tab==='descontos'||tab==='usuarios')&&AUTH.user&&AUTH.user.role!=='master')tab='conta';document.querySelectorAll('.settings-tabs button').forEach(b=>b.classList.remove('on'));const id='settingsTab'+tab.charAt(0).toUpperCase()+tab.slice(1),btn=el(id);if(btn)btn.classList.add('on');document.querySelectorAll('[data-settings-panel]').forEach(p=>p.classList.toggle('on',p.dataset.settingsPanel===tab));if(tab==='catalogo')renderCatalog();if(tab==='descontos')renderDiscountRules();if(tab==='usuarios')renderUsers()}
 function renderCatalog(){if(!el('catalogList'))return;el('catalogList').innerHTML=MASTER_CONFIG.products.filter(p=>p.id!=='live80').map(p=>'<div class="catalog-row"><label>Produto<input data-product-id="'+escapeHTML(p.id)+'" data-key="name" value="'+escapeHTML(p.name)+'"></label><label>Preço R$<input data-product-id="'+escapeHTML(p.id)+'" data-key="price" inputmode="decimal" value="'+money(p.price)+'"></label><label class="catalog-active"><input type="checkbox" data-product-id="'+escapeHTML(p.id)+'" data-key="active" '+(p.active?'checked':'')+'> Disponível</label></div>').join('');el('catalogList').querySelectorAll('[data-product-id]').forEach(x=>x.addEventListener(x.type==='checkbox'?'change':'input',updateCatalogField))}
-function updateCatalogField(e){const x=e.currentTarget,id=String(x.dataset.productId||''),p=MASTER_CONFIG.products.find(v=>v.id===id);if(!p)return;const k=x.dataset.key;if(k==='price')p.price=Math.max(num(x.value),0);else if(k==='active')p.active=x.checked;else if(k==='name')p.name=String(x.value||'').trim()||p.name;saveMasterSoon();renderProducts();renderOffer()}
-function renderDiscountRules(){if(!el('discountRules'))return;el('discountRules').innerHTML=MASTER_CONFIG.discountRules.map((r,idx)=>'<div class="discount-row"><label>Mínimo de itens<input data-rule-index="'+idx+'" data-key="minItems" value="'+r.minItems+'"></label><label>Valor mínimo R$<input data-rule-index="'+idx+'" data-key="minTotal" value="'+money(r.minTotal)+'"></label><label>Desconto %<input data-rule-index="'+idx+'" data-key="percent" value="'+r.percent+'"></label><button class="settings-remove" onclick="removeDiscountRule('+idx+')">×</button></div>').join('')||'<div class="settings-desc">Nenhuma regra configurada.</div>';el('discountRules').querySelectorAll('[data-rule-index]').forEach(x=>x.addEventListener('input',e=>{const idx=Number(e.target.dataset.ruleIndex),key=e.target.dataset.key,r=MASTER_CONFIG.discountRules[idx];if(key==='minItems')r[key]=Math.max(parseInt(e.target.value)||0,0);else if(key==='percent')r[key]=Math.min(Math.max(num(e.target.value),0),100);else r[key]=Math.max(num(e.target.value),0);scheduleMasterSave();renderProducts();renderOffer()}))}
+function updateCatalogField(e){const x=e.currentTarget,id=String(x.dataset.productId||''),p=MASTER_CONFIG.products.find(v=>v.id===id);if(!p)return;const k=x.dataset.key;if(k==='price')p.price=Math.max(num(x.value),0);else if(k==='active')p.active=x.checked;else if(k==='name')p.name=String(x.value||'').trim()||p.name;saveMasterSoon();renderProducts();renderOffer();renderBonus()}
+function renderDiscountRules(){if(!el('discountRules'))return;el('discountRules').innerHTML=MASTER_CONFIG.discountRules.map((r,idx)=>'<div class="discount-row"><label>Mínimo de itens<input data-rule-index="'+idx+'" data-key="minItems" value="'+r.minItems+'"></label><label>Valor mínimo R$<input data-rule-index="'+idx+'" data-key="minTotal" value="'+money(r.minTotal)+'"></label><label>Desconto %<input data-rule-index="'+idx+'" data-key="percent" value="'+r.percent+'"></label><button class="settings-remove" onclick="removeDiscountRule('+idx+')">×</button></div>').join('')||'<div class="settings-desc">Nenhuma regra configurada.</div>';el('discountRules').querySelectorAll('[data-rule-index]').forEach(x=>x.addEventListener('input',e=>{const idx=Number(e.target.dataset.ruleIndex),key=e.target.dataset.key,r=MASTER_CONFIG.discountRules[idx];if(key==='minItems')r[key]=Math.max(parseInt(e.target.value)||0,0);else if(key==='percent')r[key]=Math.min(Math.max(num(e.target.value),0),100);else r[key]=Math.max(num(e.target.value),0);scheduleMasterSave();renderProducts();renderOffer();renderBonus()}))}
 function addDiscountRule(){MASTER_CONFIG.discountRules.push({minItems:0,minTotal:0,percent:0});scheduleMasterSave();renderDiscountRules()}
-function removeDiscountRule(i){MASTER_CONFIG.discountRules.splice(i,1);scheduleMasterSave();renderDiscountRules();renderProducts();renderOffer()}
+function removeDiscountRule(i){MASTER_CONFIG.discountRules.splice(i,1);scheduleMasterSave();renderDiscountRules();renderProducts();renderOffer();renderBonus()}
 async function renderUsers(){if(!AUTH.user||AUTH.user.role!=='master'||!AUTH.token)return;el('userList').innerHTML='<div class="settings-desc">Carregando contas...</div>';try{const rows=await rpc('ppt_list_users',{p_token:AUTH.token});el('userList').innerHTML=(rows||[]).map(u=>'<div class="user-row"><div class="user-main"><b>'+escapeHTML(u.username)+'</b><span>'+(u.role==='master'?'Conta mestre':'Vendedor')+'</span></div><span class="user-state '+(u.active?'':'off')+'">'+(u.active?'Ativa':'Bloqueada')+'</span><div class="user-actions">'+(u.role==='master'?'':'<button class="user-action" onclick="resetSellerPassword(\''+u.user_id+'\',\''+escapeHTML(u.username).replace(/'/g,'&#039;')+'\')">Senha</button><button class="user-action '+(u.active?'danger':'')+'" onclick="setSellerActive(\''+u.user_id+'\','+(!u.active)+')">'+(u.active?'Bloquear':'Ativar')+'</button>')+'</div></div>').join('')||'<div class="settings-desc">Nenhuma conta criada.</div>'}catch(e){el('userList').innerHTML='<div class="account-status bad">'+escapeHTML(e.message)+'</div>'}}
 async function createSeller(){const name=el('newUserName').value.trim(),password=el('newUserPassword').value;el('accountStatus').className='account-status';el('accountStatus').textContent='';if(!name||password.length<3){el('accountStatus').classList.add('bad');el('accountStatus').textContent='Informe nome e senha com pelo menos 3 caracteres.';return}try{await rpc('ppt_create_user',{p_token:AUTH.token,p_username:name,p_password:password});el('newUserName').value='';el('newUserPassword').value='';el('accountStatus').classList.add('ok');el('accountStatus').textContent='Conta criada. Ela terá sua própria personalização de slides e usará o catálogo mestre.';await renderUsers()}catch(e){el('accountStatus').classList.add('bad');el('accountStatus').textContent=e.message}}
 async function setSellerActive(id,active){try{await rpc('ppt_set_user_active',{p_token:AUTH.token,p_user_id:id,p_active:!!active});await renderUsers()}catch(e){el('accountStatus').className='account-status bad';el('accountStatus').textContent=e.message}}
 async function resetSellerPassword(id,name){const pw=prompt('Nova senha para '+name+':');if(pw===null)return;if(pw.length<3){alert('A senha precisa ter pelo menos 3 caracteres.');return}try{await rpc('ppt_master_reset_password',{p_token:AUTH.token,p_user_id:id,p_new_password:pw});el('accountStatus').className='account-status ok';el('accountStatus').textContent='Senha de '+name+' redefinida.'}catch(e){el('accountStatus').className='account-status bad';el('accountStatus').textContent=e.message}}
 async function changeMyPassword(){const current=el('currentPassword').value,next=el('newPassword').value;el('passwordStatus').className='account-status';el('passwordStatus').textContent='';if(!current||next.length<3){el('passwordStatus').classList.add('bad');el('passwordStatus').textContent='Confira a senha atual e use pelo menos 3 caracteres na nova.';return}try{await rpc('ppt_change_password',{p_token:AUTH.token,p_current_password:current,p_new_password:next});el('currentPassword').value='';el('newPassword').value='';el('passwordStatus').classList.add('ok');el('passwordStatus').textContent='Senha alterada.'}catch(e){el('passwordStatus').classList.add('bad');el('passwordStatus').textContent=e.message}}
-fit();renderPresentation(true);renderProducts();renderOffer();restoreSession();
+fit();renderPresentation(true);renderProducts();renderOffer();renderBonus();restoreSession();
 window.addEventListener('online',()=>{if(AUTH.token){loadSellerRemote();loadMasterRemote()}});
 </script>
 </body></html>
