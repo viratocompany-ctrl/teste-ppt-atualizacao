@@ -543,13 +543,14 @@ body.h .slide{padding-left:calc(var(--u)*6);padding-right:calc(var(--u)*6)}
 .product-price-badge span{display:block;font-family:'Archivo';font-size:calc(var(--u)*.94);line-height:1;font-weight:900;color:#fff;transform:none;white-space:nowrap}
 .product-check{position:absolute;top:calc(var(--u)*.58);right:calc(var(--u)*.6);left:auto;z-index:3;width:calc(var(--u)*1.42);height:calc(var(--u)*1.42);border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.97);border:1px solid rgba(8,14,46,.18);font-family:'Archivo';font-size:calc(var(--u)*.72);font-weight:900;color:transparent;box-shadow:0 calc(var(--u)*.18) calc(var(--u)*.48) rgba(0,0,0,.12)}
 .product-card.on .product-check{border-color:var(--orange);color:var(--orange);background:#fff}
+.conversation-card>.product-card-media>.product-check{display:none!important}
 .product-card.conversation-card{cursor:default}
 .product-card.conversation-card:hover{transform:none}
 .product-card.conversation-card .product-panel{position:absolute;top:calc(var(--u)*.58);right:calc(var(--u)*2.35);bottom:auto;z-index:4;padding:0;background:transparent}
 .conversation-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:calc(var(--u)*.12);padding:calc(var(--u)*.18);background:rgba(255,255,255,.99);border:1px solid rgba(15,10,46,.1);border-radius:calc(var(--u)*.6);box-shadow:0 calc(var(--u)*.28) calc(var(--u)*.8) rgba(0,0,0,.16);backdrop-filter:blur(8px)}
 .conversation-option{position:relative;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:calc(var(--u)*.34);align-items:center;padding:calc(var(--u)*.38) calc(var(--u)*.58);border:none;border-radius:calc(var(--u)*.48);background:transparent;cursor:pointer;transition:.15s;min-width:calc(var(--u)*4.9)}
 .conversation-option:hover{background:#FFF4E9}
-.conversation-option.on{background:#FFF4E9;box-shadow:inset 0 0 0 1px rgba(255,107,0,.18)}
+.conversation-option.on{background:transparent;box-shadow:none}
 .conversation-option input{grid-row:1 / span 2;width:calc(var(--u)*.92);height:calc(var(--u)*.92);accent-color:var(--orange);margin:0}
 .conversation-option b{font-family:'Archivo';font-size:calc(var(--u)*.92);color:var(--navy2);line-height:1}
 .conversation-option span{display:block;font-family:'Archivo';font-size:calc(var(--u)*.72);font-weight:800;color:var(--orange);line-height:1.05}
@@ -922,7 +923,7 @@ body.h .bonus-price-card.loss strong{font-size:calc(var(--u)*3.55)}
 /* Seleção de produtos: valor aparece apenas no resumo superior */
 .slide-combo .product-price-badge{display:none!important}
 .slide-combo .conversation-option{grid-template-columns:auto 1fr;grid-template-rows:auto;padding:calc(var(--u)*.42) calc(var(--u)*.48);min-width:calc(var(--u)*4.1)}
-.slide-combo .conversation-option input{grid-row:auto;width:calc(var(--u)*.92);height:calc(var(--u)*.92)}
+.slide-combo .conversation-option input{grid-row:auto;appearance:none;-webkit-appearance:none;width:calc(var(--u)*1.05);height:calc(var(--u)*1.05);border-radius:50%;border:calc(var(--u)*.11) solid #8E91A5;background:#fff;margin:0;display:grid;place-items:center;cursor:pointer}.slide-combo .conversation-option input:checked{border-color:var(--orange);box-shadow:inset 0 0 0 calc(var(--u)*.24) #fff;background:var(--orange)}
 .slide-combo .conversation-option b{font-size:calc(var(--u)*.84);white-space:nowrap}
 .slide-combo .conversation-option span{display:none!important}
 
