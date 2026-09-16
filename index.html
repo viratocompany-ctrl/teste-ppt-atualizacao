@@ -1245,6 +1245,144 @@ body.h .bonus-price-card small{
   margin-top:calc(var(--u)*.38);
 }
 
+
+
+/* ===== Ajuste 16/09: bônus mais visual + grids 5/6 centralizados ===== */
+/* Condição exclusiva: 5 e 6 itens ocupam toda a largura útil e ficam realmente centralizados. */
+body.h .slide-final-offer .closing-products.count-5,
+body.h .slide-final-offer .closing-products.count-6{
+  width:100%;
+  max-width:calc(var(--u)*96);
+  margin-inline:auto;
+  justify-self:center;
+  align-self:center;
+  justify-content:center;
+  align-content:center;
+  gap:calc(var(--u)*.52);
+}
+body.h .slide-final-offer .closing-products.count-6{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+body.h .slide-final-offer .closing-products.count-6 .closing-product{
+  grid-column:auto;
+}
+body.h .slide-final-offer .closing-products.count-5{
+  grid-template-columns:repeat(6,minmax(0,1fr));
+}
+body.h .slide-final-offer .closing-products.count-5 .closing-product{
+  grid-column:span 2;
+}
+body.h .slide-final-offer .closing-products.count-5 .closing-product:nth-child(4){grid-column:2/span 2}
+body.h .slide-final-offer .closing-products.count-5 .closing-product:nth-child(5){grid-column:4/span 2}
+body.h .slide-final-offer .closing-products.count-5 .closing-product-name,
+body.h .slide-final-offer .closing-products.count-6 .closing-product-name{
+  font-size:calc(var(--u)*1.16);
+}
+body.h .slide-final-offer .closing-products.count-5 .closing-product-copy,
+body.h .slide-final-offer .closing-products.count-6 .closing-product-copy{
+  min-height:calc(var(--u)*3);
+  padding:calc(var(--u)*1.45) calc(var(--u)*.72) calc(var(--u)*.62);
+}
+
+/* Bônus: deixa apenas a identificação da etapa no topo; cards ganham o espaço liberado. */
+body.h .slide-closing-bonus{
+  padding:calc(var(--u)*1.5) calc(var(--u)*3.7) calc(var(--u)*3.45);
+}
+body.h .slide-closing-bonus .bonus-shell{
+  grid-template-rows:auto minmax(0,1fr) auto;
+  gap:calc(var(--u)*.5);
+}
+body.h .slide-closing-bonus .bonus-head{
+  min-height:0;
+  padding:0;
+  margin:0;
+}
+body.h .slide-closing-bonus .bonus-head .bonus-title,
+body.h .slide-closing-bonus .bonus-head .bonus-support{
+  display:none!important;
+}
+body.h .slide-closing-bonus .bonus-head .eyebrow{
+  margin:0;
+  font-size:calc(var(--u)*1.08);
+}
+body.h .slide-closing-bonus .closing-benefits{
+  align-self:stretch;
+  align-items:center;
+  gap:calc(var(--u)*1.05);
+  margin:0;
+}
+body.h .slide-closing-bonus .closing-benefits.single{
+  grid-template-columns:minmax(0,calc(var(--u)*68));
+  justify-content:center;
+}
+body.h .slide-closing-bonus .closing-benefit-card{
+  grid-template-columns:calc(var(--u)*27.2) minmax(0,1fr);
+  grid-template-rows:1fr auto;
+  min-height:calc(var(--u)*17.1);
+  padding:calc(var(--u)*.7);
+  column-gap:calc(var(--u)*1.18);
+  row-gap:calc(var(--u)*.55);
+  border-radius:calc(var(--u)*1.05);
+}
+body.h .slide-closing-bonus .closing-benefit-media,
+body.h .slide-closing-bonus .closing-cash-icon{
+  grid-row:1/span 2;
+  height:calc(var(--u)*15.7);
+  border-radius:calc(var(--u)*.88);
+}
+body.h .slide-closing-bonus .closing-benefit-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+body.h .slide-closing-bonus .closing-benefit-name{
+  font-size:calc(var(--u)*1.62);
+  line-height:1.04;
+}
+body.h .slide-closing-bonus .closing-benefit-detail{
+  font-size:calc(var(--u)*.94);
+  line-height:1.28;
+}
+body.h .slide-closing-bonus .closing-benefit-button{
+  font-size:calc(var(--u)*.96);
+  padding:calc(var(--u)*.74) calc(var(--u)*1.18);
+}
+body.h .slide-closing-bonus .closing-cash-icon{
+  font-size:calc(var(--u)*4.85);
+  line-height:.9;
+  letter-spacing:-.045em;
+}
+body.h .slide-closing-bonus .closing-cash-icon small{
+  font-size:calc(var(--u)*1.28);
+  margin-left:calc(var(--u)*.22);
+}
+
+/* Comparação: só rótulo + número. Sem textos explicativos em branco. */
+body.h .slide-closing-bonus .bonus-price-card{
+  min-height:calc(var(--u)*7.4);
+  padding:calc(var(--u)*.9) calc(var(--u)*1.18);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+body.h .slide-closing-bonus .bonus-price-card small{
+  display:none!important;
+}
+body.h .slide-closing-bonus .bonus-price-card span{
+  margin-bottom:calc(var(--u)*.28);
+  font-size:calc(var(--u)*1.02)!important;
+}
+body.h .slide-closing-bonus .bonus-price-card.today strong{
+  font-size:calc(var(--u)*4.05);
+}
+body.h .slide-closing-bonus .bonus-price-card.later strong{
+  font-size:calc(var(--u)*3.55);
+}
+body.h .slide-closing-bonus .bonus-price-card.loss strong{
+  font-size:calc(var(--u)*4.12);
+}
+
 </style>
 </head>
 <body class="h">
