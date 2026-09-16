@@ -1383,6 +1383,70 @@ body.h .slide-closing-bonus .bonus-price-card.loss strong{
   font-size:calc(var(--u)*4.12);
 }
 
+
+/* ===== Ajuste final: bônus único + comparação financeira mais legível ===== */
+body.h .slide-closing-bonus .closing-benefits.single{
+  display:block;
+  width:min(100%,calc(var(--u)*82));
+  margin:0 auto!important;
+}
+body.h .slide-closing-bonus .closing-benefits.single .closing-benefit-card{
+  width:100%;
+  grid-template-columns:calc(var(--u)*30) minmax(0,1fr);
+  min-height:calc(var(--u)*18.2);
+  padding:calc(var(--u)*.78);
+  column-gap:calc(var(--u)*1.35);
+}
+body.h .slide-closing-bonus .closing-benefits.single .closing-benefit-media,
+body.h .slide-closing-bonus .closing-benefits.single .closing-cash-icon{
+  height:calc(var(--u)*16.6);
+}
+body.h .slide-closing-bonus .closing-benefits.single .closing-cash-icon{
+  font-size:calc(var(--u)*5.65);
+}
+body.h .slide-closing-bonus .closing-benefits.single .closing-cash-icon small{
+  font-size:calc(var(--u)*1.45);
+}
+body.h .slide-closing-bonus .closing-benefits.single .closing-benefit-name{
+  font-size:calc(var(--u)*1.82);
+  line-height:1.04;
+}
+body.h .slide-closing-bonus .closing-benefits.single .closing-benefit-button{
+  font-size:calc(var(--u)*1.02);
+  padding:calc(var(--u)*.8) calc(var(--u)*1.28);
+}
+
+body.h .slide-closing-bonus .bonus-comparison{
+  display:grid;
+  grid-template-columns:.92fr 1.22fr .92fr;
+  grid-template-areas:'later today loss';
+  align-items:end;
+  gap:calc(var(--u)*.9);
+  width:100%;
+}
+body.h .slide-closing-bonus .bonus-price-card.today{grid-area:today;min-height:calc(var(--u)*10.8);padding:calc(var(--u)*1.15) calc(var(--u)*1.3);box-shadow:0 calc(var(--u)*.35) calc(var(--u)*1.25) rgba(0,0,0,.16),inset 0 0 0 1px rgba(48,213,133,.1)}
+body.h .slide-closing-bonus .bonus-price-card.later{grid-area:later;min-height:calc(var(--u)*9.15);padding:calc(var(--u)*1.02) calc(var(--u)*1.15)}
+body.h .slide-closing-bonus .bonus-price-card.loss{grid-area:loss;min-height:calc(var(--u)*9.15);padding:calc(var(--u)*1.02) calc(var(--u)*1.15)}
+body.h .slide-closing-bonus .bonus-price-card span{
+  font-size:calc(var(--u)*1.12)!important;
+  line-height:1.05;
+  margin-bottom:calc(var(--u)*.38);
+}
+body.h .slide-closing-bonus .bonus-price-card.today span{
+  font-size:calc(var(--u)*1.25)!important;
+}
+body.h .slide-closing-bonus .bonus-price-card.today strong{
+  font-size:calc(var(--u)*5.2);
+  line-height:.9;
+}
+body.h .slide-closing-bonus .bonus-price-card.later strong{
+  font-size:calc(var(--u)*3.85);
+  line-height:.92;
+}
+body.h .slide-closing-bonus .bonus-price-card.loss strong{
+  font-size:calc(var(--u)*4.15);
+  line-height:.92;
+}
 </style>
 </head>
 <body class="h">
